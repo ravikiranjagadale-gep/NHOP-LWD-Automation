@@ -1,0 +1,14 @@
+﻿{
+  "Id": "32AA35xmtEudt_DFzNwIMw",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/32AA35xmtEudt_DFzNwIMw",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/GE7d5jGKak6wzoI3pFb1hQ",
+  "Name": "GEP",
+  "Description": "Click_on_GEP",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-03-24T11:56:02.0452074Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-03-24T11:56:02.0452074Z"
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Id": "Y1xLzVLOG06-LY_Ge0mAKg",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/Y1xLzVLOG06-LY_Ge0mAKg",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/GE7d5jGKak6wzoI3pFb1hQ",
+  "Name": "SPAN",
+  "Description": "Click_on_Drop_down",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-03-24T12:01:01.6765972Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-03-24T12:01:01.6765972Z"
+}

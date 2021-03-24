@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://itsupport.gep.com/home" ContentHash="aBXRqk-gSEm10X62zJqj0g" DesignTimeRectangle="823, 623, 290, 24" ElementType="Text" FriendlyName="'GEP'" FullSelectorArgument="&lt;webctrl aaname='GEP' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='GEP' tag='SPAN' type='' check:text='GEP' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='My Instances' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="GEP" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0jVe1HxEtHEySHw6Hdlu0mQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="35afe9735b04f568376289b1a582e32b.png" xmlns="">0PD3XfEYmHUe-u7YKxlwTkw</imageRef>
+</TargetAnchorable>

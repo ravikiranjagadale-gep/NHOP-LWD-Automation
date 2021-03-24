@@ -1,0 +1,13 @@
+﻿{
+  "Id": "WX6UKrCeM0WfOkMSGTBUzg",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/WX6UKrCeM0WfOkMSGTBUzg",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/GE7d5jGKak6wzoI3pFb1hQ",
+  "Name": "Unassigned Requests",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-03-24T12:01:01.9706056Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-03-24T12:01:01.9706056Z"
+}

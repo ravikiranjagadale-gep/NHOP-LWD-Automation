@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp BrowserType="Chrome" ContentHash="Hb0Avaacok-XyS3oMcHW6A" Selector="&lt;html app='chrome.exe' title='My Instances'/&gt;" Url="https://itsupport.gep.com/home" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0-gmWuPhVBUqQNSeo0QYPew</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="116cfc94fa7a9f36fb111ac1d79c8bc9.png" xmlns="">0h_FQY4F2VEOLqHZtot1SDQ</imageRef>
+</TargetApp>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/HomePage.do" ContentHash="kozVvt15Wk-BqAQwVekQbw" DesignTimeRectangle="10, 289, 70, 80" ElementType="Text" FriendlyName="'Requests'" FullSelectorArgument="&lt;webctrl parentid='sdp.header.requests' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='sdp.header.requests' tag='A' type='' aaname='Requests&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; ' check:text='Requests' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Requests" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='A' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0xe6c_Pu3LkGES_ae967SPQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="4cfd9d59463a45cc71ba52c2aa985fb5.png" xmlns="">0acq2JzdCr06tz7NNeqmQ1w</imageRef>
+</TargetAnchorable>

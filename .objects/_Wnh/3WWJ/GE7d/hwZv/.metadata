@@ -1,0 +1,14 @@
+﻿{
+  "Id": "hwZvusnvkEq8rBWSL4AEjA",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/hwZvusnvkEq8rBWSL4AEjA",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/GE7d5jGKak6wzoI3pFb1hQ",
+  "Name": "Requests",
+  "Description": "Click_on_Requests",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-03-24T12:01:01.5406071Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-03-24T12:01:01.5406071Z"
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Id": "ILt0q3xL3UWS3IIMiYHnHQ",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/ILt0q3xL3UWS3IIMiYHnHQ",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/GE7d5jGKak6wzoI3pFb1hQ",
+  "Name": "INPUT",
+  "Description": "Click_on_Search_bar",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-03-24T12:01:01.8506025Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-03-24T12:01:01.8506025Z"
+}
