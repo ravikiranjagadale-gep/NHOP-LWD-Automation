@@ -1,0 +1,13 @@
+﻿{
+  "Id": "ZPWWfrpP4kC4yLaWSKudFg",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/ZPWWfrpP4kC4yLaWSKudFg",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/9qXvCGy7RUG8EgSOsG9_mw",
+  "Name": "Last working date",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-03-25T13:13:55.7738588Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-03-25T13:13:55.7738588Z"
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Id": "7v8f1N0pQEeYAp1TI0hbpA",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/7v8f1N0pQEeYAp1TI0hbpA",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/9qXvCGy7RUG8EgSOsG9_mw",
+  "Name": "Search_Icon",
+  "Description": "Search Icon for search ticket",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-03-25T09:48:45.3171702Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-03-25T09:48:45.3171702Z"
+}

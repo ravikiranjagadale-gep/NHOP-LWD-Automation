@@ -1,0 +1,14 @@
+﻿{
+  "Id": "aKnlwvl7vkS8iPO6EemhlA",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/aKnlwvl7vkS8iPO6EemhlA",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/9qXvCGy7RUG8EgSOsG9_mw",
+  "Name": "Text_field ",
+  "Description": "text input for write request",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-03-25T09:48:45.5141655Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-03-25T09:48:45.5141655Z"
+}
