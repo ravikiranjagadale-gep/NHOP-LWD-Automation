@@ -1,0 +1,17 @@
+﻿{
+  "Id": "hafBQQs44k2tcRCe2lA2KA",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/hafBQQs44k2tcRCe2lA2KA",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/0C3joEZtcUqbvP8R5Lx5KA",
+  "Name": "Search_Icon_for_ID",
+  "Description": "This element use to click on search icon for ID of ticket",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-03-27T06:28:23.9907396Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-03-27T06:55:25.58271Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

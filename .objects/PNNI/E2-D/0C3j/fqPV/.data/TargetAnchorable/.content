@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000023390207/details?selectTab=conversationsDetails" ContentHash="MQpYBIaqfE62-bdagQ9-PQ" DesignTimeRectangle="128, 496, 36, 36" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl isleaf='1' parentid='conList1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' parentid='conList1' tag='DIV' type='' aaname='' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0WCFcj176eESMwWyoOhjsMA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="5392a5f5d754831c7f8135e1068ef90f.png" xmlns="">0kJ28TyFFdEKv8a-bEF_4Mg</imageRef>
+</TargetAnchorable>

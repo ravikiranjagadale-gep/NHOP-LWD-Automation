@@ -1,0 +1,15 @@
+﻿{
+  "Id": "PNNI1IBHOUKEdjzc89UIsA",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/PNNI1IBHOUKEdjzc89UIsA",
+  "Name": "LWD_Data_Extraction",
+  "Description": "This application for all data extraction of LWD",
+  "Type": "App",
+  "Created": "2021-03-26T09:41:52.1625704Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-03-27T06:28:23.6467383Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

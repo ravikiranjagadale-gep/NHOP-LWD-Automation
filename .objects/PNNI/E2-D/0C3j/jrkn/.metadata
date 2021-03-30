@@ -1,0 +1,14 @@
+﻿{
+  "Id": "jrknVjJpEUqDmG6Yigr6vw",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/jrknVjJpEUqDmG6Yigr6vw",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/0C3joEZtcUqbvP8R5Lx5KA",
+  "Name": "Notes_Button",
+  "Description": "This object for Notes Button ",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-03-30T07:04:52.3549587Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-03-30T07:04:52.3549587Z"
+}

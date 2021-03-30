@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable ContentHash="4g0h9j4nO0SH-yDqj9BilQ" DesignTimeRectangle="95, 230, 1818, 539" FriendlyName="'IDSubject Requester'" FullSelectorArgument="&lt;webctrl aria-role='grid' tag='TABLE' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector" Text="IDSubject Requester Name TechnicianGroup Status Due by date Created Date 169221 FYI -  Shashvat" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='TABLE' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="InformativeScreenshot" originalValue="71988842ad0e4f63d85e826d733e8146.png" xmlns="">0amCCtS4MZ0qfxUATJesdCA</imageRef>
+</TargetAnchorable>

@@ -1,0 +1,14 @@
+﻿{
+  "Id": "fqPV8_5dvUypVC-y981OwA",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/fqPV8_5dvUypVC-y981OwA",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/0C3joEZtcUqbvP8R5Lx5KA",
+  "Name": "Ticket_Open ",
+  "Description": "This Object use for ticket open ",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-03-30T07:04:52.5399581Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-03-30T07:04:52.5399581Z"
+}

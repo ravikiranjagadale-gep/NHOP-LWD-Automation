@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp BrowserType="Chrome" ContentHash="dm33iRYKY0GpZcuIK7BDXg" Selector="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud'/&gt;" Url="https://itsupport.gep.com/app/itdesk/ui/requests" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">05_5w6IjUDEGHlYJfL1lWbw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="cd2f00c562231f0dacc88f4536bc5570.png" xmlns="">0r1S_jOmnw0OovqEsAuKOLw</imageRef>
+</TargetApp>

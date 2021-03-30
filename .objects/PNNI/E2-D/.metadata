@@ -1,0 +1,15 @@
+﻿{
+  "Id": "E2-Dbs6s-E2pLOmpUTZkcw",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/E2-Dbs6s-E2pLOmpUTZkcw",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/PNNI1IBHOUKEdjzc89UIsA",
+  "Name": "1.0.0",
+  "Type": "AppVersion",
+  "Created": "2021-03-26T09:41:52.2835709Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-03-27T06:28:23.7677396Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Id": "56HMY2ONIUm1j0uyjFyC6w",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/56HMY2ONIUm1j0uyjFyC6w",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/0C3joEZtcUqbvP8R5Lx5KA",
+  "Name": "Go_Back_from_Ticket",
+  "Description": "This activity use to go back from ticket after fetching all data from ticket",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-03-27T06:39:38.6350232Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-03-27T06:39:38.6350232Z"
+}

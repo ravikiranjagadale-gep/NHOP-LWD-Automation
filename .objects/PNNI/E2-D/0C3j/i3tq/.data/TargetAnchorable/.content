@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests" ContentHash="Ys9Mq1nEXkKNZOineD_heA" DesignTimeRectangle="239, 268, 90, 48" FriendlyName="'166068'" FullSelectorArgument="&lt;webctrl aria-role='grid' tag='TABLE' /&gt;&lt;webctrl idx='1' tableCol='5' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='grid' tag='TABLE' /&gt;&lt;webctrl aaname='' type='' tag='TD' check:text='166068' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector" Text="166068" TextMethod="AttributeText" TextSelector="&lt;webctrl type='' tag='TD' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="239, 230, 90, 38" FriendlyName="'ID'" FullSelectorArgument="&lt;webctrl aria-role='grid' tag='TABLE' /&gt;&lt;webctrl aaname='ID' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='grid' tag='TABLE' /&gt;&lt;webctrl aaname='ID' tag='TH' type='' check:text='ID' /&gt;" SearchSteps="FuzzySelector, Image" Text="ID" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='TH' type='' /&gt;">
+        <imageRef attrName="ImageBase64" xmlns="">1dT3us0Mza0edJvtjsF4lcg</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0FINYzUenuEqDSNgvAOmkhw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="2f91a3167bd6f57f5ad231f97a95e77d.png" xmlns="">0NhGK2lwr_EecGFFYcblNcA</imageRef>
+</TargetAnchorable>

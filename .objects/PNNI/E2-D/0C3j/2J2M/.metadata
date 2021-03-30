@@ -1,0 +1,17 @@
+﻿{
+  "Id": "2J2M6a286UuHrampqh33ww",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/2J2M6a286UuHrampqh33ww",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/0C3joEZtcUqbvP8R5Lx5KA",
+  "Name": "INPUT_Box_for_ID",
+  "Description": "Text_Box for insert ID number",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-03-27T06:28:24.2537401Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-03-27T06:55:25.4307124Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

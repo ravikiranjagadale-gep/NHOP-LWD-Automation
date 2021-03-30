@@ -1,0 +1,17 @@
+﻿{
+  "Id": "fvbEetlKR0qD_6-mw6FYXQ",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/fvbEetlKR0qD_6-mw6FYXQ",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/0C3joEZtcUqbvP8R5Lx5KA",
+  "Name": "Go_Button",
+  "Description": "This button search ticket",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-03-27T06:28:24.4877412Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-03-27T06:55:25.1717177Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

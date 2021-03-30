@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests" ContentHash="tCpNTkx_0EGQN-6SdlCPnQ" DesignTimeRectangle="1869, 272, 36, 30" ElementType="Button" FriendlyName="'Go'" FullSelectorArgument="&lt;webctrl parentid='DataTables_Table_0' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='DataTables_Table_0' tag='BUTTON' type='' aaname='Go' check:text='Go' /&gt;" Reference="Esc2uwRRdkGtd0UerjX7gQ/fvbEetlKR0qD_6-mw6FYXQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Go" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0FzIVXVZLp0mWAV-U5v34GA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="be12011d5548e42c7cce8610222c1b1d.png" xmlns="">0CUvgL5xCTE2753XvlTwk0Q</imageRef>
+</TargetAnchorable>
