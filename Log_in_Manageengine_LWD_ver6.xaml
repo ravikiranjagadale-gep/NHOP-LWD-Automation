@@ -87,6 +87,7 @@
       <Variable x:TypeArguments="x:String" Name="Date_of_Termination" />
       <Variable x:TypeArguments="x:String" Name="Last_Date" />
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="dbConnection" />
+      <Variable x:TypeArguments="x:String" Name="Date_Time" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -106,13 +107,13 @@
           <av:Size x:Key="ShapeSize">200,51</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1825,10613" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" Version="V1">
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1825,10937" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" Version="V1">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1791,10397" sap2010:WorkflowViewState.IdRef="Sequence_18">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1791,10701" sap2010:WorkflowViewState.IdRef="Sequence_18">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -276,7 +277,7 @@
                   </Sequence>
                 </ui:CommentOut.Body>
               </ui:CommentOut>
-              <Assign sap:VirtualizedContainerService.HintSize="1749,61" sap2010:WorkflowViewState.IdRef="Assign_10">
+              <Assign sap:VirtualizedContainerService.HintSize="1749,60" sap2010:WorkflowViewState.IdRef="Assign_10">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Int32">[flag]</OutArgument>
                 </Assign.To>
@@ -284,13 +285,13 @@
                   <InArgument x:TypeArguments="x:Int32">1</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[LWD_list_data]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1749,6615" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[LWD_list_data]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1749,6922" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1699,6466" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1699,6774" sap2010:WorkflowViewState.IdRef="Sequence_36">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -316,17 +317,17 @@
                           <InArgument x:TypeArguments="x:String">[Regex_out_put(0).Value]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <If Condition="[Regex_OP =True]" sap:VirtualizedContainerService.HintSize="1657,5866" sap2010:WorkflowViewState.IdRef="If_17">
+                      <If Condition="[Regex_OP =True]" sap:VirtualizedContainerService.HintSize="1657,6176" sap2010:WorkflowViewState.IdRef="If_17">
                         <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="1382,5707" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                          <Sequence sap:VirtualizedContainerService.HintSize="1382,6018" sap2010:WorkflowViewState.IdRef="Sequence_35">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If Condition="[flag = 1]" sap:VirtualizedContainerService.HintSize="1340,538" sap2010:WorkflowViewState.IdRef="If_13">
+                            <If Condition="[flag = 1]" sap:VirtualizedContainerService.HintSize="1340,535" sap2010:WorkflowViewState.IdRef="If_13">
                               <If.Then>
-                                <Sequence sap:VirtualizedContainerService.HintSize="376,360" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,358" sap2010:WorkflowViewState.IdRef="Sequence_28">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -420,9 +421,9 @@
                                 </Sequence>
                               </If.Then>
                             </If>
-                            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1340,2622" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1340,2614" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                               <TryCatch.Try>
-                                <Sequence sap:VirtualizedContainerService.HintSize="1302,2395" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                <Sequence sap:VirtualizedContainerService.HintSize="1302,2387" sap2010:WorkflowViewState.IdRef="Sequence_34">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -440,9 +441,9 @@
                                       </ui:Target>
                                     </ui:UiElementExists.Target>
                                   </ui:UiElementExists>
-                                  <If Condition="[Emp_Full_name = True]" sap:VirtualizedContainerService.HintSize="1260,2155" sap2010:WorkflowViewState.IdRef="If_16">
+                                  <If Condition="[Emp_Full_name = True]" sap:VirtualizedContainerService.HintSize="1260,2149" sap2010:WorkflowViewState.IdRef="If_16">
                                     <If.Then>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="376,1702" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="376,1700" sap2010:WorkflowViewState.IdRef="Sequence_30">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -563,7 +564,7 @@
                                       </Sequence>
                                     </If.Then>
                                     <If.Else>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="839,1996" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="839,1991" sap2010:WorkflowViewState.IdRef="Sequence_33">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -581,9 +582,9 @@
                                             </ui:Target>
                                           </ui:UiElementExists.Target>
                                         </ui:UiElementExists>
-                                        <If Condition="[Emp_name_ele = True]" sap:VirtualizedContainerService.HintSize="797,1756" sap2010:WorkflowViewState.IdRef="If_15">
+                                        <If Condition="[Emp_name_ele = True]" sap:VirtualizedContainerService.HintSize="797,1753" sap2010:WorkflowViewState.IdRef="If_15">
                                           <If.Then>
-                                            <Sequence sap:VirtualizedContainerService.HintSize="376,1597" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                            <Sequence sap:VirtualizedContainerService.HintSize="376,1595" sap2010:WorkflowViewState.IdRef="Sequence_31">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -698,7 +699,7 @@
                                             </Sequence>
                                           </If.Then>
                                           <If.Else>
-                                            <Sequence sap:VirtualizedContainerService.HintSize="376,1597" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                            <Sequence sap:VirtualizedContainerService.HintSize="376,1595" sap2010:WorkflowViewState.IdRef="Sequence_32">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -807,7 +808,69 @@
                             </TryCatch>
                             <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1340,61" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[Emp_name +&quot;     &quot;+ Employee_GEP_Id +&quot;     &quot;+ Job_Title +&quot;     &quot;+ Function_emp +&quot;      &quot;+ Office_location +&quot;       &quot;+HR_Business_Partner +&quot;          &quot;+ Date_of_Termination +&quot;       &quot;+Last_Date+&quot;      &quot;+ Ticket_Status]" />
                             <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="1340,22" sap2010:WorkflowViewState.IdRef="Delay_44" />
-                            <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query" ExistingDbConnection="[dbConnection]" sap:VirtualizedContainerService.HintSize="1340,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_2" Sql="[&quot;insert into dbo.LWD_Tickets values (&quot;+&quot;'&quot;+ID_of_LWD_Tickets+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Ticket_Status+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Employee_GEP_Id+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Emp_name+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Function_emp+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Job_Title+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Last_Date+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Office_location+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+HR_Business_Partner+&quot;'&quot;+&quot;,'Data Get','No Remark','4/6/2021','4/6/2021')&quot;]">
+                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1340,284" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                              <ui:MultipleAssign.AssignOperations>
+                                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[Emp_name]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[Emp_name.Substring(Emp_name.IndexOf(":")+1)]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[Employee_GEP_Id]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[Employee_GEP_Id.Substring(Employee_GEP_Id.IndexOf(":")+1)]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[Function_emp]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[Function_emp.Substring(Function_emp.IndexOf(":")+1)]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[Job_Title]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[Job_Title.Substring(Job_Title.IndexOf(":")+1)]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[Office_location]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[Office_location.Substring(Office_location.IndexOf(":")+1)]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[HR_Business_Partner]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[HR_Business_Partner.Substring(HR_Business_Partner.IndexOf(":")+1)]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[Date_Time]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[System.DateTime.Now.ToString(“MM/dd/yyyy”)]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                </scg:List>
+                              </ui:MultipleAssign.AssignOperations>
+                            </ui:MultipleAssign>
+                            <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query" ExistingDbConnection="[dbConnection]" sap:VirtualizedContainerService.HintSize="1340,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_2" Sql="[&quot;insert into dbo.LWD_Tickets values (&quot;+&quot;'&quot;+ID_of_LWD_Tickets+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Ticket_Status+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Employee_GEP_Id+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Emp_name+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Function_emp+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Job_Title+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Last_Date+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Office_location+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+HR_Business_Partner+&quot;'&quot;+&quot;,'Data Get','No Remark',&quot;+&quot;'&quot;+Date_Time+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Date_Time+&quot;')&quot;]">
                               <ui:ExecuteNonQuery.Parameters>
                                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
                               </ui:ExecuteNonQuery.Parameters>
