@@ -54,5 +54,6 @@
   ],
   "isTemplate": false,
   "templateProjectData": {},
-  "publishData": {}
+  "publishData": {},
+  "targetFramework": "Legacy"
 }

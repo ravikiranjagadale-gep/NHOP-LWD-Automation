@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests" ContentHash="INEYAq-Tz0-zi7zedOgGXw" DesignTimeRectangle="1886, 91, 35, 35" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl parentid='sdp_profile_popup' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='sdp_profile_popup' tag='SPAN' type='' aaname='' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="1847, 98, 18, 22" FriendlyName="'USE'" FullSelectorArgument="&lt;webctrl parentid='notif_popup_open' tag='use' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='notif_popup_open' tag='use' type='' aaname='' /&gt;" SearchSteps="FuzzySelector, Image">
+        <imageRef attrName="ImageBase64" xmlns="">1IKr8L2G1jUWwjOLwMBzdyA</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0EBTkTSwUOkWXHzwFnT4_0w</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="9eb5221b3a05b9ddb20baf61008a17f7.png" xmlns="">0PmP7BBwuzUuCrwMtW3ym7Q</imageRef>
+</TargetAnchorable>

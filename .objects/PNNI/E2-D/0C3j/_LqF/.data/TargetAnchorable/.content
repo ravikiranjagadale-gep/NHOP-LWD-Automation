@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024622207/details?woFrom=ZSearchFeature" ContentHash="P0KEsvEIuE6S9Vn_qLD6pA" DesignTimeRectangle="313, 153, 77, 33" ElementType="Button" FriendlyName="'Assign'" FullSelectorArgument="&lt;webctrl aaname='Assign' parentid='menufixed' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Assign' parentid='menufixed' tag='BUTTON' type='' check:text='Assign' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Assign" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="232, 153, 81, 33" ElementType="Button" FriendlyName="'Pick up'" FullSelectorArgument="&lt;webctrl aaname='Pick up' parentid='menufixed' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Pick up' parentid='menufixed' tag='BUTTON' type='' check:text='Pick up' /&gt;" SearchSteps="FuzzySelector, Image" Text="Pick up" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;">
+        <imageRef attrName="ImageBase64" xmlns="">1sH9T4DIO7kC_LXAIC5n-bw</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0sFTfmqZw00WcKQq5QA2YYg</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="638a21372bcb017daa954389b1fa7461.png" xmlns="">0UVBw1aL29EqC9TSlCRPbrw</imageRef>
+</TargetAnchorable>

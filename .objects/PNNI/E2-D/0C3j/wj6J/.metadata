@@ -1,0 +1,14 @@
+﻿{
+  "Id": "wj6JD0-6X0CI1I597qOCnA",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/wj6JD0-6X0CI1I597qOCnA",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/0C3joEZtcUqbvP8R5Lx5KA",
+  "Name": "Sign out",
+  "Description": "Click on SignOut",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-09T08:38:47.4438661Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-09T08:38:47.4438661Z"
+}

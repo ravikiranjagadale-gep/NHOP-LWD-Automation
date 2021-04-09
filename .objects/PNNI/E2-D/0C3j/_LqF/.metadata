@@ -1,0 +1,14 @@
+﻿{
+  "Id": "_LqFQIFObU28AFIsoaeg4g",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/_LqFQIFObU28AFIsoaeg4g",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/0C3joEZtcUqbvP8R5Lx5KA",
+  "Name": "Assign",
+  "Description": "Click on assign Button ",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-07T07:52:49.0577886Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-07T07:52:49.0577886Z"
+}

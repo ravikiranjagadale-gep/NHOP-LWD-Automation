@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-16"?>
-<TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000023390207/details?selectTab=conversationsDetails" ContentHash="MQpYBIaqfE62-bdagQ9-PQ" DesignTimeRectangle="128, 496, 36, 36" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl isleaf='1' parentid='conList1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' parentid='conList1' tag='DIV' type='' aaname='' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
-  <imageRef attrName="ImageBase64" xmlns="">0WCFcj176eESMwWyoOhjsMA</imageRef>
-  <imageRef attrName="InformativeScreenshot" originalValue="5392a5f5d754831c7f8135e1068ef90f.png" xmlns="">0kJ28TyFFdEKv8a-bEF_4Mg</imageRef>
+<TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024622175/details?selectTab=conversationsDetails" ContentHash="7DlF5T0Ny0iAwQ5ga5KPSQ" DesignTimeRectangle="140, 535, 40, 40" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl isleaf='1' parentid='conList1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' parentid='conList1' tag='DIV' type='' aaname='' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="122, 494, 83, 30" ElementType="Text" FriendlyName="'Description'" FullSelectorArgument="&lt;webctrl aaname='Description' parentid='threadviewtable' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Description' parentid='threadviewtable' tag='DIV' type='' check:text='Description' /&gt;" SearchSteps="FuzzySelector, Image" Text="Description" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='DIV' type='' /&gt;">
+        <imageRef attrName="ImageBase64" xmlns="">16K_H-vHO7ECQRy69bI1DXw</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0ZE6jz5FHLk2PGzszxeShng</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="d796eb5eabc80e15abdb296c3e092c84.png" xmlns="">0EjR9xHnZ7EWNqFovFMo_Ew</imageRef>
 </TargetAnchorable>

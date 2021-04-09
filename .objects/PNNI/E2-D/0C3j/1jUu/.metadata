@@ -1,0 +1,14 @@
+﻿{
+  "Id": "1jUuZ4b5rUyw1FWt19FjHA",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/1jUuZ4b5rUyw1FWt19FjHA",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/0C3joEZtcUqbvP8R5Lx5KA",
+  "Name": "Profile",
+  "Description": "Click on Profile",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-09T08:38:47.2508643Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-09T08:38:47.2508643Z"
+}

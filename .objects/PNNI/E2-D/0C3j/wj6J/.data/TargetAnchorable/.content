@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests" ContentHash="mtVwwxb42Uy2zp7QGyslbw" DesignTimeRectangle="1822, 205, 95, 36" ElementType="Button" FriendlyName="'Sign out'" FullSelectorArgument="&lt;webctrl parentid='scroll-four' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='scroll-four' tag='BUTTON' type='' aaname='Sign out' check:text='Sign out' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Sign out" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0NXLDcBBo0EKzPB25mHeRLw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="d5113d2bb6c53ae510cea4f4f14de73d.png" xmlns="">0mWpOW01FBkioP1U_6_ehfw</imageRef>
+</TargetAnchorable>
