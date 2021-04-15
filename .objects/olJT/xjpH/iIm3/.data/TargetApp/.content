@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp BrowserType="Chrome" ContentHash="UXysAbzZcUqurrZCzorXWA" Selector="&lt;html app='chrome.exe' title='Multi-factor authentication'/&gt;" Url="https://account.activedirectory.windowsazure.com/UserManagement/MultifactorVerification.aspx?BrandContextID=O365" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0RQDIQIKkykmzMWJuJ6XiJQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="3ef01d02ae726439d3dba00a7364b7b9.png" xmlns="">0IArBQr9to0K_9y5E6qjIbw</imageRef>
+</TargetApp>

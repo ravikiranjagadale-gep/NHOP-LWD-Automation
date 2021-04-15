@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://account.activedirectory.windowsazure.com/UserManagement/MultifactorVerification.aspx?BrandContextID=O365" ContentHash="CVXz1-G6pE-Zk_n5R-azfw" DesignTimeRectangle="411, 471, 48, 24" FriendlyName="'A  UserListGrid_SearchB…'" FullSelectorArgument="&lt;webctrl aria-role='button' id='UserListGrid_SearchButton' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' id='UserListGrid_SearchButton' tag='A' type='' aaname='' /&gt;" Reference="Esc2uwRRdkGtd0UerjX7gQ/fCfoIQaA9EmuYSQiY_dTdw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Multi-factor authentication' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0Q_frNzQcfkGm4ikTrYRM0A</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="7e57651372312c1f74315c6a732299b6.png" xmlns="">0lp4VUFPc2UmZhUOWusdcYw</imageRef>
+</TargetAnchorable>

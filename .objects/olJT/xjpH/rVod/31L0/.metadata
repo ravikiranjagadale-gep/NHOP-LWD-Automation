@@ -1,0 +1,13 @@
+﻿{
+  "Id": "31L0vl7W7UaLSzKStBuu4g",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/31L0vl7W7UaLSzKStBuu4g",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/rVodS_PBZE-wWOXiEqY-8w",
+  "Name": "Licenses and apps",
+  "Type": "Element",
+  "TaxonomyType": "Text",
+  "Created": "2021-04-09T06:16:32.893342Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-09T06:16:32.893342Z"
+}

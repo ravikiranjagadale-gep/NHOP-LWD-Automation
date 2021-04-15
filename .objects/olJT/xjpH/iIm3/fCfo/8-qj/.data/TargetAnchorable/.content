@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://account.activedirectory.windowsazure.com/UserManagement/MultifactorVerification.aspx?BrandContextID=O365#" ContentHash="5-sxtyy7I0SETjyDtZj5JQ" DesignTimeRectangle="1291, 652, 152, 43" ElementType="Text" FriendlyName="'Close'" FullSelectorArgument="&lt;webctrl parentid='DialogManager1_dialogAcceptButton_0' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='DialogManager1_dialogAcceptButton_0' tag='SPAN' type='' aaname='Close' check:text='Close' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Multi-factor authentication' /&gt;" SearchSteps="FuzzySelector, Image" Text="Close" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0CKHqAhoy0kCLnwEP24nBMQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="fdba0bbde61b37a476a14419a1a53005.png" xmlns="">00vidjiF6IEWwngEhon8-uQ</imageRef>
+</TargetAnchorable>

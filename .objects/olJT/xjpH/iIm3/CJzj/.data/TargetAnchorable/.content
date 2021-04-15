@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://account.activedirectory.windowsazure.com/UserManagement/MultifactorVerification.aspx?BrandContextID=O365#" ContentHash="g8Yn7CTntkCLVijKHfn3GA" DesignTimeRectangle="943, 703, 318, 43" ElementType="Text" FriendlyName="'Enable Multi-Factor Auth'" FullSelectorArgument="&lt;webctrl parentid='AddToPolicyButtonYes' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='AddToPolicyButtonYes' tag='SPAN' type='' aaname='Enable Multi-Factor Auth' check:text='Enable Multi-Factor Auth' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Multi-factor authentication' /&gt;" SearchSteps="FuzzySelector, Image" Text="Enable Multi-Factor Auth" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="519, 628, 932, 126" FriendlyName="'Enable Multi-Factor'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' parentid='dialogContentArea' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' type='' parentid='dialogContentArea' tag='DIV' aaname='                                                                       ' check:text='Enable Multi-Factor AuthEnable Multi-Factor Auth&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Button.AddGroup(&amp;apos;AddToPolicyButtonYes&amp;apos;,' /&gt;" SearchSteps="FuzzySelector, Image" Text="Enable Multi-Factor AuthEnable Multi-Factor Auth&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Button.AddGroup('AddToPolicyButtonYes'," TextMethod="AttributeText" TextSelector="&lt;webctrl type='' tag='DIV' /&gt;">
+        <imageRef attrName="ImageBase64" xmlns="">1G0xFqfgcLEKzIakIcQxhag</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0aOdMmIZRr0Gr5RULmBxZKA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="e4ee9f252beb7f44ff4e7e61ef442701.png" xmlns="">0rDN_D9ynokSBch1TIQeKpw</imageRef>
+</TargetAnchorable>

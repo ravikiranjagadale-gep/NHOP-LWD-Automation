@@ -1,0 +1,13 @@
+﻿{
+  "Id": "sMr41Z4nT0WtRRu2R9kxYw",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/sMr41Z4nT0WtRRu2R9kxYw",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/rVodS_PBZE-wWOXiEqY-8w",
+  "Name": "Tata Communication",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-09T07:34:12.2156196Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-09T07:34:12.2156196Z"
+}

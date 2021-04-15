@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://account.activedirectory.windowsazure.com/UserManagement/MultifactorVerification.aspx?BrandContextID=O365#" ContentHash="RPTuYQfuuEiTF3E-k86SNw" DesignTimeRectangle="46, 616, 19, 19" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl aaname='Select item' tag='INPUT' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Select item' tag='INPUT' type='checkbox' /&gt;" Reference="Esc2uwRRdkGtd0UerjX7gQ/_2Lzx9E5k0-BBzwN0O7saQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Multi-factor authentication' /&gt;" SearchSteps="FuzzySelector" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="InformativeScreenshot" originalValue="45935da8685f1964e18f6f97c2f4000a.png" xmlns="">0Yi4ffIhkxUaneEF03Jz9SA</imageRef>
+</TargetAnchorable>

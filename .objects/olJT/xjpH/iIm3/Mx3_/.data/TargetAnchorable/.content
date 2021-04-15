@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://account.activedirectory.windowsazure.com/UserManagement/MultifactorVerification.aspx?BrandContextID=O365#" ContentHash="dxRDKTJr2k2uHA4MXjCFow" DesignTimeRectangle="1120, 659, 152, 43" ElementType="Text" FriendlyName="'Yes'" FullSelectorArgument="&lt;webctrl parentid='RemoveFromPolicyButtonYes' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='RemoveFromPolicyButtonYes' tag='SPAN' type='' aaname='Yes' check:text='Yes' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Multi-factor authentication' /&gt;" SearchSteps="FuzzySelector, Image" Text="Yes" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="474, 584, 999, 126" FriendlyName="'YesYes           Button…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' id='dialogContentArea' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' id='dialogContentArea' tag='DIV' type='' aaname='                                      ' check:text='YesYes&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Button.AddGroup(&amp;apos;RemoveFromPolicyButtonYes&amp;apos;,&amp;apos;RemoveFromPolicyButtonYes&amp;apos;);&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' /&gt;" SearchSteps="FuzzySelector, Image" Text="YesYes&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Button.AddGroup('RemoveFromPolicyButtonYes','RemoveFromPolicyButtonYes');" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='DIV' type='' /&gt;">
+        <imageRef attrName="ImageBase64" xmlns="">1wyI6lv9oFkOw-05PFG1niw</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0t9qVBah1wEa78ZWCvk869g</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="210de2b71e45a44570f4248f42e790ca.png" xmlns="">0BlRf5W_w_EW6corq6qimBg</imageRef>
+</TargetAnchorable>

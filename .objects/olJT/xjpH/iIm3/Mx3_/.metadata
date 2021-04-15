@@ -1,0 +1,13 @@
+﻿{
+  "Id": "Mx3_YOses0atlVy4mFIy_g",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/Mx3_YOses0atlVy4mFIy_g",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/iIm3v8jDSUijawVQr83V9w",
+  "Name": "Yes",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-15T08:48:13.6347108Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-15T08:48:13.6347108Z"
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://account.activedirectory.windowsazure.com/UserManagement/MultifactorVerification.aspx?BrandContextID=O365#" ContentHash="c3hNdFxUBkCWq0e1fYPrlw" DesignTimeRectangle="1145, 825, 54, 24" ElementType="Text" FriendlyName="'Enable'" FullSelectorArgument="&lt;webctrl id='EnableMultifactorVerification' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='EnableMultifactorVerification' tag='A' type='' aaname='Enable' check:text='Enable' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Multi-factor authentication' /&gt;" SearchSteps="FuzzySelector, Image" Text="Enable" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='A' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0SzN6O2qcTUKNL1qbqf0xEw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="b99b761556380839ad12f273652a82c9.png" xmlns="">0ZY6uoY-4sUGKnWssOc0K-A</imageRef>
+</TargetAnchorable>

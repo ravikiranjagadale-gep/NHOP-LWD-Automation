@@ -1,0 +1,16 @@
+﻿{
+  "Id": "IikObuSnfEuPN_eKkSzdog",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/IikObuSnfEuPN_eKkSzdog",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/rVodS_PBZE-wWOXiEqY-8w",
+  "Name": "Filter",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-09T05:36:58.6351682Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-09T07:04:59.0521982Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

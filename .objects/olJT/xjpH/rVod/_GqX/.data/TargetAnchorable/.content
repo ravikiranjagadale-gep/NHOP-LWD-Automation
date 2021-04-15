@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://admin.microsoft.com/Adminportal/Home?source=applauncher#/users/:/UserDetails/e303222d-12b5-4a37-8f69-b6ab25297c61/LicensesAndApps" ContentHash="X4DkJ1twJUqgAWxNKnQD4A" DesignTimeRectangle="1108, 409, 21, 21" FriendlyName="''" FullSelectorArgument="&lt;webctrl idx='7' parentid='collapsibleContent2' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='collapsibleContent2' tag='I' aaname='' check:text='' /&gt;" Reference="Esc2uwRRdkGtd0UerjX7gQ/_GqXxJxdJUejXSjKBs1MJw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Microsoft 365 admin center - Home' /&gt;" SearchSteps="FuzzySelector, Image" Text="" TextMethod="AttributeText" TextSelector="&lt;webctrl type='' tag='I' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="1">
+      <Target DesignTimeRectangle="1151, 404, 453, 30" ElementType="Text" FriendlyName="'Microsoft 365'" FullSelectorArgument="&lt;webctrl aaname='Microsoft 365 E5 without Audio Conferencing' parentid='collapsibleContent2' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Microsoft 365 E5 without Audio Conferencing' parentid='collapsibleContent2' tag='DIV' type='' check:text='Microsoft 365 E5 without Audio Conferencing' /&gt;" SearchSteps="FuzzySelector, Image" Text="Microsoft 365 E5 without Audio Conferencing" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='DIV' type='' /&gt;">
+        <imageRef attrName="ImageBase64" xmlns="">1GC1qw4vW_UWr74-QMheKhQ</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0kyS5256g8E2uUW2YkNHlXA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="fa4654fc77fa253818df7dcef2d59dc0.png" xmlns="">02-L9N7MrvE63J3SV5Jfhww</imageRef>
+</TargetAnchorable>

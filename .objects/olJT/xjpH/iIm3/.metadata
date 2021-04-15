@@ -1,0 +1,15 @@
+﻿{
+  "Id": "iIm3v8jDSUijawVQr83V9w",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/iIm3v8jDSUijawVQr83V9w",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/xjpHXpTdcEKPwMvjHP4x7g",
+  "Name": "Chrome: Multi-factor authentication",
+  "Type": "Screen",
+  "Created": "2021-04-09T07:04:59.7202554Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-15T08:48:12.3845258Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

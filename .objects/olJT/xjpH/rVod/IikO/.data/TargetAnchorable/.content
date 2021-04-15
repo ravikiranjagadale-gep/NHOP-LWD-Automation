@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://admin.microsoft.com/?auth_upn=Allen_Richy%40gep.com&amp;source=applauncher#/users" ContentHash="U6Mi1Lc1mUG4JmGj3UehNg" DesignTimeRectangle="1470, 206, 303, 42" ElementType="InputBox" FriendlyName="'INPUT  SearchBox44'" FullSelectorArgument="&lt;webctrl aria-role='searchbox' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='searchbox' tag='INPUT' type='' aaname='' /&gt;" Reference="Esc2uwRRdkGtd0UerjX7gQ/IikObuSnfEuPN_eKkSzdog" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Microsoft 365 admin center - Active users' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="1">
+      <Target DesignTimeRectangle="1354, 215, 48, 21" ElementType="Text" FriendlyName="'Filter'" FullSelectorArgument="&lt;webctrl id='id__51' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='id__51' tag='SPAN' type='' aaname='Filter' check:text='Filter' /&gt;" SearchSteps="FuzzySelector, Image" Text="Filter" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;">
+        <imageRef attrName="ImageBase64" xmlns="">175BUu92OVECItj24f_iETA</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0iBhoF__xTUOPqiCtgnJhPw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="47675fda698ca90e948495398ec77264.png" xmlns="">0vzMnSkVTQ0qUs-bIFvEaiQ</imageRef>
+</TargetAnchorable>

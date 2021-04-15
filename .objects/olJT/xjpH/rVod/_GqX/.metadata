@@ -1,0 +1,16 @@
+﻿{
+  "Id": "_GqXxJxdJUejXSjKBs1MJw",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/_GqXxJxdJUejXSjKBs1MJw",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/rVodS_PBZE-wWOXiEqY-8w",
+  "Name": "Microsoft 365 E5",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-09T06:16:33.0793415Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-09T07:33:10.0367204Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

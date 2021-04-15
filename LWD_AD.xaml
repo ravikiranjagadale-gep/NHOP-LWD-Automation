@@ -1,0 +1,487 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="LWD_AD" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="662,466" sap2010:WorkflowViewState.IdRef="LWD_AD_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/activedirectorydomainservices" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:uas="clr-namespace:UiPath.ActiveDirectoryDomainServices.Service;assembly=UiPath.ActiveDirectoryDomainServices" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.ActiveDirectoryDomainServices</AssemblyReference>
+      <AssemblyReference>UiPath.ActiveDirectoryDomainServices.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="LWD_AD" sap:VirtualizedContainerService.HintSize="242,482.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ss:SecureString" Default="[new system.Net.NetworkCredential(&quot;&quot;, “AllPassw0rd@786$!”).SecurePassword]" Name="ADPass" />
+      <Variable x:TypeArguments="x:String" Name="ADDirectoryServer" />
+      <Variable x:TypeArguments="x:Int32" Name="ADPort" />
+      <Variable x:TypeArguments="x:String" Name="ADUsername" />
+      <Variable x:TypeArguments="sd:DataTable" Name="LWDDatatable" />
+      <Variable x:TypeArguments="x:String" Name="UserEmail" />
+      <Variable x:TypeArguments="x:String" Name="UserLastName" />
+      <Variable x:TypeArguments="x:String" Name="UserFirstName" />
+      <Variable x:TypeArguments="x:String" Name="UserMobileNumber" />
+      <Variable x:TypeArguments="x:String" Name="UserJobTitle" />
+      <Variable x:TypeArguments="x:String" Name="UserDepartmentTitle" />
+      <Variable x:TypeArguments="x:String" Name="UserReportingManager" />
+      <Variable x:TypeArguments="x:String" Name="UserVOIP" />
+      <Variable x:TypeArguments="x:String" Name="UserLocation" />
+      <Variable x:TypeArguments="s:String[]" Name="EmailList" />
+      <Variable x:TypeArguments="x:Int32" Name="EmailIncrementor" />
+      <Variable x:TypeArguments="x:String" Name="NewUserEmail" />
+      <Variable x:TypeArguments="x:String" Name="UserPass" />
+      <Variable x:TypeArguments="x:String" Name="UserDistinguishedName" />
+      <Variable x:TypeArguments="sd:DataTable" Name="ADProperty" />
+      <Variable x:TypeArguments="x:String" Name="UserReportingManagerDistingushedName" />
+      <Variable x:TypeArguments="x:String" Name="UserReportingLocation" />
+      <Variable x:TypeArguments="x:String" Name="BoardlineNo" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:MultipleAssign sap2010:Annotation.AnnotationText="Set AD Login Details&#xA;" DisplayName="Initialize_Variable" sap:VirtualizedContainerService.HintSize="200,98" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="ss:SecureString">[ADPass]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="ss:SecureString">[new system.Net.NetworkCredential("", “AllPassw0rd@786$!”).SecurePassword]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[ADDirectoryServer]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">INARDC01.gep.com</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:Int32">[ADPort]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:Int32">389</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[ADUsername]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">GEP\admAllen</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MultipleAssign>
+    <Sequence sap2010:Annotation.AnnotationText="Sequence to input data from the Database " DisplayName="LWDInputData" sap:VirtualizedContainerService.HintSize="200,114.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="ui:DatabaseConnection" Name="SQLConnectionString" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:DatabaseConnect DatabaseConnection="[SQLConnectionString]" DisplayName="Connect" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.SqlClient" ConnectionString="Data Source=INAZACAUTO02;Initial Catalog=GEP_Automation;Persist Security Info=True;User ID=sa;Password=Password@123" />
+      <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[LWDDatatable]" DisplayName="Execute Query" ExistingDbConnection="[SQLConnectionString]" sap:VirtualizedContainerService.HintSize="334,87.3333333333333" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="Select * from LWD_Tickets&#xD;&#xA;where Incendent_Status = 'Ticket Assigned to Bot' or Incendent_Status = 'User scheduled for disabling'">
+        <ui:ExecuteQuery.Parameters>
+          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        </ui:ExecuteQuery.Parameters>
+      </ui:ExecuteQuery>
+      <ui:DatabaseDisconnect DatabaseConnection="[SQLConnectionString]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
+    </Sequence>
+    <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Loop Through each line item in LWD Table" DataTable="[LWDDatatable]" DisplayName="For Each Row in LWD" sap:VirtualizedContainerService.HintSize="304.666666666667,344.666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,161.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_14">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="AD Creation Sequence" sap:VirtualizedContainerService.HintSize="242,299.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MultipleAssign sap2010:Annotation.AnnotationText="Initalize AD Creatian Input Variable&#xA;" DisplayName="AD Creation Input Variables" sap:VirtualizedContainerService.HintSize="334,418.666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                <ui:MultipleAssign.AssignOperations>
+                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[UserEmail]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[row(10).ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[UserFirstName]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[row(2).ToString.Split(" "C)(0)]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[UserLastName]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[row(2).ToString.Split(" "C)(1)]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[UserMobileNumber]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[row(19).ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[UserJobTitle]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[row(12).ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[UserDepartmentTitle]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[row(13).ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[UserReportingManager]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[row(16).ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[UserVOIP]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[row(22).ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[UserLocation]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">OU=Test RPA Team,OU=India,DC=gep,DC=com</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[UserReportingLocation]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[row(17).ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                  </scg:List>
+                </ui:MultipleAssign.AssignOperations>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MultipleAssign>
+              <p:ActiveDirectoryScope ActiveDirectoryServer="[ADDirectoryServer]" ConnectionType="LDAP" DisplayName="Active Directory Scope" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="ActiveDirectoryScope_1" Password="[ADPass]" Port="[ADPort]" Username="[ADUsername]">
+                <p:ActiveDirectoryScope.Body>
+                  <ActivityAction x:TypeArguments="uas:ActiveDirectoryService">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="uas:ActiveDirectoryService" Name="ActiveDirectoryScopeConnectionName" />
+                    </ActivityAction.Argument>
+                    <Sequence sap2010:Annotation.AnnotationText="This Sequence Deals with AD Creation&#xA;" DisplayName="AD Creation" sap:VirtualizedContainerService.HintSize="544,4079.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence sap2010:Annotation.AnnotationText="This Sequence deals with validation of email and assign new email if already exist" DisplayName="Email Exist Sequence" sap:VirtualizedContainerService.HintSize="502,1130" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="p:ActiveStatus" Name="Status" />
+                          <Variable x:TypeArguments="x:Boolean" Name="Status2" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign DisplayName="Assign Email Increment" sap:VirtualizedContainerService.HintSize="460,62" sap2010:WorkflowViewState.IdRef="Assign_1">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">[EmailIncrementor]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign DisplayName="Assign New Email" sap:VirtualizedContainerService.HintSize="460,62" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[NewUserEmail]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[UserEmail]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:InterruptibleDoWhile Condition="[EmailList.Count &lt;&gt; 0]" DisplayName="User Email Condition" sap:VirtualizedContainerService.HintSize="460,803.333333333333" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                          <ui:InterruptibleDoWhile.Body>
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="423.333333333333,634" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign DisplayName="Assign User Email" sap:VirtualizedContainerService.HintSize="381.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[UserEmail]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[NewUserEmail]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <p:GetObjectsByFilter Location="{x:Null}" DisplayName="Check for User Email" sap:VirtualizedContainerService.HintSize="381.333333333333,236" sap2010:WorkflowViewState.IdRef="GetObjectsByFilter_1" ObjectCategory="Person" ObjectClass="User" Objects="[EmailList]" PropertyToFilterBy="mail" PropertyValue="[UserEmail]" Relation="EqualTo" />
+                              <Assign DisplayName="Assign New Email" sap:VirtualizedContainerService.HintSize="381.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[NewUserEmail]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[UserEmail.Replace("@",EmailIncrementor.ToString+"@")]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign DisplayName="Increment Email Incrementor" sap:VirtualizedContainerService.HintSize="381.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Int32">[EmailIncrementor]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Int32">[EmailIncrementor + 1]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </ui:InterruptibleDoWhile.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:InterruptibleDoWhile>
+                      </Sequence>
+                      <Sequence sap2010:Annotation.AnnotationText="This Sequence deals with Creating AD Password" DisplayName="Generate Password Sequence" sap:VirtualizedContainerService.HintSize="502,647.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow To Generate AD Password" sap:VirtualizedContainerService.HintSize="376,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ADPasswordGenerator.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <OutArgument x:TypeArguments="x:String" x:Key="UserPassword">[UserPass]</OutArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:InvokeWorkflowFile>
+                        <Sequence sap2010:Annotation.AnnotationText="Update AD Password into the database" DisplayName="Update Password" sap:VirtualizedContainerService.HintSize="376,370.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="ui:DatabaseConnection" Name="SQLConnectionString" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:DatabaseConnect DatabaseConnection="[SQLConnectionString]" DisplayName="Connect" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="DatabaseConnect_2" ProviderName="System.Data.SqlClient" ConnectionString="Data Source=INAZACAUTO02;Initial Catalog=GEP_Automation;Persist Security Info=True;User ID=sa;Password=Password@123" />
+                          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[LWDDatatable]" DisplayName="Execute Query" ExistingDbConnection="[SQLConnectionString]" sap:VirtualizedContainerService.HintSize="334,87.3333333333333" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="UPDATE NHOP_Tickets&#xA;SET Password = @UserPass&#xA;WHERE NHOP_Auto_ID = @NHOP_Req_ID;">
+                            <ui:ExecuteQuery.Parameters>
+                              <InArgument x:TypeArguments="x:String" x:Key="UserPass">[UserPass]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="NHOP_Req_ID">[row(0).ToString]</InArgument>
+                            </ui:ExecuteQuery.Parameters>
+                          </ui:ExecuteQuery>
+                          <ui:DatabaseDisconnect DatabaseConnection="[SQLConnectionString]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_2" />
+                        </Sequence>
+                      </Sequence>
+                      <Sequence sap2010:Annotation.AnnotationText="This Sequence deals with creating a property datatable" DisplayName="Property Datatable" sap:VirtualizedContainerService.HintSize="502,1664" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:BuildDataTable DataTable="[ADProperty]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="426,58.6666666666667" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;PropertyName&quot; msdata:Caption=&quot;&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;PropertyValue&quot; msdata:Caption=&quot;&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;      &lt;xs:unique name=&quot;Constraint1&quot;&gt;&#xA;        &lt;xs:selector xpath=&quot;.//TableName&quot; /&gt;&#xA;        &lt;xs:field xpath=&quot;PropertyName&quot; /&gt;&#xA;      &lt;/xs:unique&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+                        <Sequence DisplayName="General Tab" sap:VirtualizedContainerService.HintSize="426,588" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;mail&quot;,UserEmail}]" DataTable="[ADProperty]" DisplayName="mail" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;physicalDeliveryOfficeName&quot;,UserMobileNumber}]" DataTable="[ADProperty]" DisplayName="physicalDeliveryOfficeName" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;sn&quot;,UserLastName}]" DataTable="[ADProperty]" DisplayName="sn" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;displayName&quot;,UserFirstName +&quot; &quot;+UserLastName}]" DataTable="[ADProperty]" DisplayName="Display Name" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;givenName&quot;,UserFirstName}]" DataTable="[ADProperty]" DisplayName="givenName" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_5" />
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;description&quot;,&quot;This Particular user has been created for test purpose by Konverge RPA Team&quot;}]" DataTable="[ADProperty]" DisplayName="description" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_6" />
+                          <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_6">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[BoardlineNo]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">+1 732 382 6565</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;telephoneNumber&quot;,BoardlineNo+&quot;,&quot;+UserVOIP}]" DataTable="[ADProperty]" DisplayName="telephoneNumber" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_7" />
+                        </Sequence>
+                        <Sequence DisplayName="Account and Telephone Tab" sap:VirtualizedContainerService.HintSize="426,176" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;userPrincipalName&quot;,UserEmail}]" DataTable="[ADProperty]" DisplayName="userPrincipalName" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_8" />
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;mobile&quot;,UserMobileNumber}]" DataTable="[ADProperty]" DisplayName="mobile" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_9" />
+                        </Sequence>
+                        <Sequence DisplayName="Organization Tab" sap:VirtualizedContainerService.HintSize="426,382.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;department&quot;,UserDepartmentTitle}]" DataTable="[ADProperty]" DisplayName="department" sap:VirtualizedContainerService.HintSize="384,22" sap2010:WorkflowViewState.IdRef="AddDataRow_10" />
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;title&quot;,UserJobTitle}]" DataTable="[ADProperty]" DisplayName="title" sap:VirtualizedContainerService.HintSize="384,22" sap2010:WorkflowViewState.IdRef="AddDataRow_11" />
+                          <p:GetObjectDistinguishedName DisplayName="Get Object Distinguished Name" DistinguishedName="[UserReportingManagerDistingushedName]" sap:VirtualizedContainerService.HintSize="384,104.666666666667" sap2010:WorkflowViewState.IdRef="GetObjectDistinguishedName_1" SAMAccountName="[UserReportingManager.ToString.Split(&quot; &quot;C)(0)+&quot;.&quot;+UserReportingManager.ToString.Split(&quot; &quot;C)(1)]" />
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;manager&quot;,UserReportingManagerDistingushedName}]" DataTable="[ADProperty]" DisplayName="manager" sap:VirtualizedContainerService.HintSize="384,22" sap2010:WorkflowViewState.IdRef="AddDataRow_12" />
+                        </Sequence>
+                        <Sequence DisplayName="Address" sap:VirtualizedContainerService.HintSize="426,114" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;l&quot;,UserReportingLocation}]" DataTable="[ADProperty]" DisplayName="l" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_13" />
+                        </Sequence>
+                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;proxyAddresses&quot;,&quot;SMTP:&quot;+UserEmail+&quot;;sip:&quot;+UserEmail}]" DataTable="[ADProperty]" DisplayName="proxyAddresses" sap:VirtualizedContainerService.HintSize="426,22" sap2010:WorkflowViewState.IdRef="AddDataRow_14" />
+                      </Sequence>
+                      <p:CreateUser CommonName="[UserFirstName+&quot; &quot;+UserLastName]" DisplayName="Create User" DistinguishedName="[UserDistinguishedName]" Enabled="True" sap:VirtualizedContainerService.HintSize="502,236" sap2010:WorkflowViewState.IdRef="CreateUser_1" Location="[UserLocation]" Password="[UserPass]" Properties="[ADProperty]" SAMAccountName="[UserFirstName.ToLower+&quot;.&quot;+UserLastName.ToLower]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </p:CreateUser>
+                      <p:ForcePasswordChange DisplayName="Force Password Change" DistinguishedName="[UserDistinguishedName]" sap:VirtualizedContainerService.HintSize="502,104.666666666667" sap2010:WorkflowViewState.IdRef="ForcePasswordChange_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </p:ForcePasswordChange>
+                    </Sequence>
+                  </ActivityAction>
+                </p:ActiveDirectoryScope.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </p:ActiveDirectoryScope>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEachRow>
+  </Sequence>
+</Activity>

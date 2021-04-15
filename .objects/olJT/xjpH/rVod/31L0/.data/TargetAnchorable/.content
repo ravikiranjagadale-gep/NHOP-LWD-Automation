@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://admin.microsoft.com/Adminportal/Home?source=applauncher#/users/:/UserDetails/e303222d-12b5-4a37-8f69-b6ab25297c61/Account" ContentHash="1qdPhQqkyUWTlT1wcnhz3w" DesignTimeRectangle="1324, 522, 167, 66" ElementType="Text" FriendlyName="'Licenses and apps'" FullSelectorArgument="&lt;webctrl aaname=' Licenses and apps' parentid='Pivot1369-Tab2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Licenses and apps' parentid='Pivot1369-Tab2' tag='SPAN' type='' check:text='Licenses and apps' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Microsoft 365 admin center - Home' /&gt;" SearchSteps="FuzzySelector, Image" Text="Licenses and apps" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">02ImTZJjU50CoEyKfqKJySg</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="52df6b0e686a3e88d97babe65aa8cdfd.png" xmlns="">0IVPeXt8M20y7YTXz4erm9A</imageRef>
+</TargetAnchorable>

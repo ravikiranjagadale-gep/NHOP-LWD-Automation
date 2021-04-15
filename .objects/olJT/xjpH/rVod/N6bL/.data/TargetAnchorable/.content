@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://admin.microsoft.com/?auth_upn=Allen_Richy%40gep.com&amp;source=applauncher#/users/:/UserDetails/9d1cab79-f7e3-4dca-85d7-7763a82cdce3/LicensesAndApps" ContentHash="PmA0ohrrAUyYyNBCaSXW4g" DesignTimeRectangle="1121, 973, 128, 21" ElementType="Text" FriendlyName="'Save changes'" FullSelectorArgument="&lt;webctrl id='id__2261' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='id__2261' tag='SPAN' type='' aaname='Save changes' check:text='Save changes' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Microsoft 365 admin center - Home' /&gt;" SearchSteps="FuzzySelector, Image" Text="Save changes" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="1091, 960, 188, 48" ElementType="Button" FriendlyName="'Save changes'" FullSelectorArgument="&lt;webctrl aaname='Save changes' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Save changes' tag='BUTTON' type='button' check:text='Save changes' /&gt;" SearchSteps="FuzzySelector, Image" Text="Save changes" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='button' /&gt;">
+        <imageRef attrName="ImageBase64" xmlns="">1q1v4GEzuMkaQaoKxAMvMrA</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0L_14P7q-L0mgfsyEOtDYYQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="2627ab5649389156f4b11a0a354e37ab.png" xmlns="">0A6DlFqeoukWpiOMoggwX2w</imageRef>
+</TargetAnchorable>

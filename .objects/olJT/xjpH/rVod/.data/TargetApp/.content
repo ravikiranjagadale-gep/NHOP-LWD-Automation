@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp BrowserType="Chrome" ContentHash="GuotTD-WVUCnmq01GobEBw" Selector="&lt;html app='chrome.exe' title='Microsoft 365 admin center - Active users'/&gt;" Url="https://admin.microsoft.com/?auth_upn=Allen_Richy%40gep.com&amp;source=applauncher#/users" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0MP1p4guXFkCfwAncH_GCaA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="72646421bfd6feb2906e3f23eab98472.png" xmlns="">0yqGE7YW9c02o2s7ztW1tEQ</imageRef>
+</TargetApp>

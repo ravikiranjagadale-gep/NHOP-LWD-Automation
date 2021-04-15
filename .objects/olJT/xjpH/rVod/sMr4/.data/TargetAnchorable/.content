@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://admin.microsoft.com/Adminportal/Home?source=applauncher#/users/:/UserDetails/9d1cab79-f7e3-4dca-85d7-7763a82cdce3/LicensesAndApps" ContentHash="jhjQAy1KlkezMhUJ3mUyIg" DesignTimeRectangle="1108, 686, 21, 21" FriendlyName="''" FullSelectorArgument="&lt;webctrl idx='17' parentid='collapsibleContent2' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='collapsibleContent2' tag='I' aaname='' check:text='' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Microsoft 365 admin center - Home' /&gt;" SearchSteps="FuzzySelector, Image" Text="" TextMethod="AttributeText" TextSelector="&lt;webctrl type='' tag='I' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="1151, 682, 609, 30" ElementType="Text" FriendlyName="'Tata Communications'" FullSelectorArgument="&lt;webctrl aaname='Tata Communications Connections for Microsoft Teams for E5' parentid='collapsibleContent2' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Tata Communications Connections for Microsoft Teams for E5' parentid='collapsibleContent2' tag='DIV' type='' check:text='Tata Communications Connections for Microsoft Teams for E5' /&gt;" SearchSteps="FuzzySelector, Image" Text="Tata Communications Connections for Microsoft Teams for E5" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='DIV' type='' /&gt;">
+        <imageRef attrName="ImageBase64" xmlns="">10CdYZVNSjBUCbe-NG140MbA</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">09XHlQ0j8Ika-_IzkDguKig</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="d23c22409aa3e9a90e2c89dfe2f2f0ec.png" xmlns="">0izQiovmAwk-cW_2BEowPaQ</imageRef>
+</TargetAnchorable>

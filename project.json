@@ -4,6 +4,8 @@
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.ActiveDirectoryDomainServices.Activities": "[1.2.0]",
+    "UiPath.Azure.Activities": "[1.1.6]",
+    "UiPath.AzureActiveDirectory.Activities": "[1.1.7]",
     "UiPath.Database.Activities": "[1.4.0]",
     "UiPath.Excel.Activities": "[2.9.5]",
     "UiPath.Mail.Activities": "[1.9.5]",

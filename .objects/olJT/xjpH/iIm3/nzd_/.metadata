@@ -1,0 +1,13 @@
+﻿{
+  "Id": "nzd_ZatCQkmB7_K4loHnUQ",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/nzd_ZatCQkmB7_K4loHnUQ",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/iIm3v8jDSUijawVQr83V9w",
+  "Name": "Close",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-15T08:52:49.3533107Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-15T08:52:49.3533107Z"
+}

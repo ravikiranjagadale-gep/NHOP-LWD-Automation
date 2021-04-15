@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://account.activedirectory.windowsazure.com/UserManagement/MultifactorVerification.aspx?BrandContextID=O365#" ContentHash="VkwtYjfoIU-QabF37dLeXw" DesignTimeRectangle="1145, 825, 59, 24" ElementType="Text" FriendlyName="'Disable'" FullSelectorArgument="&lt;webctrl id='DisableMultifactorVerification' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='DisableMultifactorVerification' tag='A' type='' aaname='Disable' check:text='Disable' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Multi-factor authentication' /&gt;" SearchSteps="FuzzySelector, Image" Text="Disable" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='A' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0rsaXwvQuukugme7VjMzGwQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="f864dd3a640745818343bd5ec0b03117.png" xmlns="">0wpgHfHXdxkShhqzCcKxI9A</imageRef>
+</TargetAnchorable>
