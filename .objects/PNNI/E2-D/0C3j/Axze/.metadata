@@ -1,0 +1,13 @@
+﻿{
+  "Id": "AxzetfASmEWEads_AqSYyA",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/AxzetfASmEWEads_AqSYyA",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/0C3joEZtcUqbvP8R5Lx5KA",
+  "Name": "Assign_LWD",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-19T11:29:18.4381308Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-19T11:29:18.4381308Z"
+}

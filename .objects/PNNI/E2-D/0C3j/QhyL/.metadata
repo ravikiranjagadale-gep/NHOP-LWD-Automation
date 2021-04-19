@@ -1,0 +1,13 @@
+﻿{
+  "Id": "QhyLiXzgeE6q9WPwHW5h3A",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/QhyLiXzgeE6q9WPwHW5h3A",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/0C3joEZtcUqbvP8R5Lx5KA",
+  "Name": "Ticket_Open_LWD",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-17T11:03:35.2534308Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-17T11:03:35.2534308Z"
+}

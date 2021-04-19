@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Log_in_Manageengine_LWD_Ver7" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1242,841" sap2010:WorkflowViewState.IdRef="Log_in_Manageengine_LWD_Ver7_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:swc="clr-namespace:System.Web.Caching;assembly=System.Web" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Log_in_Manageengine_LWD_Ver7" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1488,827" sap2010:WorkflowViewState.IdRef="Log_in_Manageengine_LWD_Ver7_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:swc="clr-namespace:System.Web.Caching;assembly=System.Web" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="40">
       <x:String>System.Activities</x:String>
@@ -44,7 +44,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="66">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -78,6 +78,7 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Log_in_Manageengine_LWD_Ver7" sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -112,6 +113,8 @@
       <Variable x:TypeArguments="x:String" Name="Path_of_log_file" />
       <Variable x:TypeArguments="x:String" Name="Next_date" />
       <Variable x:TypeArguments="x:String" Name="To_and_CC" />
+      <Variable x:TypeArguments="x:String" Name="Cc" />
+      <Variable x:TypeArguments="x:String" Name="Sender" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -131,32 +134,32 @@
           <av:Size x:Key="ShapeSize">200,108</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence sap2010:Annotation.AnnotationText="It wil read te LWD ticket fom Manageengie" DisplayName="Sequence LWD Ticket reading process" sap:VirtualizedContainerService.HintSize="2409,19328" sap2010:WorkflowViewState.IdRef="Sequence_18">
+      <Sequence sap2010:Annotation.AnnotationText="It wil read te LWD ticket fom Manageengie" DisplayName="Sequence LWD Ticket reading process" sap:VirtualizedContainerService.HintSize="2409,20377" sap2010:WorkflowViewState.IdRef="Sequence_18">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application/Browser foe Open GEP Manageengine" sap:VirtualizedContainerService.HintSize="2367,19205" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" Version="V1">
+        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application/Browser foe Open GEP Manageengine" sap:VirtualizedContainerService.HintSize="2367,20254" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" Version="V1">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence sap:VirtualizedContainerService.HintSize="2333,18989" sap2010:WorkflowViewState.IdRef="Sequence_54">
+              <Sequence sap:VirtualizedContainerService.HintSize="2333,20038" sap2010:WorkflowViewState.IdRef="Sequence_54">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence sap:VirtualizedContainerService.HintSize="2291,18895" sap2010:WorkflowViewState.IdRef="Sequence_83">
+                <Sequence sap:VirtualizedContainerService.HintSize="2291,19944" sap2010:WorkflowViewState.IdRef="Sequence_83">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2249,18801" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2249,19850" sap2010:WorkflowViewState.IdRef="Sequence_82">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -372,30 +375,101 @@
                     </If>
                     <ui:AppendLine DisplayName="Append Line Log-IN Manage engine" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="2207,132" sap2010:WorkflowViewState.IdRef="AppendLine_50" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Log-IN Manage engine&quot;]" UseDefaultEncoding="False" />
                     <Delay Duration="00:00:15" sap:VirtualizedContainerService.HintSize="2207,22" sap2010:WorkflowViewState.IdRef="Delay_36" />
-                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="2207,681" sap2010:WorkflowViewState.IdRef="TryCatch_21">
+                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="2207,1329" sap2010:WorkflowViewState.IdRef="TryCatch_33">
                       <TryCatch.Try>
-                        <Sequence sap:VirtualizedContainerService.HintSize="376,432" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                        <Sequence sap:VirtualizedContainerService.HintSize="901,1080" sap2010:WorkflowViewState.IdRef="Sequence_94">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:Boolean" Name="Drop_Down" />
+                          </Sequence.Variables>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick ClickType="Single" DisplayName="Click on 'Down arrow'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_34" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left">
-                            <uix:NClick.Target>
-                              <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests" ContentHash="pLUlhy-vcE-U1eNiReKY6A" DesignTimeRectangle="320, 166, 18, 14" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span&amp;gt;span&amp;gt;a&amp;gt;span' idx='2' isleaf='1' parentid='container-td' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span&amp;gt;span&amp;gt;a&amp;gt;span' type='' isleaf='1' parentid='container-td' tag='SPAN' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAASCAYAAABfJS4tAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACKSURBVDhPY/hPIzBqMByMGgwHKAa/efvu/83bd6E87IAYNSCAYvDmHbv/pxeW/1+wbBVUBBU8evL0f0FlPVgNIYBiMLJGdMOR5Zq7J0BFcQOMMMZmOLqhX799A4vjA1gjD9mgaXMXkmwoCGA1GASQDSfVUBDAaTAIwAwn1VAQwGswJWDUYCj4/x8Az6/6zfI+XwsAAAAASUVORK5CYII=" InformativeScreenshot="146a08a99820beaac620599d1a725a1b.png" Reference="Esc2uwRRdkGtd0UerjX7gQ/Y1xLzVLOG06-LY_Ge0mAKg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
-                                <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                    <uix:Target DesignTimeRectangle="362, 168, 18, 18" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl idx='1' parentid='container-td' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='container-td' tag='svg' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADzSURBVEhL7ZMtD8IwEIb5c2jw4MHj0QQzN9wSBLg5DAkOHIYgCQZFcPsCxueRd2mXrbtt2ciC4Umatc3uaXu91qgiqhf3TY/qA6tw0xcXYYgTil3/TS3dptXuLmaymW9v1DGcII4jlorN4UENzUr9WXK0XtTUbNqfnmImSSLH4+WVelNPjHiwU3PtixEPe3lZgcHCE1eM0mHFOCpSoh6VSxUWQlNhxUC9HHzbIydxuYXFACUoU4Lg4ewc9KOUEkeD1D5X02iSUuIoafO/FaM6uobLlmBpMYQosbwHoZIrxmNAXRclU1xGKMkUf8NfHFKRmOgDK1dBoMnGdU4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
-                                  </scg:List>
-                                </uix:TargetAnchorable.Anchors>
-                              </uix:TargetAnchorable>
-                            </uix:NClick.Target>
-                          </uix:NClick>
-                          <ui:AppendLine DisplayName="Append Line Ticket search start for LWD" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_31" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Ticket search start for LWD&quot;]" UseDefaultEncoding="False" />
+                          <ui:UiElementExists DisplayName="Element Exists 'Search drop Down '" Exists="[Drop_Down]" sap:VirtualizedContainerService.HintSize="859,106" sap2010:WorkflowViewState.IdRef="UiElementExists_13">
+                            <ui:UiElementExists.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3a41f2b8-9a0c-45c8-bb45-7a700e6337e2" InformativeScreenshot="2b2c4eeab76b38f299203ec0a24c1357" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span&amp;gt;span&amp;gt;a&amp;gt;span' idx='2' isleaf='1' parentid='container-td' tag='SPAN' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:UiElementExists.Target>
+                          </ui:UiElementExists>
+                          <If Condition="[Drop_Down = True]" sap:VirtualizedContainerService.HintSize="859,840" sap2010:WorkflowViewState.IdRef="If_19">
+                            <If.Then>
+                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,681" sap2010:WorkflowViewState.IdRef="TryCatch_34">
+                                <TryCatch.Try>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,432" sap2010:WorkflowViewState.IdRef="Sequence_95">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NClick ClickType="Single" DisplayName="Click on 'Down arrow'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_45" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests" ContentHash="pLUlhy-vcE-U1eNiReKY6A" DesignTimeRectangle="320, 166, 18, 14" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span&amp;gt;span&amp;gt;a&amp;gt;span' idx='2' isleaf='1' parentid='container-td' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span&amp;gt;span&amp;gt;a&amp;gt;span' type='' isleaf='1' parentid='container-td' tag='SPAN' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAASCAYAAABfJS4tAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACKSURBVDhPY/hPIzBqMByMGgwHKAa/efvu/83bd6E87IAYNSCAYvDmHbv/pxeW/1+wbBVUBBU8evL0f0FlPVgNIYBiMLJGdMOR5Zq7J0BFcQOMMMZmOLqhX799A4vjA1gjD9mgaXMXkmwoCGA1GASQDSfVUBDAaTAIwAwn1VAQwGswJWDUYCj4/x8Az6/6zfI+XwsAAAAASUVORK5CYII=" InformativeScreenshot="146a08a99820beaac620599d1a725a1b.png" Reference="Esc2uwRRdkGtd0UerjX7gQ/Y1xLzVLOG06-LY_Ge0mAKg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="362, 168, 18, 18" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl idx='1' parentid='container-td' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='container-td' tag='svg' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADzSURBVEhL7ZMtD8IwEIb5c2jw4MHj0QQzN9wSBLg5DAkOHIYgCQZFcPsCxueRd2mXrbtt2ciC4Umatc3uaXu91qgiqhf3TY/qA6tw0xcXYYgTil3/TS3dptXuLmaymW9v1DGcII4jlorN4UENzUr9WXK0XtTUbNqfnmImSSLH4+WVelNPjHiwU3PtixEPe3lZgcHCE1eM0mHFOCpSoh6VSxUWQlNhxUC9HHzbIydxuYXFACUoU4Lg4ewc9KOUEkeD1D5X02iSUuIoafO/FaM6uobLlmBpMYQosbwHoZIrxmNAXRclU1xGKMkUf8NfHFKRmOgDK1dBoMnGdU4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <ui:AppendLine DisplayName="Append Line Ticket search start for LWD" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_75" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Ticket search start for LWD&quot;]" UseDefaultEncoding="False" />
+                                  </Sequence>
+                                </TryCatch.Try>
+                                <TryCatch.Catches>
+                                  <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_51">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ActivityAction x:TypeArguments="ui:SelectorNotFoundException">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exception" />
+                                      </ActivityAction.Argument>
+                                      <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_76" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Ticket search failed for LWD&quot;]" UseDefaultEncoding="False" />
+                                    </ActivityAction>
+                                  </Catch>
+                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_52">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ActivityAction x:TypeArguments="s:Exception">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                      </ActivityAction.Argument>
+                                      <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_77" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Ticket search failed for LWD&quot;]" UseDefaultEncoding="False" />
+                                    </ActivityAction>
+                                  </Catch>
+                                </TryCatch.Catches>
+                              </TryCatch>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,288" sap2010:WorkflowViewState.IdRef="Sequence_93">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_72" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Ticket search failed for LWD&quot;]" UseDefaultEncoding="False" />
+                                <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="Browser unable to load" />
+                              </Sequence>
+                            </If.Else>
+                          </If>
                         </Sequence>
                       </TryCatch.Try>
                       <TryCatch.Catches>
-                        <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_22">
+                        <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="905,21" sap2010:WorkflowViewState.IdRef="Catch`1_49">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -406,10 +480,10 @@
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exception" />
                             </ActivityAction.Argument>
-                            <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_32" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Ticket search failed for LWD&quot;]" UseDefaultEncoding="False" />
+                            <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_73" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Ticket search failed for NHOP&quot;]" UseDefaultEncoding="False" />
                           </ActivityAction>
                         </Catch>
-                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_23">
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="905,21" sap2010:WorkflowViewState.IdRef="Catch`1_50">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -420,7 +494,7 @@
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                             </ActivityAction.Argument>
-                            <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_33" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Ticket search failed for LWD&quot;]" UseDefaultEncoding="False" />
+                            <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_74" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Ticket search failed for NHOP&quot;]" UseDefaultEncoding="False" />
                           </ActivityAction>
                         </Catch>
                       </TryCatch.Catches>
@@ -446,7 +520,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NExtractData ContinueOnError="True" DataTable="[LWD_list_data]" DisplayName="Extract Table Data 'IDSubject Requester'" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest' /&gt;" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NExtractData_5" InteractionMode="WindowMessages" MaximumResults="2">
+                          <uix:NExtractData ContinueOnError="True" DataTable="[LWD_list_data]" DisplayName="Extract Table Data 'IDSubject Requester'" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest' /&gt;" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NExtractData_5" InteractionMode="WindowMessages" MaximumResults="5">
                             <uix:NExtractData.NextLink>
                               <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests" ContentHash="YClyt8H9FkGJbi4Wb7-Hjw" DesignTimeRectangle="1840, 201, 20, 20" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;a&amp;gt;div' isleaf='1' parentid='container-td' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;a&amp;gt;div' isleaf='1' parentid='container-td' tag='DIV' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACbSURBVEhL7dGhCoRQFIRh39bqJjFtMC6CYYvPYRHshmVfQMQi+ghrPTJyo+CZAWGDPxi8Yb5wIru4GzjtP4C6aW2al/DH5QKS7Ll/CuICMKwi7huoCHVkBaEAxCI0gBhEAlA/jBY/UstfZXg5TgJ+67oPA+g+3/B6HA0w44gC2HHkBpRx5ALUceQC1HHkAop3JY0j6shKN3CS2QYdhMPRnbYnaAAAAABJRU5ErkJggg==" InformativeScreenshot="acb028ed9a476d5f139c05f5c7529c88.png" Reference="Esc2uwRRdkGtd0UerjX7gQ/G6GU07zs4E2JtbX7Usxh3A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="FuzzySelector, Image" />
                             </uix:NExtractData.NextLink>
@@ -488,37 +562,6 @@
                         </Catch>
                       </TryCatch.Catches>
                     </TryCatch>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="2207,336" sap2010:WorkflowViewState.IdRef="CommentOut_3">
-                      <ui:CommentOut.Body>
-                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,258" sap2010:WorkflowViewState.IdRef="Sequence_61">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <uix:NExtractData ContinueOnError="True" DataTable="[LWD_list_data]" DisplayName="Extract Table Data 'DIV'" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest' /&gt;" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NExtractData_6" MaximumResults="20">
-                            <uix:NExtractData.NextLink>
-                              <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests" ContentHash="tXo3YlFdtUmjemTXZyke2g" DesignTimeRectangle="1840, 201, 20, 20" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;a&amp;gt;div' isleaf='1' parentid='container-td' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;a&amp;gt;div' isleaf='1' parentid='container-td' tag='DIV' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACbSURBVEhL7dGhCoRQFIRh39bqJjFtMC6CYYvPYRHshmVfQMQi+ghrPTJyo+CZAWGDPxi8Yb5wIru4GzjtP4C6aW2al/DH5QKS7Ll/CuICMKwi7huoCHVkBaEAxCI0gBhEAlA/jBY/UstfZXg5TgJ+67oPA+g+3/B6HA0w44gC2HHkBpRx5ALUceQC1HHkAop3JY0j6shKN3CS2QYdhMPRnbYnaAAAAABJRU5ErkJggg==" InformativeScreenshot="9c56beb5c4b941f16669389cb45b2f63.png" Reference="Esc2uwRRdkGtd0UerjX7gQ/G6GU07zs4E2JtbX7Usxh3A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="FuzzySelector, Image">
-                                <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                    <uix:Target DesignTimeRectangle="1863, 201, 20, 20" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' isleaf='1' parentid='container-td' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' isleaf='1' parentid='container-td' tag='DIV' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACqSURBVEhLY/hPYzBqAUFAfwtWrd/8v3fqTLLw4yfPoKYgAIYFIIV7Dx75f/POXZJwS89EMI0OsFqATSEhgEsfXgt+3bnz/9uuXXgxDAxOC0gBZFnw9ue//7c//8GLYYAsC069/f1/yq3veDEMkGUBKWBwWrDg1tL/jtt88GIYGJw+IAWQZAGoXAHRpODCqgbiLACViCCF5OBv3xDJFgYwLKA2GLWAAPj/HwD+JH3PdSdLUAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
-                                  </scg:List>
-                                </uix:TargetAnchorable.Anchors>
-                              </uix:TargetAnchorable>
-                            </uix:NExtractData.NextLink>
-                            <uix:NExtractData.Target>
-                              <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests" ContentHash="tXo3YlFdtUmjemTXZyke2g" DesignTimeRectangle="1840, 201, 20, 20" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;a&amp;gt;div' isleaf='1' parentid='container-td' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;a&amp;gt;div' isleaf='1' parentid='container-td' tag='DIV' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACbSURBVEhL7dGhCoRQFIRh39bqJjFtMC6CYYvPYRHshmVfQMQi+ghrPTJyo+CZAWGDPxi8Yb5wIru4GzjtP4C6aW2al/DH5QKS7Ll/CuICMKwi7huoCHVkBaEAxCI0gBhEAlA/jBY/UstfZXg5TgJ+67oPA+g+3/B6HA0w44gC2HHkBpRx5ALUceQC1HHkAop3JY0j6shKN3CS2QYdhMPRnbYnaAAAAABJRU5ErkJggg==" InformativeScreenshot="9c56beb5c4b941f16669389cb45b2f63.png" Reference="Esc2uwRRdkGtd0UerjX7gQ/G6GU07zs4E2JtbX7Usxh3A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="FuzzySelector, Image">
-                                <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                    <uix:Target DesignTimeRectangle="1863, 201, 20, 20" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' isleaf='1' parentid='container-td' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' isleaf='1' parentid='container-td' tag='DIV' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACqSURBVEhLY/hPYzBqAUFAfwtWrd/8v3fqTLLw4yfPoKYgAIYFIIV7Dx75f/POXZJwS89EMI0OsFqATSEhgEsfXgt+3bnz/9uuXXgxDAxOC0gBZFnw9ue//7c//8GLYYAsC069/f1/yq3veDEMkGUBKWBwWrDg1tL/jtt88GIYGJw+IAWQZAGoXAHRpODCqgbiLACViCCF5OBv3xDJFgYwLKA2GLWAAPj/HwD+JH3PdSdLUAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
-                                  </scg:List>
-                                </uix:TargetAnchorable.Anchors>
-                              </uix:TargetAnchorable>
-                            </uix:NExtractData.Target>
-                          </uix:NExtractData>
-                        </Sequence>
-                      </ui:CommentOut.Body>
-                    </ui:CommentOut>
                     <Assign sap:VirtualizedContainerService.HintSize="2207,61" sap2010:WorkflowViewState.IdRef="Assign_15">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Int32">[flag]</OutArgument>
@@ -527,13 +570,13 @@
                         <InArgument x:TypeArguments="x:Int32">1</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[LWD_list_data]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="2207,11317" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[LWD_list_data]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="2207,12107" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                       <ui:ForEachRow.Body>
                         <ActivityAction x:TypeArguments="sd:DataRow">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="2157,11168" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="2157,11958" sap2010:WorkflowViewState.IdRef="Sequence_81">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -559,9 +602,9 @@
                                 <InArgument x:TypeArguments="x:String">[Regex_out_put(0).Value]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <If Condition="[Regex_OP =True]" sap:VirtualizedContainerService.HintSize="2115,10567" sap2010:WorkflowViewState.IdRef="If_18">
+                            <If Condition="[Regex_OP =True]" sap:VirtualizedContainerService.HintSize="2115,11357" sap2010:WorkflowViewState.IdRef="If_18">
                               <If.Then>
-                                <Sequence sap:VirtualizedContainerService.HintSize="1694,10408" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                                <Sequence sap:VirtualizedContainerService.HintSize="1694,11198" sap2010:WorkflowViewState.IdRef="Sequence_80">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -704,15 +747,9 @@
                                           </uix:NClick.Target>
                                         </uix:NClick>
                                         <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_45" />
-                                        <uix:NClick ClickType="Single" DisplayName="Click 'Description'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_40" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left">
+                                        <uix:NClick ClickType="Single" DisplayName="Click 'Ticket_Open_LWD'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_46" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left">
                                           <uix:NClick.Target>
-                                            <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024622175/details?selectTab=conversationsDetails" ContentHash="7DlF5T0Ny0iAwQ5ga5KPSQ" DesignTimeRectangle="140, 535, 40, 40" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl isleaf='1' parentid='conList1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' parentid='conList1' tag='DIV' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM3SURBVFhH5ZnrTxNBFMX9/7/7QI2UApViC1RRQANoQCCiYiCKiA9KgQ8Y3uGV7Mxxz26nbJfb7ez2lcaTnKS0c3d+M3tv5265gxapWNwuv2qu/j9gxwEuL4GzM98nJ8DxsW++Nu9zDMc2qkTASgEXF9VwtmYMY3mNJIoFrDVwfi6DJDGvxWvGkTXw9bU8aTPMa9vKCriZu1rLnMNGkcC8Xaen8gStMOeqlyKRwO2ENeacUaoJ3I40qOWo9BCBW1lgtq5ViLeAmUPSBTphKZ9vAXcyFcLmARNWFTBPHymwkw6fiFXAXJEU1EmHd7kK2KY3KP4BFt8pzEwqTE8kM2PnZxW2fmscHsrzGJMpqAowOykpIOydErA0p5Drd5C656D3bjwzZqjXwYK76FJR4+hInifoYJdXAWb7Jw0Oe31NY3tLY3lBIz+g0HdfBpNM2GdpF/atD/t1tf4O02QzqgCzZ5UGh13IKnz5qL3U+PBeYTTjIN0jAwadfuBgJKPcu8NYjbUVYGRQ4e++PE/QZDOKDTzw0EE25eDTkvZ2afWzxvNhhf4eJYLShB0rL5QpxZhsn//ZflJg22acwJwom+Ju+YWztqIxNkToalCau8+dXVlmKgHLiwrDfTeLswEOFl4FWBoo2QDTBJybVtgtafzc0Jgq3N7l8ZzCxjeNvR3tFVp4UTbAtFFDwDT/np1SXl4yRSYLN59NjCr82oT7PryFhWPpxMBxU8KYlT/4yHFBFX6s+7d9fkZ7Zrpsftd481Ih81j+GkycEnGKLjwpzffH88oD3Nv1vbkBvH7h7qy7ICmGTlx0jQLTBpq3n37lpsSgu7PSWOPEwLYHRxSwMXeUtjkJbYCvrsqQrirAtkezDXAc2wCLRzNlU3jtBg4WHFUFbNNe5vrj9Q+1zHR5+sSpezRHtpc2DTxbS55cPJ4bcd7tI1iYBwfyPMaRDTzVVY9IVNc9hFJd9Zhv1FU/pBh11U9VFHOondCcS8rboCKBjdqRHlFpEJQVMNXKQqxVYJKsgSnermbuNr9n66VAWLGAjXj6cDLbpj9oxjA2fILZKhFwUOykbP7txRYx2HUlVcPA7VaXAQP/AMG72LklkoCoAAAAAElFTkSuQmCC" InformativeScreenshot="d796eb5eabc80e15abdb296c3e092c84.png" Reference="Esc2uwRRdkGtd0UerjX7gQ/fqPV8_5dvUypVC-y981OwA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
-                                              <uix:TargetAnchorable.Anchors>
-                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                  <uix:Target DesignTimeRectangle="122, 494, 83, 30" ElementType="Text" FriendlyName="'Description'" FullSelectorArgument="&lt;webctrl aaname='Description' parentid='threadviewtable' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Description' parentid='threadviewtable' tag='DIV' type='' check:text='Description' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFcAAAAiCAYAAAAqJ0UeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOQSURBVGhD7Vpda6tAEL3////Yl4IFXyQvYmvFF5H2SlgQEUQEscLcmdnVTJJNmzTm3vSyBw5kP8bdOTvObmR/wZ3j/f23+fXz4MS9IRZxx3GE19dX8H0fPM9zvIBPT0+sHWkosYj7/PxsNXQ8n6ShxCLu4+Oj1cDxfNJbL8Hifnx8WDs7XsaHh4e91LBErq2z4+WUcOKuTAkn7sqUcOKuTAkn7sqUcOKuTIkfKq4PybaCMra1XcBNAUrlENravkmJr8UtO9Njh2kcoN0mENj6/xUmUONxclCRpe0Uc2imDkpZR75NLRSy7kpKnCfuWEM6l4MNZGUDw0TVKfiy7x3TT2oY4EDcG1DicnEN/bSGESZosl3dpqihR9E1Rugwunfib+CtJYsZIwxVtm8rvnuMTc71KYYoLWJa9dqW55Jy5Hbl/OwSZetgm1W78ace6mKj24sGRlM/TROyhyrB+iPfKN10S99jH2icXo+zzHWEvtoFmcS3xfW8EFRPTakuxxVGxgh1FnA5SBROY4K20F/Zwi11biALtH2wySBNzBc4tp3QkZhTjR/GEEe6jcTF/5QwdluIja1nFReB88xDsvMhQpEmfGo152UOBktaEL75RcvCq8T4EG+hQ6H7rVmkeZyhgcLML8hw4WicSD9D4gpxPcC5kIf8m0SYTLTNJNO5LuSV2IkrmTXoAT7HlmJYXMqLvqy3i9uVZrGYevGHyuTlL8UNgdd/DhZDnvdQQcRl2zj7c5FYTVzqZoVp9/wEFIUBxVOrII91dMy2h07NZHHnZyy0iYtvTSr7eJCbRePyl+IePtNwz842zk3EjaAaqCnh8mcCSQZxDqqlJIAiK93fiXtQ7+fNXk7jV7tXZ58Z/TcMe/PcWYSTaeEscSk3ytc15sU/Py341kXW6ayGhMs3Fpc2m1zREHoiiyBmU+oxGkPOjwFskhwy60E/gIQ9VzqXseO4+ZV6Q+PjXhJz30vEpXme3NAis+GmYgEOfaMNDbfhow1NyQ1tbXEPMI0dVEV0FGlBpqAj1Wfgn43KHNUijACc54JpbOHN7LjE46NYwfWXpIVWiaOgPIoxQ8hrXFAGzuvEUSzCN2rvKIbBsvNzbXF/BG1O/xtKOHFXpoQTd2VK/Cfi3g8lnLgrU8KJuzIlFnHdNabrab0UQnDXma7nyetMdFPk5eWFL5XZDB1PkyL204t49wp3P/eG+LniAvwBWXuk4Po2mVsAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" Text="Description" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='DIV' type='' /&gt;" />
-                                                </scg:List>
-                                              </uix:TargetAnchorable.Anchors>
-                                            </uix:TargetAnchorable>
+                                            <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024308257/details?selectTab=conversationsDetails" ContentHash="jrYgqNbdhkCicI4dhBTrEQ" DesignTimeRectangle="116, 454, 32, 32" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl isleaf='1' parentid='conList1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' parentid='conList1' tag='DIV' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKVSURBVFhH1ZfdTxNBFMX9/9+NnxERhKoIRiVGolWDPmgIVkVig4AtLYn4wkeAhOzc4xzqLLvbuzO7dDepJzlpu3tn5rdz78xsr6AidTrdf99G0/8PJAKcnQHHx8DREXBwAOzvX5i/eZ33Gcf4MioMZMxgkOTgRc12bF9EQSA+4cmJPlBZn56GZ8wLxMaHh3rnlzX780HlAkWR3mFVZv+aVCA+gdZJ1dZmagiojjTlWUvfEFBVBVzULPSkUkBcmlqjup3cElJAl91nRjXHdYqBQoW891uwvSnYaNMo5c0NwZ89vV9nV0sxELd5LdC5twMsvzaYuhFh4mpxT16L0HxhsNPR+3Xm+FQMFEpXe13Q2Ra8bxrcu64PnjXj+BC9rmD9m6j9Oru0xUA8ELVA55dPDd4uCfo9oLVi8OCuUSGcZ+9EWP0o2O0LlpuCxcdG7deZ41MxUPbUzvrZo0G6Xi1y+gXt77BQOkxjwuDrqqBr45iu6ZsG8zOR2q8z9yQqBtKCkiYQB2NNzE1F6P4S/LQF+3wuPVMLs5FNL87vL1gIxvN6CIimSgM5N2xKuOo4W+7ek4axkLbWtgTz9y9i6dJARVKWHIBmatZag2L/skIQ4Mca8HAyHUeXTlmoqDUgmnX0+ZNgy+41LQuVnRnnENBQUYeWfR4QzeU9c9t+evaoENDQsg9tjD6gIg4BDW2MoaOjbiCnGIjype3DG8H0LX2wkLn03y3lb4wuXVQKyPf6wcN1t4/znbq8/Ydr7usHxRcmrVFd9r6gUWP3CkuFCrwqZ2EoFYgaq79BTnWkT0tTUl4gio2rKvSR/0onxaUZOl7yzHbJpe1TYSAnPiG3eQ7CAzGbUv7mdd5nXGhGsioNVLfGDAj4C8xIUZKyDusLAAAAAElFTkSuQmCC" InformativeScreenshot="d13f908a665572199fd0dbac0ac017f7.png" Reference="Esc2uwRRdkGtd0UerjX7gQ/QhyLiXzgeE6q9WPwHW5h3A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="FuzzySelector, Image" />
                                           </uix:NClick.Target>
                                         </uix:NClick>
                                       </Sequence>
@@ -754,7 +791,7 @@
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <uix:NGetText DisplayName="Get Text 'Employee Full Name'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_45">
+                                                    <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Employee Full Name'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_45">
                                                       <uix:NGetText.Target>
                                                         <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024315091/details?selectTab=conversationsDetails" DesignTimeRectangle="196, 676, 1309, 15" FriendlyName="'Employee Full'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' idx='6' parentid='notiDesc_35364000024315091' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' type='' parentid='notiDesc_35364000024315091' tag='DIV' aaname=': Partho Chatterjee' /&gt;" ImageBase64="" InformativeScreenshot="81fd5464b816f2f1aafeeb583b056a62.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="Employee Full Name: Partho Chatterjee" TextMethod="AttributeText" TextSelector="&lt;webctrl type='' tag='DIV' /&gt;">
                                                           <uix:TargetAnchorable.Anchors>
@@ -768,7 +805,7 @@
                                                         <OutArgument x:TypeArguments="x:String">[Emp_name]</OutArgument>
                                                       </uix:NGetText.Text>
                                                     </uix:NGetText>
-                                                    <uix:NGetText DisplayName="Get Text 'Employee GEP ID:'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_46">
+                                                    <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Employee GEP ID:'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_46">
                                                       <uix:NGetText.Target>
                                                         <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024544567/details?selectTab=conversationsDetails" DesignTimeRectangle="196, 579, 1309, 15" FriendlyName="'Employee GEP ID: G2676'" FullSelectorArgument="&lt;webctrl aaname=' G2676' css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' parentid='notiDesc_35364000024544567' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' G2676' css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' parentid='notiDesc_35364000024544567' tag='DIV' type='' /&gt;" ImageBase64="" InformativeScreenshot="1529e289aa4d8847bc0af093e7c46643.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="Employee GEP ID: G2676" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='DIV' type='' /&gt;">
                                                           <uix:TargetAnchorable.Anchors>
@@ -782,7 +819,7 @@
                                                         <OutArgument x:TypeArguments="x:String">[Employee_GEP_Id]</OutArgument>
                                                       </uix:NGetText.Text>
                                                     </uix:NGetText>
-                                                    <uix:NGetText DisplayName="Get Text 'Job Title:'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_47">
+                                                    <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Job Title:'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_47">
                                                       <uix:NGetText.Target>
                                                         <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024544567/details?selectTab=conversationsDetails" DesignTimeRectangle="196, 624, 1309, 15" FriendlyName="'Job Title: Senior'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' idx='8' parentid='notiDesc_35364000024544567' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' type='' parentid='notiDesc_35364000024544567' tag='DIV' aaname=' Senior Consultant - Solution Design, Services' /&gt;" ImageBase64="" InformativeScreenshot="dfb0b069aab15139aecbd2f741665081.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="Job Title: Senior Consultant - Solution Design, Services" TextMethod="AttributeText" TextSelector="&lt;webctrl type='' tag='DIV' /&gt;">
                                                           <uix:TargetAnchorable.Anchors>
@@ -796,7 +833,7 @@
                                                         <OutArgument x:TypeArguments="x:String">[Job_Title]</OutArgument>
                                                       </uix:NGetText.Text>
                                                     </uix:NGetText>
-                                                    <uix:NGetText DisplayName="Get Text 'Function'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_48">
+                                                    <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Function'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_48">
                                                       <uix:NGetText.Target>
                                                         <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024544567/details?selectTab=conversationsDetails" DesignTimeRectangle="196, 609, 1309, 15" FriendlyName="'Function: Sales and'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' idx='7' parentid='notiDesc_35364000024544567' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' type='' parentid='notiDesc_35364000024544567' tag='DIV' aaname=': Sales and Marketing - Sol Design - Services' /&gt;" ImageBase64="" InformativeScreenshot="68a649f8af8c479dc6a5ae708502a837.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="Function: Sales and Marketing - Sol Design - Services" TextMethod="AttributeText" TextSelector="&lt;webctrl type='' tag='DIV' /&gt;">
                                                           <uix:TargetAnchorable.Anchors>
@@ -810,7 +847,7 @@
                                                         <OutArgument x:TypeArguments="x:String">[Function_emp]</OutArgument>
                                                       </uix:NGetText.Text>
                                                     </uix:NGetText>
-                                                    <uix:NGetText DisplayName="Get Text 'Office Location'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_49">
+                                                    <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Office Location'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_49">
                                                       <uix:NGetText.Target>
                                                         <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024544567/details?selectTab=conversationsDetails" DesignTimeRectangle="196, 684, 1309, 15" FriendlyName="'Office Location:India'" FullSelectorArgument="&lt;webctrl aaname=':India - Mumbai' css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' parentid='notiDesc_35364000024544567' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=':India - Mumbai' css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' parentid='notiDesc_35364000024544567' tag='DIV' type='' /&gt;" ImageBase64="" InformativeScreenshot="651af649dada0d863fe6f126be9b7acf.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="Office Location:India - Mumbai" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='DIV' type='' /&gt;">
                                                           <uix:TargetAnchorable.Anchors>
@@ -824,7 +861,7 @@
                                                         <OutArgument x:TypeArguments="x:String">[Office_location]</OutArgument>
                                                       </uix:NGetText.Text>
                                                     </uix:NGetText>
-                                                    <uix:NGetText DisplayName="Get Text 'Status'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_50">
+                                                    <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Status'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_50">
                                                       <uix:NGetText.Target>
                                                         <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024429954/details" DesignTimeRectangle="1713, 232, 42, 18" ElementType="Text" FriendlyName="'Closed'" FullSelectorArgument="&lt;webctrl parentid='rhs_inner_panel' tag='SPAN' idx='5' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='rhs_inner_panel' tag='SPAN' type='' /&gt;" ImageBase64="" InformativeScreenshot="65dedb728d4678717127474ef5cbd793.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="Closed" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;">
                                                           <uix:TargetAnchorable.Anchors>
@@ -838,7 +875,7 @@
                                                         <OutArgument x:TypeArguments="x:String">[Ticket_Status]</OutArgument>
                                                       </uix:NGetText.Text>
                                                     </uix:NGetText>
-                                                    <uix:NGetText DisplayName="Get Text 'Date of Termination'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_51">
+                                                    <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Date of Termination'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_51">
                                                       <uix:NGetText.Target>
                                                         <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024429954/details" DesignTimeRectangle="168, 199, 1359, 28" FriendlyName="'FYI -'" FullSelectorArgument="&lt;webctrl parentid='details_inner_title' tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='details_inner_title' tag='H1' type='' /&gt;" ImageBase64="" InformativeScreenshot="5d02b71c48b834aa94303aec68f09174.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="FYI -  Willem Weidner - Last Working Date - 24-Mar-2021" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='H1' type='' /&gt;">
                                                           <uix:TargetAnchorable.Anchors>
@@ -852,7 +889,7 @@
                                                         <OutArgument x:TypeArguments="x:String">[Date_of_Termination]</OutArgument>
                                                       </uix:NGetText.Text>
                                                     </uix:NGetText>
-                                                    <uix:NGetText DisplayName="Get Text 'HR Business Partner:'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_52">
+                                                    <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'HR Business Partner:'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_52">
                                                       <uix:NGetText.Target>
                                                         <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024544567/details?woFrom=ZSearchFeature" DesignTimeRectangle="196, 669, 1309, 15" FriendlyName="'HR Business'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' idx='11' parentid='notiDesc_35364000024544567' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' type='' parentid='notiDesc_35364000024544567' tag='DIV' aaname=' GEP03558 - Sahil Jain' /&gt;" ImageBase64="" InformativeScreenshot="5340e4db890c237b49ae1b923580e93e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="HR Business Partner: GEP03558 - Sahil Jain" TextMethod="AttributeText" TextSelector="&lt;webctrl type='' tag='DIV' /&gt;">
                                                           <uix:TargetAnchorable.Anchors>
@@ -866,7 +903,7 @@
                                                         <OutArgument x:TypeArguments="x:String">[HR_Business_Partner]</OutArgument>
                                                       </uix:NGetText.Text>
                                                     </uix:NGetText>
-                                                    <uix:NGetText DisplayName="Get Text 'To :'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_67">
+                                                    <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'To :'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_67">
                                                       <uix:NGetText.Target>
                                                         <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024915051/details?selectTab=conversationsDetails" DesignTimeRectangle="215, 581, 1251, 39" FriendlyName="'To :'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='1' parentid='notiDesc_35364000024915051' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' type='' parentid='notiDesc_35364000024915051' tag='DIV' aaname='exit_intimations_mum@gep.com, peoplematters@gep.comdarryl.dsouza@gep.com' /&gt;" ImageBase64="" InformativeScreenshot="19c4d4ec95f48e416ea11872c3128119.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="To : exit_intimations_mum@gep.com, peoplematters@gep.comCc : darryl.dsouza@gep.com" TextMethod="AttributeText" TextSelector="&lt;webctrl type='' tag='DIV' /&gt;" />
                                                       </uix:NGetText.Target>
@@ -888,7 +925,7 @@
                                                       <ActivityAction.Argument>
                                                         <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exception" />
                                                       </ActivityAction.Argument>
-                                                      <Sequence sap:VirtualizedContainerService.HintSize="376,329" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="376,327" sap2010:WorkflowViewState.IdRef="Sequence_66">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -910,7 +947,7 @@
                                                       <ActivityAction.Argument>
                                                         <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                                       </ActivityAction.Argument>
-                                                      <Sequence sap:VirtualizedContainerService.HintSize="376,329" sap2010:WorkflowViewState.IdRef="Sequence_86">
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="376,327" sap2010:WorkflowViewState.IdRef="Sequence_86">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -960,7 +997,7 @@
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <uix:NGetText DisplayName="Get Text 'Employee Name:'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_53">
+                                                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Employee Name:'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_53">
                                                             <uix:NGetText.Target>
                                                               <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000023542651/details" DesignTimeRectangle="196, 585, 1309, 15" FriendlyName="'Employee Name: Priya'" FullSelectorArgument="&lt;webctrl aaname=' Priya Anbhavne' css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' parentid='notiDesc_35364000023542651' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Priya Anbhavne' css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' parentid='notiDesc_35364000023542651' tag='DIV' type='' /&gt;" ImageBase64="" InformativeScreenshot="3820fe8db582d2902c7842ff8e788e3d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="FuzzySelector" Text="Employee Name: Priya Anbhavne" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='DIV' type='' /&gt;">
                                                                 <uix:TargetAnchorable.Anchors>
@@ -974,7 +1011,7 @@
                                                               <OutArgument x:TypeArguments="x:String">[Emp_name]</OutArgument>
                                                             </uix:NGetText.Text>
                                                           </uix:NGetText>
-                                                          <uix:NGetText DisplayName="Get Text 'Employee GEP ID:'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_54">
+                                                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Employee GEP ID:'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_54">
                                                             <uix:NGetText.Target>
                                                               <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024508897/details?selectTab=conversationsDetails" DesignTimeRectangle="196, 600, 1309, 15" FriendlyName="'Employee GEP ID: G4313'" FullSelectorArgument="&lt;webctrl aaname=' G4313' css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' parentid='notiDesc_35364000024508897' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' G4313' css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' parentid='notiDesc_35364000024508897' tag='DIV' type='' /&gt;" ImageBase64="" InformativeScreenshot="812d7b2659652ac99e8eebcf5897e012.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="Employee GEP ID: G4313" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='DIV' type='' /&gt;">
                                                                 <uix:TargetAnchorable.Anchors>
@@ -988,7 +1025,7 @@
                                                               <OutArgument x:TypeArguments="x:String">[Employee_GEP_Id]</OutArgument>
                                                             </uix:NGetText.Text>
                                                           </uix:NGetText>
-                                                          <uix:NGetText DisplayName="Get Text 'Job Title:'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_55">
+                                                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Job Title:'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_55">
                                                             <uix:NGetText.Target>
                                                               <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024508897/details?selectTab=conversationsDetails" DesignTimeRectangle="196, 615, 1309, 15" FriendlyName="'Job Title: Senior'" FullSelectorArgument="&lt;webctrl aaname=' Senior Manager - TSO' css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' parentid='notiDesc_35364000024508897' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Senior Manager - TSO' css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' parentid='notiDesc_35364000024508897' tag='DIV' type='' /&gt;" ImageBase64="" InformativeScreenshot="5b936c43fd206b9e77164f46c73c6a22.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="Job Title: Senior Manager - TSO" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='DIV' type='' /&gt;">
                                                                 <uix:TargetAnchorable.Anchors>
@@ -1002,7 +1039,7 @@
                                                               <OutArgument x:TypeArguments="x:String">[Job_Title]</OutArgument>
                                                             </uix:NGetText.Text>
                                                           </uix:NGetText>
-                                                          <uix:NGetText DisplayName="Get Text 'Function / Sub-Function:'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_56">
+                                                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Function / Sub-Function:'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_56">
                                                             <uix:NGetText.Target>
                                                               <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024508897/details?selectTab=conversationsDetails" DesignTimeRectangle="196, 630, 1309, 15" FriendlyName="'Function /'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' idx='8' parentid='notiDesc_35364000024508897' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' type='' parentid='notiDesc_35364000024508897' tag='DIV' aaname=' Global Delivery - TSO - CIT' /&gt;" ImageBase64="" InformativeScreenshot="626a0bb99c065ecd009428681f0a6c60.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="Function / Sub-Function: Global Delivery - TSO - CIT" TextMethod="AttributeText" TextSelector="&lt;webctrl type='' tag='DIV' /&gt;">
                                                                 <uix:TargetAnchorable.Anchors>
@@ -1016,7 +1053,7 @@
                                                               <OutArgument x:TypeArguments="x:String">[Function_emp]</OutArgument>
                                                             </uix:NGetText.Text>
                                                           </uix:NGetText>
-                                                          <uix:NGetText DisplayName="Get Text 'Location:'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_57">
+                                                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Location:'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_57">
                                                             <uix:NGetText.Target>
                                                               <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024508897/details?selectTab=conversationsDetails" DesignTimeRectangle="196, 645, 1309, 15" FriendlyName="'Location: India - Mumbai'" FullSelectorArgument="&lt;webctrl aaname=' India - Mumbai' css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' parentid='notiDesc_35364000024508897' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' India - Mumbai' css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' parentid='notiDesc_35364000024508897' tag='DIV' type='' /&gt;" ImageBase64="" InformativeScreenshot="758b464acad7109f8a024a2a400d801d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="Location: India - Mumbai" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='DIV' type='' /&gt;">
                                                                 <uix:TargetAnchorable.Anchors>
@@ -1030,7 +1067,7 @@
                                                               <OutArgument x:TypeArguments="x:String">[Office_location]</OutArgument>
                                                             </uix:NGetText.Text>
                                                           </uix:NGetText>
-                                                          <uix:NGetText DisplayName="Get Text 'Status'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_58">
+                                                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Status'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_58">
                                                             <uix:NGetText.Target>
                                                               <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024429954/details" DesignTimeRectangle="1713, 232, 42, 18" ElementType="Text" FriendlyName="'Closed'" FullSelectorArgument="&lt;webctrl parentid='rhs_inner_panel' tag='SPAN' idx='5' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='rhs_inner_panel' tag='SPAN' type='' /&gt;" ImageBase64="" InformativeScreenshot="65dedb728d4678717127474ef5cbd793.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="Closed" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;">
                                                                 <uix:TargetAnchorable.Anchors>
@@ -1044,7 +1081,7 @@
                                                               <OutArgument x:TypeArguments="x:String">[Ticket_Status]</OutArgument>
                                                             </uix:NGetText.Text>
                                                           </uix:NGetText>
-                                                          <uix:NGetText DisplayName="Get Text 'Date of Termination'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_59">
+                                                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Date of Termination'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_59">
                                                             <uix:NGetText.Target>
                                                               <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024429954/details" DesignTimeRectangle="168, 199, 1359, 28" FriendlyName="'FYI -'" FullSelectorArgument="&lt;webctrl parentid='details_inner_title' tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='details_inner_title' tag='H1' type='' /&gt;" ImageBase64="" InformativeScreenshot="5d02b71c48b834aa94303aec68f09174.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="FYI -  Willem Weidner - Last Working Date - 24-Mar-2021" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='H1' type='' /&gt;">
                                                                 <uix:TargetAnchorable.Anchors>
@@ -1066,7 +1103,7 @@
                                                               <InArgument x:TypeArguments="x:String">NA</InArgument>
                                                             </Assign.Value>
                                                           </Assign>
-                                                          <uix:NGetText DisplayName="Get Text 'To :'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_68">
+                                                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'To :'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_68">
                                                             <uix:NGetText.Target>
                                                               <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024915051/details?selectTab=conversationsDetails" DesignTimeRectangle="215, 581, 1251, 39" FriendlyName="'To :'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='1' parentid='notiDesc_35364000024915051' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' type='' parentid='notiDesc_35364000024915051' tag='DIV' aaname='exit_intimations_mum@gep.com, peoplematters@gep.comdarryl.dsouza@gep.com' /&gt;" ImageBase64="" InformativeScreenshot="19c4d4ec95f48e416ea11872c3128119.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="To : exit_intimations_mum@gep.com, peoplematters@gep.comCc : darryl.dsouza@gep.com" TextMethod="AttributeText" TextSelector="&lt;webctrl type='' tag='DIV' /&gt;" />
                                                             </uix:NGetText.Target>
@@ -1088,7 +1125,7 @@
                                                             <ActivityAction.Argument>
                                                               <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exception" />
                                                             </ActivityAction.Argument>
-                                                            <Sequence sap:VirtualizedContainerService.HintSize="376,329" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                                                            <Sequence sap:VirtualizedContainerService.HintSize="376,327" sap2010:WorkflowViewState.IdRef="Sequence_69">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1110,7 +1147,7 @@
                                                             <ActivityAction.Argument>
                                                               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                                             </ActivityAction.Argument>
-                                                            <Sequence sap:VirtualizedContainerService.HintSize="376,329" sap2010:WorkflowViewState.IdRef="Sequence_87">
+                                                            <Sequence sap:VirtualizedContainerService.HintSize="376,327" sap2010:WorkflowViewState.IdRef="Sequence_87">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1140,7 +1177,7 @@
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <uix:NGetText DisplayName="Get Text 'Employee Full'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_60">
+                                                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Employee Full'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_60">
                                                             <uix:NGetText.Target>
                                                               <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000023537821/details?selectTab=conversationsDetails" DesignTimeRectangle="196, 594, 1309, 15" FriendlyName="'Employee Full'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' tag='DIV' idx='6' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' parentid='notiDesc_35364000023537821' tag='DIV' type='' /&gt;" ImageBase64="" InformativeScreenshot="c6fcf44b0792c071dedba8c47023b6b7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="Employee Full Name: Alex Yu" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='DIV' type='' /&gt;" />
                                                             </uix:NGetText.Target>
@@ -1148,7 +1185,7 @@
                                                               <OutArgument x:TypeArguments="x:String">[Emp_name]</OutArgument>
                                                             </uix:NGetText.Text>
                                                           </uix:NGetText>
-                                                          <uix:NGetText DisplayName="Get Text 'Employee GEP ID: GCN217'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_61">
+                                                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Employee GEP ID: GCN217'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_61">
                                                             <uix:NGetText.Target>
                                                               <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000023537821/details?selectTab=conversationsDetails" DesignTimeRectangle="196, 579, 1309, 15" FriendlyName="'Employee GEP ID: GCN217'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' tag='DIV' idx='5' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' parentid='notiDesc_35364000023537821' tag='DIV' type='' /&gt;" ImageBase64="" InformativeScreenshot="de36158cbc09e6f9d775b0ad5d1414f5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="Employee GEP ID: GCN217" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='DIV' type='' /&gt;" />
                                                             </uix:NGetText.Target>
@@ -1156,7 +1193,7 @@
                                                               <OutArgument x:TypeArguments="x:String">[Employee_GEP_Id]</OutArgument>
                                                             </uix:NGetText.Text>
                                                           </uix:NGetText>
-                                                          <uix:NGetText DisplayName="Get Text 'Job Title:'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_62">
+                                                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Job Title:'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_62">
                                                             <uix:NGetText.Target>
                                                               <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000023537821/details?selectTab=conversationsDetails" DesignTimeRectangle="196, 624, 1309, 15" FriendlyName="'Job Title:'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' tag='DIV' idx='8' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' type='' parentid='notiDesc_35364000023537821' tag='DIV' /&gt;" ImageBase64="" InformativeScreenshot="b17ecf2437d38d3002df6773bcac63b3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="Job Title: Sourcing Analyst - Knowledge Services" TextMethod="AttributeText" TextSelector="&lt;webctrl type='' tag='DIV' /&gt;" />
                                                             </uix:NGetText.Target>
@@ -1164,7 +1201,7 @@
                                                               <OutArgument x:TypeArguments="x:String">[Job_Title]</OutArgument>
                                                             </uix:NGetText.Text>
                                                           </uix:NGetText>
-                                                          <uix:NGetText DisplayName="Get Text 'Function: Global'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_63">
+                                                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Function: Global'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_63">
                                                             <uix:NGetText.Target>
                                                               <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000023537821/details?selectTab=conversationsDetails" DesignTimeRectangle="196, 609, 1309, 15" FriendlyName="'Function: Global'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' tag='DIV' idx='7' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' type='' parentid='notiDesc_35364000023537821' tag='DIV' /&gt;" ImageBase64="" InformativeScreenshot="f8d3cb8481a1c6b02a4429c4be7c54d3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="Function: Global Delivery - Knowledge Services - Sourcing Support" TextMethod="AttributeText" TextSelector="&lt;webctrl type='' tag='DIV' /&gt;" />
                                                             </uix:NGetText.Target>
@@ -1180,7 +1217,7 @@
                                                               <InArgument x:TypeArguments="x:String">NA</InArgument>
                                                             </Assign.Value>
                                                           </Assign>
-                                                          <uix:NGetText DisplayName="Get Text 'Status'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_64">
+                                                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Status'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_64">
                                                             <uix:NGetText.Target>
                                                               <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024429954/details" DesignTimeRectangle="1713, 232, 42, 18" ElementType="Text" FriendlyName="'Closed'" FullSelectorArgument="&lt;webctrl parentid='rhs_inner_panel' tag='SPAN' idx='5' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='rhs_inner_panel' tag='SPAN' type='' /&gt;" ImageBase64="" InformativeScreenshot="65dedb728d4678717127474ef5cbd793.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="Closed" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;">
                                                                 <uix:TargetAnchorable.Anchors>
@@ -1194,7 +1231,7 @@
                                                               <OutArgument x:TypeArguments="x:String">[Ticket_Status]</OutArgument>
                                                             </uix:NGetText.Text>
                                                           </uix:NGetText>
-                                                          <uix:NGetText DisplayName="Get Text 'Date of Termination'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_65">
+                                                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Date of Termination'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_65">
                                                             <uix:NGetText.Target>
                                                               <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024429954/details" DesignTimeRectangle="168, 199, 1359, 28" FriendlyName="'FYI -'" FullSelectorArgument="&lt;webctrl parentid='details_inner_title' tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='details_inner_title' tag='H1' type='' /&gt;" ImageBase64="" InformativeScreenshot="5d02b71c48b834aa94303aec68f09174.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="FYI -  Willem Weidner - Last Working Date - 24-Mar-2021" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='H1' type='' /&gt;">
                                                                 <uix:TargetAnchorable.Anchors>
@@ -1208,7 +1245,7 @@
                                                               <OutArgument x:TypeArguments="x:String">[Date_of_Termination]</OutArgument>
                                                             </uix:NGetText.Text>
                                                           </uix:NGetText>
-                                                          <uix:NGetText DisplayName="Get Text 'HR Business'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_66">
+                                                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'HR Business'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_66">
                                                             <uix:NGetText.Target>
                                                               <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024429954/details" DesignTimeRectangle="196, 751, 1309, 15" FriendlyName="'HR Business'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' tag='DIV' idx='11' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;font&amp;gt;div' tag='DIV' type='' /&gt;" ImageBase64="" InformativeScreenshot="f36391e4abddc39d149372572c1e2044.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="HR Business Partner: GEP06827 - Hana Jelinkova" TextMethod="AttributeText" TextSelector="&lt;webctrl type='' tag='DIV' /&gt;" />
                                                             </uix:NGetText.Target>
@@ -1216,7 +1253,7 @@
                                                               <OutArgument x:TypeArguments="x:String">[HR_Business_Partner]</OutArgument>
                                                             </uix:NGetText.Text>
                                                           </uix:NGetText>
-                                                          <uix:NGetText DisplayName="Get Text 'To :'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_69">
+                                                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'To :'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_69">
                                                             <uix:NGetText.Target>
                                                               <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024915051/details?selectTab=conversationsDetails" DesignTimeRectangle="215, 581, 1251, 39" FriendlyName="'To :'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='1' parentid='notiDesc_35364000024915051' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' type='' parentid='notiDesc_35364000024915051' tag='DIV' aaname='exit_intimations_mum@gep.com, peoplematters@gep.comdarryl.dsouza@gep.com' /&gt;" ImageBase64="" InformativeScreenshot="19c4d4ec95f48e416ea11872c3128119.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector" Text="To : exit_intimations_mum@gep.com, peoplematters@gep.comCc : darryl.dsouza@gep.com" TextMethod="AttributeText" TextSelector="&lt;webctrl type='' tag='DIV' /&gt;" />
                                                             </uix:NGetText.Target>
@@ -1238,14 +1275,14 @@
                                                             <ActivityAction.Argument>
                                                               <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exception" />
                                                             </ActivityAction.Argument>
-                                                            <Sequence sap:VirtualizedContainerService.HintSize="376,329" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                                                            <Sequence sap:VirtualizedContainerService.HintSize="376,327" sap2010:WorkflowViewState.IdRef="Sequence_72">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
                                                               <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_21" Text="[exception.Message]" />
-                                                              <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="AppendLine_40" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Data gathered successful for ticket ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
+                                                              <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_40" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Data gathered successful for ticket ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
                                                             </Sequence>
                                                           </ActivityAction>
                                                         </Catch>
@@ -1260,14 +1297,14 @@
                                                             <ActivityAction.Argument>
                                                               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                                             </ActivityAction.Argument>
-                                                            <Sequence sap:VirtualizedContainerService.HintSize="376,330" sap2010:WorkflowViewState.IdRef="Sequence_88">
+                                                            <Sequence sap:VirtualizedContainerService.HintSize="376,327" sap2010:WorkflowViewState.IdRef="Sequence_88">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
-                                                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="WriteLine_27" Text="[exception.Message]" />
-                                                              <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="AppendLine_62" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Data gathered successful for ticket ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
+                                                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_27" Text="[exception.Message]" />
+                                                              <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_62" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Data gathered successful for ticket ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
                                                             </Sequence>
                                                           </ActivityAction>
                                                         </Catch>
@@ -1293,7 +1330,7 @@
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exception" />
                                           </ActivityAction.Argument>
-                                          <Sequence sap:VirtualizedContainerService.HintSize="376,329" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                                          <Sequence sap:VirtualizedContainerService.HintSize="376,327" sap2010:WorkflowViewState.IdRef="Sequence_76">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1315,7 +1352,7 @@
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                           </ActivityAction.Argument>
-                                          <Sequence sap:VirtualizedContainerService.HintSize="376,329" sap2010:WorkflowViewState.IdRef="Sequence_91">
+                                          <Sequence sap:VirtualizedContainerService.HintSize="376,327" sap2010:WorkflowViewState.IdRef="Sequence_91">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1328,11 +1365,10 @@
                                       </Catch>
                                     </TryCatch.Catches>
                                   </TryCatch>
-                                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1652,61" sap2010:WorkflowViewState.IdRef="WriteLine_23" Text="[Emp_name +&quot;     &quot;+ Employee_GEP_Id +&quot;     &quot;+ Job_Title +&quot;     &quot;+ Function_emp +&quot;      &quot;+ Office_location +&quot;       &quot;+HR_Business_Partner +&quot;          &quot;+ Date_of_Termination +&quot;       &quot;+Last_Date+&quot;      &quot;+ Ticket_Status+&quot;   &quot;+To_and_CC]" />
                                   <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="1652,22" sap2010:WorkflowViewState.IdRef="Delay_46" />
                                   <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1652,284" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
                                     <ui:MultipleAssign.AssignOperations>
-                                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
                                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
                                           <ui:AssignOperation.To>
                                             <OutArgument x:TypeArguments="x:String">[Emp_name]</OutArgument>
@@ -1392,24 +1428,80 @@
                                       </scg:List>
                                     </ui:MultipleAssign.AssignOperations>
                                   </ui:MultipleAssign>
-                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1652,611" sap2010:WorkflowViewState.IdRef="TryCatch_28">
-                                    <TryCatch.Try>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="376,356" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                                  <If Condition="[To_and_CC.Contains(&quot;Cc&quot;)]" sap:VirtualizedContainerService.HintSize="1652,516" sap2010:WorkflowViewState.IdRef="If_20">
+                                    <If.Then>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="304,357" sap2010:WorkflowViewState.IdRef="Sequence_97">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query - Inser Ouery" ExistingDbConnection="[dbConnection]" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_5" Sql="[&quot;insert into dbo.LWD_Tickets values (&quot;+&quot;'&quot;+ID_of_LWD_Tickets+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Ticket_Status+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Employee_GEP_Id+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Emp_name+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Function_emp+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Job_Title+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Last_Date+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Office_location+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+HR_Business_Partner+&quot;'&quot;+&quot;,'LWD Data Gathered','No Remark',&quot;+&quot;'&quot;+Date_Time+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Date_Time+&quot;')&quot;]">
+                                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="WriteLine_33" Text="From True" />
+                                        <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_22">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[Cc]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">[To_and_CC.Substring(To_and_CC.IndexOf("Cc :")+0)]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                        <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_27">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[Sender]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">[To_and_CC.Remove(To_and_CC.IndexOf("Cc :")+0)]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="304,357" sap2010:WorkflowViewState.IdRef="Sequence_98">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="WriteLine_34" Text="From False" />
+                                        <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_25">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[Cc]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">["NA"]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                        <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_26">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[Sender]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">[To_and_CC.Substring(To_and_CC.IndexOf(":")+1)]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </Sequence>
+                                    </If.Else>
+                                  </If>
+                                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1652,61" sap2010:WorkflowViewState.IdRef="WriteLine_29" Text="[Emp_name +&quot;     &quot;+ Employee_GEP_Id +&quot;     &quot;+ Job_Title +&quot;     &quot;+ Function_emp +&quot;      &quot;+ Office_location +&quot;       &quot;+HR_Business_Partner +&quot;          &quot;+ Date_of_Termination +&quot;       &quot;+Last_Date+&quot;      &quot;+ Ticket_Status+&quot;   &quot;+Sender+&quot;   &quot;+Cc]" />
+                                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1652,61" sap2010:WorkflowViewState.IdRef="WriteLine_32" Text="[To_and_CC]" />
+                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1652,603" sap2010:WorkflowViewState.IdRef="TryCatch_28">
+                                    <TryCatch.Try>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="376,354" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query - Inser Ouery" ExistingDbConnection="[dbConnection]" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_5" Sql="[&quot;insert into dbo.LWD_Tickets ([Request_ID],[Ticket_Status],[Employee_GEP_ID],[Employee_Full_Name],[Function_SubFunction],[Job_Title],[Date_of_Termination],[Employee_Location],[HR_Business_Partner],[Incendent_Status],[Remarks],[Created_DateTime],[Updated_DateTime],[Sender],[CC])  values (&quot;+&quot;'&quot;+ID_of_LWD_Tickets+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Ticket_Status+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Employee_GEP_Id+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Emp_name+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Function_emp+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Job_Title+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Last_Date+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Office_location+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+HR_Business_Partner+&quot;'&quot;+&quot;,'LWD Data Gathered','No Remark',&quot;+&quot;'&quot;+Date_Time+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Date_Time+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Sender+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Cc+&quot;')&quot;]">
                                           <ui:ExecuteNonQuery.Parameters>
                                             <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                           </ui:ExecuteNonQuery.Parameters>
                                         </ui:ExecuteNonQuery>
-                                        <ui:AppendLine DisplayName="Append Line Data insert in data base successful" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="AppendLine_42" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Data insert in data base successful for ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
+                                        <ui:AppendLine DisplayName="Append Line Data insert in data base successful" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_42" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Data insert in data base successful for ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
                                       </Sequence>
                                     </TryCatch.Try>
                                     <TryCatch.Catches>
-                                      <Catch x:TypeArguments="swc:DatabaseNotEnabledForNotificationException" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_30">
+                                      <Catch x:TypeArguments="swc:DatabaseNotEnabledForNotificationException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_30">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1420,10 +1512,10 @@
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="swc:DatabaseNotEnabledForNotificationException" Name="exception" />
                                           </ActivityAction.Argument>
-                                          <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="AppendLine_43" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Data insert in data base Unsuccessful for ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
+                                          <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_43" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Data insert in data base Unsuccessful for ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
                                         </ActivityAction>
                                       </Catch>
-                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_42">
+                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_42">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1434,35 +1526,35 @@
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                           </ActivityAction.Argument>
-                                          <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="AppendLine_63" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Data insert in data base Unsuccessful for ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
+                                          <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_63" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Data insert in data base Unsuccessful for ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
                                         </ActivityAction>
                                       </Catch>
                                     </TryCatch.Catches>
                                   </TryCatch>
-                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1652,690" sap2010:WorkflowViewState.IdRef="TryCatch_29">
+                                  <TryCatch DisplayName="Try Catch Ticket Assign " sap:VirtualizedContainerService.HintSize="1652,680" sap2010:WorkflowViewState.IdRef="TryCatch_29">
                                     <TryCatch.Try>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="376,435" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="376,431" sap2010:WorkflowViewState.IdRef="Sequence_78">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <uix:NHighlight Color="Gold" DisplayName="Highlight 'Assign'" sap:VirtualizedContainerService.HintSize="334,167" sap2010:WorkflowViewState.IdRef="NHighlight_3">
+                                        <uix:NHighlight Color="Gold" DisplayName="Highlight 'Assign_LWD'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NHighlight_4">
                                           <uix:NHighlight.Target>
-                                            <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024622207/details?woFrom=ZSearchFeature" ContentHash="P0KEsvEIuE6S9Vn_qLD6pA" DesignTimeRectangle="313, 153, 77, 33" ElementType="Button" FriendlyName="'Assign'" FullSelectorArgument="&lt;webctrl aaname='Assign' parentid='menufixed' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Assign' parentid='menufixed' tag='BUTTON' type='' check:text='Assign' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAAlCAYAAAA6PAXhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGOSURBVGhD7ZpBroUgDEXZoctiKS7FpejUxHmfRdHSB+9/YyVq7kkaJSimxxYnunEcCXEuINEg3DAMNE0T8RHx/5DOHK3wABwjOoPEE0CiAZBoACQaAIkGQKIBkGgAJBoAiQZAogHVJHbekfPdOjpB31LjGmr7dXwD6kjkxJtmTt6TgcbbUUVi384C59KJR0moULfHNh8qTs7FF9CRFy+D15T3h2ha4lV4znd8/T6nn29BBYki6VCRS4KBzhdavKd2rtx8vmo9Wd1q/UWwmr9gK7heohLFlbcNfyRV3kP/kCjGQWKyBr8c8XwjLpeo2zVEJrFsq/ELCPcIUVLijG5nuTTPpWs+UaJqr4VUgoSFZ/espMLS+5PKVrxC4ncSCyVZpetTcfL81975ComcbCHBWFlbu66xVe3e4jH2xFUl6zXEM9/RzhfDkr4+PsUv/nU8WmJuPwwfMkg8Are2bOX6ApmHS7wHkGgAJBoAiQZAogGQaAAkGgCJBmwS+QT/Jx6P5P/E3J+fiGMBiadjpA+4HiJXzsAdjgAAAABJRU5ErkJggg==" InformativeScreenshot="638a21372bcb017daa954389b1fa7461.png" Reference="Esc2uwRRdkGtd0UerjX7gQ/_LqFQIFObU28AFIsoaeg4g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Assign" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;">
+                                            <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024946829/details" ContentHash="G9cZErBtd0i1GiysHyAJvQ" DesignTimeRectangle="258, 139, 63, 28" ElementType="Button" FriendlyName="'Assign'" FullSelectorArgument="&lt;webctrl aaname='Assign' parentid='menufixed' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Assign' parentid='menufixed' tag='BUTTON' type='' check:text='Assign' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAgCAYAAABJqsWHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFdSURBVGhD7ZltroMgEEXZIctiKWyge2Ap+tcVzGNgGC/YJn0+7bNxTjIp4EfkcNUmumVZyKqWyYBy8zyXBv/esXDujgTu3JU2d5ORMRmAyQBMBmAyAJMBmAzAZAAmAzhNxhQ9uZCk90tSIOcjTdL9FCfJSBR8KLVTx79wjoy8sj5OJR0YjhQcOdeqiioJ0jFP+TAeJN8O5LZur8WbUggU8di9KQROkZECTKrFHdtKTpBI6VAZE0Uv52JEcm06bW/228nxMrpJ9xdZk9FfdEtGt7BvyejPM/b3cLiMPva11hVkeIJ5fEhJFSUpURnS1nOtKfoCGU/iWiYz3gq83/b26G4vkTE+dxrXl8GvxCdXzqseHrjCLS38zFjH9NiXycglifqCZBwMi9jcTn+f9CuuLWOTNE7SXWVk+v8mw1vnYC4v45OYDMBkACYDMBmAyuCGfV6sbfvwDGUytBb6AW48Kb7/i9z1AAAAAElFTkSuQmCC" InformativeScreenshot="d446f8f9ca7f595fcec9815731b718c4.png" Reference="Esc2uwRRdkGtd0UerjX7gQ/AxzetfASmEWEads_AqSYyA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Assign" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;">
                                               <uix:TargetAnchorable.Anchors>
                                                 <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                  <uix:Target DesignTimeRectangle="232, 153, 81, 33" ElementType="Button" FriendlyName="'Pick up'" FullSelectorArgument="&lt;webctrl aaname='Pick up' parentid='menufixed' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Pick up' parentid='menufixed' tag='BUTTON' type='' check:text='Pick up' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFUAAAAlCAYAAAAz16WbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGRSURBVGhD7ZpRjoMgFEXZIctiKSzFpeivifGX4aEoUHSMek2duSd5LVgK5fCgP6i+7x3j3qBUQKiu69w4jk7eGedjGIalrNyMVMg1okNKvRFKBUCpACgVAKUCoFQAlAqAUgFQKoAXSG2cUca/vges1MY4pVQWJrHTGP8sfVCFUnNEaiqttU4r7Ww71w9BqTmlVI9kp56ttlYvZUHqa1ZH+YXUkP31hUn7nmid1Wtb6d800l9959zF90gNsmoZmUiVTNfWq6pzRGo2xqmd8zvPSi2yLJX6KSQySw0CatJXjkgtx9ge9zx4qclWKzNxnaRMfmsrilTfzn+udrJUOCM1ZO/NZ8CzmVpwPFNFzCR+r7/PPuJ3p1pN4Dsz9aDU0La6vZMzNZS3/1yCtCSbQ72Umo7xJ87UgkyqZ5p0PCriZFOpniBiS+yczbEP36gxuVRtbViY2Gbn550GK/XLKBcRBaUCoFQA/0rqU1AqAEoFQKkAKBUApQKgVACUCmCRKgXeT70e2f3U2k1gxrWg1Nujdz+HCXl+vSiIrwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" Text="Pick up" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;" />
+                                                  <uix:Target DesignTimeRectangle="191, 139, 67, 28" ElementType="Button" FriendlyName="'Pick up'" FullSelectorArgument="&lt;webctrl aaname='Pick up' parentid='menufixed' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Pick up' parentid='menufixed' tag='BUTTON' type='' check:text='Pick up' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEcAAAAgCAYAAABAQWX9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFJSURBVGhD7ZlRksIgDIa5IcfiKByFo9jXzvQ9S0qDodK4ahl39f9mMkIRnHwmfcHN80yIfkCOEW6aJlqWhfgTMa1SZOxogyegIC4gpwPkGECOAeQYQI4B5BhAjgHkGECOwflyLpG8c+RqBEplgaJ3FMqkQ6LgY/7W32GMHJ1kCuR+lfQ3ylFJp+ApygJLk+pa17WcPM7P91WWQvvsEn2dpxAo5rmc6esPPc9wOZyA2zKoctbWk3YTRA6LURIVthwthFu4f8YjjJEjFcGhRFU5uWpu/1mW4/Pe46RsOe0+Xnu1eoZXjuauHK4mc38rR88/R47ZVseJtc9ZppbzX9rqnpwy2bXeVU5Z7r1Ui5Cyr7yAdeWEHHLmq1XDnC/nTezb6gwgxwByDD5GzgggxwByDCDHAHIMqhwe4Dr4Gs11sL44R7QBOYcx0w/1QzuTDoBRggAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" Text="Pick up" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;" />
                                                 </scg:List>
                                               </uix:TargetAnchorable.Anchors>
                                             </uix:TargetAnchorable>
                                           </uix:NHighlight.Target>
                                         </uix:NHighlight>
-                                        <ui:AppendLine DisplayName="Append LineTicket assign successful" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="AppendLine_44" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Ticket assign successful of :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
+                                        <ui:AppendLine DisplayName="Append LineTicket assign successful" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_44" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Ticket assign successful of :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
                                       </Sequence>
                                     </TryCatch.Try>
                                     <TryCatch.Catches>
-                                      <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_31">
+                                      <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_31">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1473,10 +1565,10 @@
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exception" />
                                           </ActivityAction.Argument>
-                                          <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="AppendLine_45" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Ticket assign Unsuccessful of :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
+                                          <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_45" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Ticket assign Unsuccessful of :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
                                         </ActivityAction>
                                       </Catch>
-                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_43">
+                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_43">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1487,7 +1579,7 @@
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                           </ActivityAction.Argument>
-                                          <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="AppendLine_64" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Ticket assign Unsuccessful of :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
+                                          <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_64" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Ticket assign Unsuccessful of :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
                                         </ActivityAction>
                                       </Catch>
                                     </TryCatch.Catches>
@@ -1501,9 +1593,9 @@
                                       <InArgument x:TypeArguments="x:String">[System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”)]</InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1652,611" sap2010:WorkflowViewState.IdRef="TryCatch_30">
+                                  <TryCatch DisplayName="Try Catch Ticket Assigned to Bot" sap:VirtualizedContainerService.HintSize="1652,603" sap2010:WorkflowViewState.IdRef="TryCatch_30">
                                     <TryCatch.Try>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="376,356" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="376,354" sap2010:WorkflowViewState.IdRef="Sequence_79">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1514,11 +1606,11 @@
                                             <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                           </ui:ExecuteNonQuery.Parameters>
                                         </ui:ExecuteNonQuery>
-                                        <ui:AppendLine DisplayName="Append Line Data Update in data base successful" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="AppendLine_46" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Data Update in data base successful for ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
+                                        <ui:AppendLine DisplayName="Append Line Data Update in data base successful" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_46" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Data Update in data base successful for ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
                                       </Sequence>
                                     </TryCatch.Try>
                                     <TryCatch.Catches>
-                                      <Catch x:TypeArguments="swc:DatabaseNotEnabledForNotificationException" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_32">
+                                      <Catch x:TypeArguments="swc:DatabaseNotEnabledForNotificationException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_32">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1529,10 +1621,10 @@
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="swc:DatabaseNotEnabledForNotificationException" Name="exception" />
                                           </ActivityAction.Argument>
-                                          <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="AppendLine_47" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Data Update in data base Unsuccessful for ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
+                                          <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_47" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Data Update in data base Unsuccessful for ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
                                         </ActivityAction>
                                       </Catch>
-                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_46">
+                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_46">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1543,18 +1635,18 @@
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                           </ActivityAction.Argument>
-                                          <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="AppendLine_68" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Data Update in data base Unsuccessful for ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
+                                          <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_68" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Data Update in data base Unsuccessful for ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
                                         </ActivityAction>
                                       </Catch>
                                     </TryCatch.Catches>
                                   </TryCatch>
-                                  <Sequence DisplayName="Sequence mil fom Bot" sap:VirtualizedContainerService.HintSize="1652,342" sap2010:WorkflowViewState.IdRef="Sequence_89">
+                                  <Sequence DisplayName="Sequence mil fom Bot" sap:VirtualizedContainerService.HintSize="1652,510" sap2010:WorkflowViewState.IdRef="Sequence_89">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_21">
+                                    <Assign sap:VirtualizedContainerService.HintSize="436,61" sap2010:WorkflowViewState.IdRef="Assign_21">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:String">[Next_date]</OutArgument>
                                       </Assign.To>
@@ -1562,15 +1654,26 @@
                                         <InArgument x:TypeArguments="x:String">[DateTime.Now.AddDays(+1).ToString(“MMMM/dd/yyyy”)]</InArgument>
                                       </Assign.Value>
                                     </Assign>
-                                    <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hello&quot; +&#xA;Environment.NewLine+&#xA;Environment.NewLine+&#xA;&quot;LWD ticket number &quot; + ID_of_LWD_Tickets +&quot; is schedule for tomorrow  &quot;+Next_date+&quot; at 05:30 PM&quot;+&#xA;Environment.NewLine+&#xA;Environment.NewLine+&#xA;&quot;Regards,&quot;+&#xA;Environment.NewLine+&#xA;&quot;BOT&quot;]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="334,147" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" IsBodyHtml="False" IsDraft="False" Subject="Email fom Bot" To="Saurabh_Talawdekar@gep.com">
-                                      <ui:SendOutlookMail.Files>
-                                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-                                      </ui:SendOutlookMail.Files>
-                                    </ui:SendOutlookMail>
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,315" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                                      <ui:CommentOut.Body>
+                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,237" sap2010:WorkflowViewState.IdRef="Sequence_96">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:SendOutlookMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Account="Ashish_Jadhav@gep.com" Body="[&quot;Hello&quot; +&#xA;Environment.NewLine+&#xA;Environment.NewLine+&#xA;&quot;LWD ticket number &quot; + ID_of_LWD_Tickets +&quot; is schedule for tomorrow  &quot;+Next_date+&quot; at 05:30 PM&quot;+&#xA;Environment.NewLine+&#xA;Environment.NewLine+&#xA;&quot;Regards,&quot;+&#xA;Environment.NewLine+&#xA;&quot;BOT&quot;]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" IsBodyHtml="False" IsDraft="False" Subject="Email fom Bot" To="Saurabh_Talawdekar@gep.com">
+                                            <ui:SendOutlookMail.Files>
+                                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                            </ui:SendOutlookMail.Files>
+                                          </ui:SendOutlookMail>
+                                        </Sequence>
+                                      </ui:CommentOut.Body>
+                                    </ui:CommentOut>
                                   </Sequence>
-                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1652,611" sap2010:WorkflowViewState.IdRef="TryCatch_32">
+                                  <TryCatch DisplayName="Try Catch User scheduled for disabling" sap:VirtualizedContainerService.HintSize="1652,603" sap2010:WorkflowViewState.IdRef="TryCatch_32">
                                     <TryCatch.Try>
-                                      <Sequence DisplayName="Sequence Bot status Data Update in data base" sap:VirtualizedContainerService.HintSize="376,356" sap2010:WorkflowViewState.IdRef="Sequence_90">
+                                      <Sequence DisplayName="Sequence Bot status Data Update in data base" sap:VirtualizedContainerService.HintSize="376,354" sap2010:WorkflowViewState.IdRef="Sequence_90">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1581,11 +1684,11 @@
                                             <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                           </ui:ExecuteNonQuery.Parameters>
                                         </ui:ExecuteNonQuery>
-                                        <ui:AppendLine DisplayName="Append Line Bot status Data Update in data base" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="AppendLine_65" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Bot status Data Update in data base successful for ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
+                                        <ui:AppendLine DisplayName="Append Line Bot status Data Update in data base" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_65" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Bot status Data Update in data base successful for ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
                                       </Sequence>
                                     </TryCatch.Try>
                                     <TryCatch.Catches>
-                                      <Catch x:TypeArguments="swc:DatabaseNotEnabledForNotificationException" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_44">
+                                      <Catch x:TypeArguments="swc:DatabaseNotEnabledForNotificationException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_44">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1596,10 +1699,10 @@
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="swc:DatabaseNotEnabledForNotificationException" Name="exception" />
                                           </ActivityAction.Argument>
-                                          <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="AppendLine_66" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Data Update in data base Unsuccessful for ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
+                                          <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_66" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Data Update in data base Unsuccessful for ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
                                         </ActivityAction>
                                       </Catch>
-                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_47">
+                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_47">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1610,13 +1713,13 @@
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                           </ActivityAction.Argument>
-                                          <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="AppendLine_69" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Data Update in data base Unsuccessful for ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
+                                          <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_69" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Data Update in data base Unsuccessful for ID :- &quot;+ID_of_LWD_Tickets]" UseDefaultEncoding="False" />
                                         </ActivityAction>
                                       </Catch>
                                     </TryCatch.Catches>
                                   </TryCatch>
                                   <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="1652,22" sap2010:WorkflowViewState.IdRef="Delay_51" />
-                                  <uix:NClick ClickType="Single" DisplayName="Click 'Go_Back_from_Ticket'" sap:VirtualizedContainerService.HintSize="1652,167" sap2010:WorkflowViewState.IdRef="NClick_41" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left">
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'Go_Back_from_Ticket'" sap:VirtualizedContainerService.HintSize="1652,166" sap2010:WorkflowViewState.IdRef="NClick_41" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left">
                                     <uix:NClick.Target>
                                       <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000023542635/details?selectTab=conversationsDetails" ContentHash="xCLpCv5CSUmmbxzAv1dw9w" DesignTimeRectangle="112, 153, 12, 13" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl idx='1' parentid='menufixed' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='menufixed' tag='SPAN' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAYAAADUryzEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABnSURBVDhPY/hPIRjEBixYtgqMCQGsBoA0pheW/z926gxUBDfAMIAUzSCAYgCpmkEAbgA5mkEAbAC5mkGAgRLNIMAA0kwuBhtAsQtABEVhAKUpiwUYIMcQFANAgFRDMAwAAeIN+f8fADDK+FLFet0MAAAAAElFTkSuQmCC" InformativeScreenshot="b72305e6a32be457084fdfb49a9ed465.png" Reference="Esc2uwRRdkGtd0UerjX7gQ/56HMY2ONIUm1j0uyjFyC6w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
                                         <uix:TargetAnchorable.Anchors>
@@ -1646,16 +1749,16 @@
                         </ActivityAction>
                       </ui:ForEachRow.Body>
                     </ui:ForEachRow>
-                    <TryCatch DisplayName="Try Catch Disconnect from DB" sap:VirtualizedContainerService.HintSize="2207,463" sap2010:WorkflowViewState.IdRef="TryCatch_31">
+                    <TryCatch DisplayName="Try Catch Disconnect from DB" sap:VirtualizedContainerService.HintSize="2207,456" sap2010:WorkflowViewState.IdRef="TryCatch_31">
                       <TryCatch.Try>
-                        <Sequence DisplayName="Sequence Disconnect from DB" sap:VirtualizedContainerService.HintSize="242,208" sap2010:WorkflowViewState.IdRef="Sequence_84">
+                        <Sequence DisplayName="Sequence Disconnect from DB" sap:VirtualizedContainerService.HintSize="242,207" sap2010:WorkflowViewState.IdRef="Sequence_84">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:DatabaseDisconnect DatabaseConnection="[dbConnection]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_3" />
-                          <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AppendLine_52" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Disconnect from data base&quot;]" UseDefaultEncoding="False">
+                          <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AppendLine_52" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Disconnect from data base&quot;]" UseDefaultEncoding="False">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1666,7 +1769,7 @@
                         </Sequence>
                       </TryCatch.Try>
                       <TryCatch.Catches>
-                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_33">
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_33">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1677,7 +1780,7 @@
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                             </ActivityAction.Argument>
-                            <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AppendLine_53" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Disconnect from data base failed&quot;]" UseDefaultEncoding="False">
+                            <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="AppendLine_53" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Disconnect from data base failed&quot;]" UseDefaultEncoding="False">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1687,7 +1790,7 @@
                             </ui:AppendLine>
                           </ActivityAction>
                         </Catch>
-                        <Catch x:TypeArguments="swc:DatabaseNotEnabledForNotificationException" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_48">
+                        <Catch x:TypeArguments="swc:DatabaseNotEnabledForNotificationException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_48">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1698,7 +1801,7 @@
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="swc:DatabaseNotEnabledForNotificationException" Name="exception" />
                             </ActivityAction.Argument>
-                            <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AppendLine_70" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Disconnect from data base failed&quot;]" UseDefaultEncoding="False">
+                            <ui:AppendLine DisplayName="Append Line" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="AppendLine_70" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Disconnect from data base failed&quot;]" UseDefaultEncoding="False">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1710,7 +1813,7 @@
                         </Catch>
                       </TryCatch.Catches>
                     </TryCatch>
-                    <uix:NClick ClickType="Single" DisplayName="Click 'Profile'" sap:VirtualizedContainerService.HintSize="2207,167" sap2010:WorkflowViewState.IdRef="NClick_42" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left">
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Profile'" sap:VirtualizedContainerService.HintSize="2207,166" sap2010:WorkflowViewState.IdRef="NClick_42" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests" ContentHash="INEYAq-Tz0-zi7zedOgGXw" DesignTimeRectangle="1886, 91, 35, 35" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl parentid='sdp_profile_popup' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='sdp_profile_popup' tag='SPAN' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAnCAYAAACMo1E1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALwSURBVFhH7Zdbc+IwDIX3///EbQu0wHIPIeGaELz+Ag4myMYJPHQ6PTPnAWLLx7IkW3/UN8bPE3c8Fird7NVotlL9UaR6w4X6251U5Df/851xjG+DRuJ2+0wNJ8sbIaFkHvObIEhclh1LL0iLGr71rpS+G2IHeyF4KC5d79X75/RukffeVHW+Zqrbn5dHuEq35REm650aawG9wVyPuZ1TzdX2NtvDZQU3vOKi1UY0zsKIOBZFGU+n0+ky44pCf4vitfrU8efyJvZ9cIqLYlnYh/YWXpIE1cGYPD9qT8ZugXodF0RxHKVk6E1zNI1VESDMBiKHY3ciuY74ThzBKsUY5Di3AbEiYX/Iy/mSXdaTkuRO3GgqZyUJsErCjlMC8ybzpPS+ZJ9167gRRx2SJsL+v0jlLYspQByx6spgWPfejThXXLDbeZRcRrXH7pDphJJDBrK+jUocJUGaAMm0RO/6WeA9V9wZ2qjEuTIUIi5+kTgKtrSGIToMKnGuRDCcLhLVLhWuQBx2JPuGdmJU4gh4abAhO8b4M2D+ZO53AjoMKnH1Z0+d3f5MZbraP4OQmEOHQSVOGmizo7OsKJ7zHKXKl62GBsHiqOKrdHcZ3Rx4bakvel+dMzQIF6eNppvnxM2jVLRdp8E15gb+mKOcLJbr1klBHR2M/UkH0WFQiXuUrXCgMzY/tkuKfXk7zES7NsVsfVTn4IeOu6beY+h2dwjuPcQ657shbJJtdhV/BDKcBV2PzTrFG8J3t9bJBR36Qjlkufp6UENt2qjEAd9r1WZ5lQUeLZ5b6F6CkJBs2XS+SoDvPWdIvVtvmr2G2chskT6scd73HPAlBsK4fmhamiLTxzuaxKqjr0Hs1GPQTgSDO3FlD6Gf5Gcx575hoN1NLxonG7Vv2LXboF1kY2vd39J18QigPNH7BvUQgOaYepPq3pQdY5SjaVuAJWAKeyQi/a8EURyg/XuhllZwivsO+BXXFj9f3DnzLj9eiN9jbQel/gM83Ady/ikQEQAAAABJRU5ErkJggg==" InformativeScreenshot="9eb5221b3a05b9ddb20baf61008a17f7.png" Reference="Esc2uwRRdkGtd0UerjX7gQ/1jUuZ4b5rUyw1FWt19FjHA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
                           <uix:TargetAnchorable.Anchors>
@@ -1722,13 +1825,13 @@
                       </uix:NClick.Target>
                     </uix:NClick>
                     <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="2207,22" sap2010:WorkflowViewState.IdRef="Delay_49" />
-                    <uix:NClick ClickType="Single" DisplayName="Click 'Sign out'" sap:VirtualizedContainerService.HintSize="2207,167" sap2010:WorkflowViewState.IdRef="NClick_43" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left">
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Sign out'" sap:VirtualizedContainerService.HintSize="2207,166" sap2010:WorkflowViewState.IdRef="NClick_43" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests" ContentHash="mtVwwxb42Uy2zp7QGyslbw" DesignTimeRectangle="1822, 205, 95, 36" ElementType="Button" FriendlyName="'Sign out'" FullSelectorArgument="&lt;webctrl parentid='scroll-four' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='scroll-four' tag='BUTTON' type='' aaname='Sign out' check:text='Sign out' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGMAAAAoCAYAAADqpEQ6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP2SURBVGhD7Zf7SxVBFMf763oQgvlKU3uZJSUVoliZmZaJFYWUYUr2sIcWCUGSlBgV2oMI0ltQJv2Q6N29d3fv3b0P9ZfTnLPuunvvFuLdctT54Qv3njlzduZ8Zs7MbEjOzYMQHxIwOJKAwZEEDI4kYHAkAYMjCRgcScDgSAIGRxIwOJKAwZEEDI4kYHAkAYMjCRgc6b/CMN6NQrAwC0JVFZAIhTx91rN8hZHQDYj03gF573YI5myEYN5mkCvLINrfC0kjBrGJ7xA6fhS0212QjMc9Y/AsXEBa51XQR155tmcqX2FoNztNCAVbQSrfAXJZIQFRr12G5OycZ5/VJP35MwjmboLI/Vue7ZnKNxgJLcJW/RGCER14smiPRFibRr/118PUjn7oj7b4zAwo5xoIIIF0SLlwxo4rHSiB6OAA7TRMCPojZIxvfStNbAEYH94u9mELI1RzCIxPH22f+PQ0SPuLQSrJBiMwbtvx2zgGSjyLow8NgrQz1zU+5zz8kH87wzAg3HTCHGTtYUhM/UrzSYWBZS3ceMycHDtLcDdZUKSSbaB2X7dhkA/ad+WBvKfATC77TyUw5TuW6HsYj/liH6sfJjU29pl8lgIjEY26FgyOTSovBqWlgdqsPpnK1zJlBMZA3p1vJo6tQqWpDmKTP+z2VBh2IoqzITZuJkfr6SYftf0S/XfCUJpPmWcNW6nqlYumjSXNiu8SLo6GWjPWjQ6zTDr7tZxmsRJL2xnsv3Mc3JcpS1iS8JDDBOPAcTXpwy+oLW1nqCqEqg9CMH8LK0FPqeRYSfCCEXl41/4OJgRtf4JhJRl98LuW3RoDlq64LK9tGJYQitLa5Jp4Kgz0M74EzIOe2S2FaypZmZtaiLOYBGdSlw3j5RDZ/grDsatWJQwcLB2MjiurPvqGVr1cUQrxYNATRqSvB6SiLGrDxCQUxe6PWi4MZ0Jxp6aVqbMnXWUKzxIrfvznpL1AbBjsbAjVVZnxWCl1fcsn+QbDnhS+LdhEnIex2naeJu4FQ+toIxsezHgoonDSVNqSs8uHwaS/H/E8wKl0sjb0oUtEfTXFQjuNm10mcBGhzbkLsHQ6/ZTmensefsjXnaGyxNoPPiZ5XxFEHz+gCaNPKgx6JD66B1Jpjt3HFq5Udq/PBAYKdyteZ3GReF1tUbHJCdNnARRemfEajf+dMLB04k2R/FiscGsj7UBnrEz0z86Mpch6JEb7+2gXkB1LCbvSot2ZiPUgLmBY257KFCtXaMO3gPE14NlvrWpFYeBVVutqd71s8UGFj6nYxDfPPmtZKwpDyC0BgyMJGBxJwOBIAgZHEjA4koDBkQQMjiRgcCQBgyMJGNxoHn4DhK0FtNSovhAAAAAASUVORK5CYII=" InformativeScreenshot="d5113d2bb6c53ae510cea4f4f14de73d.png" Reference="Esc2uwRRdkGtd0UerjX7gQ/wj6JD0-6X0CI1I597qOCnA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Sign out" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <ui:AppendLine DisplayName="Append Line Sing-Out from Manage engine" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="2207,134" sap2010:WorkflowViewState.IdRef="AppendLine_51" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Sing-Out from Manage engine&quot;]" UseDefaultEncoding="False" />
-                    <ui:AppendLine DisplayName="Append Line Browser close" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="2207,134" sap2010:WorkflowViewState.IdRef="AppendLine_49" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Manage Engine Tickets Reading LWD Execution End and Browser close&quot;]" UseDefaultEncoding="False" />
+                    <ui:AppendLine DisplayName="Append Line Sing-Out from Manage engine" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="2207,132" sap2010:WorkflowViewState.IdRef="AppendLine_51" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Sing-Out from Manage engine&quot;]" UseDefaultEncoding="False" />
+                    <ui:AppendLine DisplayName="Append Line Browser close" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="2207,132" sap2010:WorkflowViewState.IdRef="AppendLine_49" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Manage Engine Tickets Reading LWD Execution End and Browser close&quot;]" UseDefaultEncoding="False" />
                     <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="2207,22" sap2010:WorkflowViewState.IdRef="Delay_50" />
                   </Sequence>
                 </Sequence>
@@ -1755,7 +1858,7 @@
           <av:PointCollection x:Key="ConnectorLocation">300,215 300,254</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence sap2010:Annotation.AnnotationText="Targeting log file for write a log " DisplayName="Sequence Target Log File" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="Sequence_47">
+      <Sequence sap2010:Annotation.AnnotationText="Targeting log file for write a log for LWD  " DisplayName="Sequence Target Log File" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="Sequence_47">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
