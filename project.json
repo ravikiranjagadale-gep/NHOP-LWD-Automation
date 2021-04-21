@@ -3,6 +3,7 @@
   "description": "This process contain all work related with Manageengine",
   "main": "Main.xaml",
   "dependencies": {
+    "Microsoft.Activities.Extensions": "[2.0.6.9]",
     "UiPath.ActiveDirectoryDomainServices.Activities": "[1.2.0]",
     "UiPath.Azure.Activities": "[1.1.6]",
     "UiPath.AzureActiveDirectory.Activities": "[1.1.7]",

@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="AD_Test" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="662,466" sap2010:WorkflowViewState.IdRef="AD_Test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/activedirectorydomainservices" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:uas="clr-namespace:UiPath.ActiveDirectoryDomainServices.Service;assembly=UiPath.ActiveDirectoryDomainServices" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="AD_Test" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="781.333333333333,6170" sap2010:WorkflowViewState.IdRef="AD_Test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/activedirectorydomainservices" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:uas="clr-namespace:UiPath.ActiveDirectoryDomainServices.Service;assembly=UiPath.ActiveDirectoryDomainServices" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="35">
+    <scg:List x:TypeArguments="x:String" Capacity="38">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -36,10 +36,13 @@
       <x:String>UiPath.Database.Activities</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="31">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -69,17 +72,18 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
-      <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="NHOP_AD" sap:VirtualizedContainerService.HintSize="242,482.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="NHOP_AD" sap:VirtualizedContainerService.HintSize="791.333333333333,6005.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Default="[new system.Net.NetworkCredential(&quot;&quot;, “AllPassw0rd@786$!”).SecurePassword]" Name="ADPass" />
       <Variable x:TypeArguments="x:String" Name="ADDirectoryServer" />
@@ -103,16 +107,20 @@
       <Variable x:TypeArguments="sd:DataTable" Name="ADProperty" />
       <Variable x:TypeArguments="x:String" Name="UserReportingManagerDistingushedName" />
       <Variable x:TypeArguments="x:String" Name="UserReportingLocation" />
-      <Variable x:TypeArguments="x:String" Name="BoardlineNo" />
+      <Variable x:TypeArguments="sd:DataTable" Name="VOIPdt" />
+      <Variable x:TypeArguments="x:Int32" Name="VOIPIndex" />
+      <Variable x:TypeArguments="x:String" Name="ScriptCode" />
+      <Variable x:TypeArguments="x:String" Name="OccurenceID" />
+      <Variable x:TypeArguments="sd:DataTable" Name="EmailTempDt" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign sap2010:Annotation.AnnotationText="Set AD Login Details&#xA;" DisplayName="Initialize_Variable" sap:VirtualizedContainerService.HintSize="200,98" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign sap2010:Annotation.AnnotationText="Set AD Login Details&#xA;" DisplayName="Initialize_Variable" sap:VirtualizedContainerService.HintSize="749.333333333333,296" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
-        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="ss:SecureString">[ADPass]</OutArgument>
@@ -145,6 +153,22 @@
               <InArgument x:TypeArguments="x:String">GEP\admAllen</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[ScriptCode]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">NHOP_O365</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[OccurenceID]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">NHOP_O36501</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
       <sap:WorkflowViewStateService.ViewState>
@@ -155,7 +179,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <Sequence sap2010:Annotation.AnnotationText="Temporary Sequence to input data from the Database " DisplayName="TempInputData" sap:VirtualizedContainerService.HintSize="200,114.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap2010:Annotation.AnnotationText="Temporary Sequence to input data from the Database " DisplayName="TempInputData" sap:VirtualizedContainerService.HintSize="749.333333333333,370.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <Sequence.Variables>
         <Variable x:TypeArguments="ui:DatabaseConnection" Name="SQLConnectionString" />
       </Sequence.Variables>
@@ -174,19 +198,19 @@
       </ui:ExecuteQuery>
       <ui:DatabaseDisconnect DatabaseConnection="[SQLConnectionString]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
     </Sequence>
-    <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Loop Through each line item in NHOP Table" DataTable="[NHOPDatatable]" DisplayName="For Each Row in NHOP" sap:VirtualizedContainerService.HintSize="304.666666666667,252.666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Loop Through each line item in NHOP Table" DataTable="[NHOPDatatable]" DisplayName="For Each Row in NHOP" sap:VirtualizedContainerService.HintSize="749.333333333333,5166.66666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,206.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="698.666666666667,4983.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If sap2010:Annotation.AnnotationText="Condition to check the last incident status as per process&#xA;" Condition="[row(23).ToString.Equals(&quot;VOIP Assigned To Employee&quot;)]" DisplayName="If Condition to check BOT Incident Status" sap:VirtualizedContainerService.HintSize="200,114.666666666667" sap2010:WorkflowViewState.IdRef="If_1">
+            <If sap2010:Annotation.AnnotationText="Condition to check the last incident status as per process&#xA;" Condition="[row(23).ToString.Equals(&quot;VOIP Assigned To Employee&quot;)]" DisplayName="If Condition to check BOT Incident Status" sap:VirtualizedContainerService.HintSize="656.666666666667,4891.33333333333" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -195,14 +219,14 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="AD Creation Sequence" sap:VirtualizedContainerService.HintSize="242,299.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="AD Creation Sequence" sap:VirtualizedContainerService.HintSize="620,4661.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MultipleAssign sap2010:Annotation.AnnotationText="Initalize AD Creatian Input Variable&#xA;" DisplayName="AD Creation Input Variables" sap:VirtualizedContainerService.HintSize="200,114.666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                  <ui:MultipleAssign sap2010:Annotation.AnnotationText="Initalize AD Creatian Input Variable&#xA;" DisplayName="AD Creation Input Variables" sap:VirtualizedContainerService.HintSize="578,418.666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
                     <ui:MultipleAssign.AssignOperations>
                       <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
@@ -295,20 +319,20 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:MultipleAssign>
-                  <p:ActiveDirectoryScope ActiveDirectoryServer="[ADDirectoryServer]" ConnectionType="LDAP" DisplayName="Active Directory Scope" sap:VirtualizedContainerService.HintSize="434,217.333333333333" sap2010:WorkflowViewState.IdRef="ActiveDirectoryScope_1" Password="[ADPass]" Port="[ADPort]" Username="[ADUsername]">
+                  <p:ActiveDirectoryScope ActiveDirectoryServer="[ADDirectoryServer]" ConnectionType="LDAP" DisplayName="Active Directory Scope" sap:VirtualizedContainerService.HintSize="578,4110.66666666667" sap2010:WorkflowViewState.IdRef="ActiveDirectoryScope_1" Password="[ADPass]" Port="[ADPort]" Username="[ADUsername]">
                     <p:ActiveDirectoryScope.Body>
                       <ActivityAction x:TypeArguments="uas:ActiveDirectoryService">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="uas:ActiveDirectoryService" Name="ActiveDirectoryScopeConnectionName" />
                         </ActivityAction.Argument>
-                        <Sequence sap2010:Annotation.AnnotationText="This Sequence Deals with AD Creation&#xA;" DisplayName="AD Creation" sap:VirtualizedContainerService.HintSize="242,763.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                        <Sequence sap2010:Annotation.AnnotationText="This Sequence Deals with AD Creation&#xA;" DisplayName="AD Creation" sap:VirtualizedContainerService.HintSize="544,4024.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_8">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence sap2010:Annotation.AnnotationText="This Sequence deals with validation of email and assign new email if already exist" DisplayName="Email Exist Sequence" sap:VirtualizedContainerService.HintSize="200,131.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                          <Sequence sap2010:Annotation.AnnotationText="This Sequence deals with validation of email and assign new email if already exist" DisplayName="Email Exist Sequence" sap:VirtualizedContainerService.HintSize="502,1130" sap2010:WorkflowViewState.IdRef="Sequence_2">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="p:ActiveStatus" Name="Status" />
                               <Variable x:TypeArguments="x:Boolean" Name="Status2" />
@@ -379,7 +403,7 @@
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:InterruptibleDoWhile>
                           </Sequence>
-                          <Sequence sap2010:Annotation.AnnotationText="This Sequence deals with Creating AD Password" DisplayName="Generate Password Sequence" sap:VirtualizedContainerService.HintSize="200,114.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <Sequence sap2010:Annotation.AnnotationText="This Sequence deals with Creating AD Password" DisplayName="Generate Password Sequence" sap:VirtualizedContainerService.HintSize="502,647.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_7">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -387,11 +411,9 @@
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow To Generate AD Password" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ADPasswordGenerator.xaml">
+                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow To Generate AD Password" sap:VirtualizedContainerService.HintSize="376,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ADPasswordGenerator.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
-                                <OutArgument x:TypeArguments="x:String" x:Key="UserPassword">
-                                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="UserPass" />
-                                </OutArgument>
+                                <OutArgument x:TypeArguments="x:String" x:Key="UserPassword">[UserPass]</OutArgument>
                               </ui:InvokeWorkflowFile.Arguments>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -412,20 +434,16 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:DatabaseConnect DatabaseConnection="[SQLConnectionString]" DisplayName="Connect" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="DatabaseConnect_2" ProviderName="System.Data.SqlClient" ConnectionString="Data Source=INAZACAUTO02;Initial Catalog=GEP_Automation;Persist Security Info=True;User ID=sa;Password=Password@123" />
-                              <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[NHOPDatatable]" DisplayName="Execute Query" ExistingDbConnection="[SQLConnectionString]" sap:VirtualizedContainerService.HintSize="334,87.3333333333333" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="UPDATE NHOP_Tickets&#xD;&#xA;SET Password = @UserPass&#xD;&#xA;WHERE NHOP_Auto_ID = @NHOP_Req_ID;">
+                              <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[NHOPDatatable]" DisplayName="Execute Query" ExistingDbConnection="[SQLConnectionString]" sap:VirtualizedContainerService.HintSize="334,87.3333333333333" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="UPDATE NHOP_Tickets&#xA;SET Password = @UserPass&#xA;WHERE NHOP_Auto_ID = @NHOP_Req_ID;">
                                 <ui:ExecuteQuery.Parameters>
-                                  <InArgument x:TypeArguments="x:String" x:Key="UserPass">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="UserPass" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="NHOP_Req_ID">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(0).ToString" />
-                                  </InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="UserPass">[UserPass]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="NHOP_Req_ID">[row(0).ToString]</InArgument>
                                 </ui:ExecuteQuery.Parameters>
                               </ui:ExecuteQuery>
                               <ui:DatabaseDisconnect DatabaseConnection="[SQLConnectionString]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_2" />
                             </Sequence>
                           </Sequence>
-                          <Sequence sap2010:Annotation.AnnotationText="This Sequence deals with creating a property datatable" DisplayName="Property Datatable" sap:VirtualizedContainerService.HintSize="242,689.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                          <Sequence sap2010:Annotation.AnnotationText="This Sequence deals with creating a property datatable" DisplayName="Property Datatable" sap:VirtualizedContainerService.HintSize="502,1609.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_12">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -433,31 +451,23 @@
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:BuildDataTable DataTable="[ADProperty]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;PropertyName&quot; msdata:Caption=&quot;&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;PropertyValue&quot; msdata:Caption=&quot;&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;      &lt;xs:unique name=&quot;Constraint1&quot;&gt;&#xD;&#xA;        &lt;xs:selector xpath=&quot;.//TableName&quot; /&gt;&#xD;&#xA;        &lt;xs:field xpath=&quot;PropertyName&quot; /&gt;&#xD;&#xA;      &lt;/xs:unique&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-                            <Sequence DisplayName="General Tab" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                            <ui:BuildDataTable DataTable="[ADProperty]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="426,58.6666666666667" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;PropertyName&quot; msdata:Caption=&quot;&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;PropertyValue&quot; msdata:Caption=&quot;&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;      &lt;xs:unique name=&quot;Constraint1&quot;&gt;&#xA;        &lt;xs:selector xpath=&quot;.//TableName&quot; /&gt;&#xA;        &lt;xs:field xpath=&quot;PropertyName&quot; /&gt;&#xA;      &lt;/xs:unique&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+                            <Sequence DisplayName="General Tab" sap:VirtualizedContainerService.HintSize="242,486" sap2010:WorkflowViewState.IdRef="Sequence_13">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;mail&quot;,UserEmail}]" DataTable="[ADProperty]" DisplayName="mail" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
-                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;physicalDeliveryOfficeName&quot;,UserMobileNumber}]" DataTable="[ADProperty]" DisplayName="physicalDeliveryOfficeName" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_11" />
-                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;sn&quot;,UserLastName}]" DataTable="[ADProperty]" DisplayName="sn" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
-                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;displayName&quot;,UserFirstName +&quot; &quot;+UserLastName}]" DataTable="[ADProperty]" DisplayName="Display Name" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
-                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;givenName&quot;,UserFirstName}]" DataTable="[ADProperty]" DisplayName="givenName" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
-                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;description&quot;,&quot;This Particular user has been created for test purpose by Konverge RPA Team&quot;}]" DataTable="[ADProperty]" DisplayName="description" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_12" />
-                              <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_6">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:String">[BoardlineNo]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String">+1 732 382 6565</InArgument>
-                                </Assign.Value>
-                              </Assign>
-                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;telephoneNumber&quot;,BoardlineNo+&quot;,&quot;+UserVOIP}]" DataTable="[ADProperty]" DisplayName="telephoneNumber" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_13" />
+                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;mail&quot;,UserEmail}]" DataTable="[ADProperty]" DisplayName="mail" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;physicalDeliveryOfficeName&quot;,UserMobileNumber}]" DataTable="[ADProperty]" DisplayName="physicalDeliveryOfficeName" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_11" />
+                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;sn&quot;,UserLastName}]" DataTable="[ADProperty]" DisplayName="sn" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;displayName&quot;,UserFirstName +&quot; &quot;+UserLastName}]" DataTable="[ADProperty]" DisplayName="Display Name" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
+                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;givenName&quot;,UserFirstName}]" DataTable="[ADProperty]" DisplayName="givenName" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
+                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;description&quot;,&quot;This Particular user has been created for test purpose by Konverge RPA Team&quot;}]" DataTable="[ADProperty]" DisplayName="description" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_12" />
+                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;telephoneNumber&quot;,UserVOIP}]" DataTable="[ADProperty]" DisplayName="telephoneNumber" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_13" />
                             </Sequence>
-                            <Sequence DisplayName="Account and Telephone Tab" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                            <Sequence DisplayName="Account and Telephone Tab" sap:VirtualizedContainerService.HintSize="426,176" sap2010:WorkflowViewState.IdRef="Sequence_14">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -467,7 +477,7 @@
                               <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;userPrincipalName&quot;,UserEmail}]" DataTable="[ADProperty]" DisplayName="userPrincipalName" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_5" />
                               <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;mobile&quot;,UserMobileNumber}]" DataTable="[ADProperty]" DisplayName="mobile" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_6" />
                             </Sequence>
-                            <Sequence DisplayName="Organization Tab" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                            <Sequence DisplayName="Organization Tab" sap:VirtualizedContainerService.HintSize="426,382.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_15">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -479,7 +489,7 @@
                               <p:GetObjectDistinguishedName DisplayName="Get Object Distinguished Name" DistinguishedName="[UserReportingManagerDistingushedName]" sap:VirtualizedContainerService.HintSize="384,104.666666666667" sap2010:WorkflowViewState.IdRef="GetObjectDistinguishedName_1" SAMAccountName="[UserReportingManager.ToString.Split(&quot; &quot;C)(0)+&quot;.&quot;+UserReportingManager.ToString.Split(&quot; &quot;C)(1)]" />
                               <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;manager&quot;,UserReportingManagerDistingushedName}]" DataTable="[ADProperty]" DisplayName="manager" sap:VirtualizedContainerService.HintSize="384,22" sap2010:WorkflowViewState.IdRef="AddDataRow_10" />
                             </Sequence>
-                            <Sequence DisplayName="Address" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                            <Sequence DisplayName="Address" sap:VirtualizedContainerService.HintSize="426,114" sap2010:WorkflowViewState.IdRef="Sequence_16">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -488,9 +498,9 @@
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;l&quot;,UserReportingLocation}]" DataTable="[ADProperty]" DisplayName="l" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_14" />
                             </Sequence>
-                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;proxyAddresses&quot;,&quot;SMTP:&quot;+UserEmail+&quot;;sip:&quot;+UserEmail}]" DataTable="[ADProperty]" DisplayName="proxyAddresses" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_15" />
+                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&quot;proxyAddresses&quot;,&quot;SMTP:&quot;+UserEmail+&quot;;sip:&quot;+UserEmail}]" DataTable="[ADProperty]" DisplayName="proxyAddresses" sap:VirtualizedContainerService.HintSize="426,22" sap2010:WorkflowViewState.IdRef="AddDataRow_15" />
                           </Sequence>
-                          <p:CreateUser CommonName="[UserFirstName+&quot; &quot;+UserLastName]" DisplayName="Create User" DistinguishedName="[UserDistinguishedName]" Enabled="True" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="CreateUser_2" Location="[UserLocation]" Password="[UserPass]" Properties="[ADProperty]" SAMAccountName="[UserFirstName.ToLower+&quot;.&quot;+UserLastName.ToLower]">
+                          <p:CreateUser CommonName="[UserFirstName+&quot; &quot;+UserLastName]" DisplayName="Create User" DistinguishedName="[UserDistinguishedName]" Enabled="True" sap:VirtualizedContainerService.HintSize="502,236" sap2010:WorkflowViewState.IdRef="CreateUser_2" Location="[UserLocation]" Password="[UserPass]" Properties="[ADProperty]" SAMAccountName="[UserFirstName.ToLower+&quot;.&quot;+UserLastName.ToLower]">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -498,7 +508,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </p:CreateUser>
-                          <p:ForcePasswordChange DisplayName="Force Password Change" DistinguishedName="[UserDistinguishedName]" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="ForcePasswordChange_2">
+                          <p:ForcePasswordChange DisplayName="Force Password Change" DistinguishedName="[UserDistinguishedName]" sap:VirtualizedContainerService.HintSize="502,104.666666666667" sap2010:WorkflowViewState.IdRef="ForcePasswordChange_2">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
