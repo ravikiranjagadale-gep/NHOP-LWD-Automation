@@ -1,0 +1,13 @@
+﻿{
+  "Id": "4OTKsGRp1USMKLDeKj6zGQ",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/4OTKsGRp1USMKLDeKj6zGQ",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/0C3joEZtcUqbvP8R5Lx5KA",
+  "Name": "Chaeck_ticket is present or not",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-20T08:08:27.1342179Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-20T08:08:27.1342179Z"
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Id": "vCPe0vOgpE6VI4Kb9AuqvQ",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/vCPe0vOgpE6VI4Kb9AuqvQ",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/0C3joEZtcUqbvP8R5Lx5KA",
+  "Name": "Search Requests",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-21T11:52:05.4128005Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-21T11:52:05.4128005Z"
+}

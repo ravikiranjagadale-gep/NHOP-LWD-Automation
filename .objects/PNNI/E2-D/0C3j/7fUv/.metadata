@@ -1,0 +1,13 @@
+﻿{
+  "Id": "7fUvLgvMF0W2EkD8UDU7uw",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/7fUvLgvMF0W2EkD8UDU7uw",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/0C3joEZtcUqbvP8R5Lx5KA",
+  "Name": "Search_Main_Icon",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-21T11:25:46.3569248Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-21T11:25:46.3569248Z"
+}

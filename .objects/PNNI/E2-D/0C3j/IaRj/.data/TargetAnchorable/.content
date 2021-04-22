@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/WOListView.do" ContentHash="mjC1KLfgkkGDit5_8qUdMg" DesignTimeRectangle="343, 90, 1289, 27" ElementType="InputBox" FriendlyName="'INPUT  zsearch-select2-…'" FullSelectorArgument="&lt;webctrl id='zsearch-select2-inputsearchTextField' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='zsearch-select2-inputsearchTextField' tag='INPUT' type='text' aaname='' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="264, 95, 54, 17" ElementType="Text" FriendlyName="'Requests'" FullSelectorArgument="&lt;webctrl id='search-module-text' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='search-module-text' tag='SPAN' type='' aaname='Requests' check:text='Requests' /&gt;" SearchSteps="FuzzySelector, Image" Text="Requests" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;">
+        <imageRef attrName="ImageBase64" xmlns="">1GD_VatvSgUKRGeLli4N9XA</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0jTYjRHXEU0-RYoiw7Ep4Sw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="4669fc0490289e2c5d635b10a33bbb67.png" xmlns="">0hsU9wOQM3E-oRYMklQ_mCA</imageRef>
+</TargetAnchorable>

@@ -1,0 +1,13 @@
+﻿{
+  "Id": "yBlrxIA1h0GJqVHpy_oatg",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/yBlrxIA1h0GJqVHpy_oatg",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/0C3joEZtcUqbvP8R5Lx5KA",
+  "Name": "Resolution for NHOP Ticket",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-22T12:15:42.5713323Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-22T12:15:42.5713323Z"
+}

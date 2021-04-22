@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests" ContentHash="NjFEKHpe30CxAX9ASHh_ow" DesignTimeRectangle="1683, 91, 23, 23" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl parentid='searchAnimation' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='searchAnimation' tag='svg' type='' aaname='                         ' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="1718, 91, 23, 23" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl parentid='tb_new_request_popup' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='tb_new_request_popup' tag='svg' type='' aaname=' &amp;#x9;               &amp;#x9;         ' /&gt;" SearchSteps="FuzzySelector, Image">
+        <imageRef attrName="ImageBase64" xmlns="">10wgAV3IRjDUKSHfMP6A3nSQ</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">09U5RJQBLSE2Bfc2jEffDiw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="5ee5b9311e83031a154f01b1a3da431a.png" xmlns="">0LdPN92tf10meajXUtAPeCg</imageRef>
+</TargetAnchorable>

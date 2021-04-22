@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests" ContentHash="HZfRp3GT-0ycmfeB5esiQw" DesignTimeRectangle="363, 149, 145, 15" ElementType="Text" FriendlyName="'Search Requests'" FullSelectorArgument="&lt;webctrl id='174160' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='174160' tag='SPAN' type='' aaname='Search Requests for &amp;apos;174160&amp;apos;' check:text='Search Requests for &amp;apos;174160&amp;apos;' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="FuzzySelector, Image" Text="Search Requests for '174160'" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0fK9QP3YAvkWMmQd3QmAa5Q</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="c41e0370e9ac7707b16c599265774fb5.png" xmlns="">0X-oPpFxvBkargZpZiKljpg</imageRef>
+</TargetAnchorable>

@@ -1,0 +1,13 @@
+﻿{
+  "Id": "1yPpJZs23E2ZVkeaXEe26w",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/1yPpJZs23E2ZVkeaXEe26w",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/0C3joEZtcUqbvP8R5Lx5KA",
+  "Name": "Search_every_Ticket",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-21T11:58:21.8369901Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-21T11:58:21.8369901Z"
+}

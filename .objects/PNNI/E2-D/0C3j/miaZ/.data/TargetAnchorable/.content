@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000025126523/details?selectTab=resolutionDetails" ContentHash="z1ZmFjwmp0qPFmWlpiLD8A" DesignTimeRectangle="191, 139, 58, 28" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;webctrl aaname='Close Request' parentid='menufixed' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Close Request' parentid='menufixed' tag='BUTTON' type='' check:text='Close' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Close" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="141, 139, 50, 28" ElementType="Button" FriendlyName="'Edit'" FullSelectorArgument="&lt;webctrl aaname='Edit Request' parentid='menufixed' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Edit Request' parentid='menufixed' tag='BUTTON' type='' check:text='Edit' /&gt;" SearchSteps="FuzzySelector, Image" Text="Edit" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;">
+        <imageRef attrName="ImageBase64" xmlns="">1FgEaiQxh6EK4AsPsNbE20g</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0uuPixeFBX0mZIE9ZTjeAjw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="2e9e2af1429d9f64ef9a702719bdd71c.png" xmlns="">0VPgDwTgGrUCdM8so8h1ciQ</imageRef>
+</TargetAnchorable>

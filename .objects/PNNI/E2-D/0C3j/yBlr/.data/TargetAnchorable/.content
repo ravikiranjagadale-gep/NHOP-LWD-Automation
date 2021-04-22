@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000025126523/details" ContentHash="5zQdCsjP9E-JJqKAH_gpCA" DesignTimeRectangle="364, 249, 98, 27" ElementType="Text" FriendlyName="'Resolution'" FullSelectorArgument="&lt;webctrl aaname='Resolution' parentid='1619093369822' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Resolution' parentid='1619093369822' tag='A' type='' check:text='Resolution' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="FuzzySelector, Image" Text="Resolution" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='A' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0gqeQ5LbO7UOXl-6BDH3Txg</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="59791e9efcfdd26688acd59fdf377785.png" xmlns="">0P0GIuZQUmUSwlJYiE-5gXg</imageRef>
+</TargetAnchorable>

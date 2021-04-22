@@ -1,0 +1,13 @@
+﻿{
+  "Id": "5GkTxsfRFkSaT-YKhEqK0Q",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/5GkTxsfRFkSaT-YKhEqK0Q",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/0C3joEZtcUqbvP8R5Lx5KA",
+  "Name": "Location_Confirm_Confirm",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-22T08:23:48.4899906Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-22T08:23:48.4899906Z"
+}

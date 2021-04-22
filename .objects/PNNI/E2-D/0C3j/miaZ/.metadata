@@ -1,0 +1,13 @@
+﻿{
+  "Id": "miaZXj7Ht0ewvPirpWdPpA",
+  "Reference": "Esc2uwRRdkGtd0UerjX7gQ/miaZXj7Ht0ewvPirpWdPpA",
+  "ParentRef": "Esc2uwRRdkGtd0UerjX7gQ/0C3joEZtcUqbvP8R5Lx5KA",
+  "Name": "Close_Ticket_NHOP",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-22T12:17:42.142891Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=20.10.4.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-22T12:17:42.142891Z"
+}
