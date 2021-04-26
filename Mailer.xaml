@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>917.333333333333,3493.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>917.333333333333,3146.66666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Mailer_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="35">
@@ -78,7 +78,6 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>System.Runtime.InteropServices.RuntimeInformation</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
@@ -86,11 +85,15 @@
       <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Mailer" sap:VirtualizedContainerService.HintSize="927.333333333333,3328.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Mailer" sap:VirtualizedContainerService.HintSize="927.333333333333,2942" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="EmailTempDt" />
       <Variable x:TypeArguments="sd:DataTable" Name="SenderAccount" />
-      <Variable x:TypeArguments="x:Boolean" Name="TicketExist" />
+      <Variable x:TypeArguments="x:Boolean" Name="TicketExist">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Boolean" />
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="x:String" Name="EmailTO" />
       <Variable x:TypeArguments="x:String" Name="EmailCC" />
       <Variable x:TypeArguments="sd:DataTable" Name="SpocDT" />
@@ -138,27 +141,27 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[EmailTempDt]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="885.333333333333,2838.66666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[EmailTempDt]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="885.333333333333,2452" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="834.666666666667,2687.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="834.666666666667,2299.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[row(3).Equals(EmailDict(&quot;OccurenceID&quot;))]" sap:VirtualizedContainerService.HintSize="792.666666666667,2595.33333333333" sap2010:WorkflowViewState.IdRef="If_3">
+            <If Condition="[row(3).Equals(EmailDict(&quot;OccurenceID&quot;))]" sap:VirtualizedContainerService.HintSize="792.666666666667,2207.33333333333" sap2010:WorkflowViewState.IdRef="If_3">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="756,2413.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence sap:VirtualizedContainerService.HintSize="756,2022.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <maes:KeyExistsInDictionary x:TypeArguments="x:String, x:String" Dictionary="[EmailDict]" DisplayName="Key exists in dictionary" sap:VirtualizedContainerService.HintSize="714,71.3333333333333" sap2010:WorkflowViewState.IdRef="KeyExistsInDictionary`2_1" Key="OrgTicket" Result="[TicketExist]">
+                  <maes:KeyExistsInDictionary x:TypeArguments="x:String, x:String" Dictionary="[EmailDict]" DisplayName="Key exists in dictionary" sap:VirtualizedContainerService.HintSize="714,72" sap2010:WorkflowViewState.IdRef="KeyExistsInDictionary`2_1" Key="OrgTicket" Result="[TicketExist]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -166,15 +169,15 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </maes:KeyExistsInDictionary>
-                  <If Condition="[TicketExist = True]" sap:VirtualizedContainerService.HintSize="484,958.666666666667" sap2010:WorkflowViewState.IdRef="If_4">
+                  <If Condition="[TicketExist = True]" sap:VirtualizedContainerService.HintSize="714,962.666666666667" sap2010:WorkflowViewState.IdRef="If_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="438.666666666667,776.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence sap:VirtualizedContainerService.HintSize="438.666666666667,778" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="ui:DatabaseConnection" Name="SQLConnectionString" />
                         </Sequence.Variables>
@@ -185,15 +188,13 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:DatabaseConnect DatabaseConnection="[SQLConnectionString]" DisplayName="Connect" sap:VirtualizedContainerService.HintSize="396.666666666667,58.6666666666667" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.SqlClient" ConnectionString="Data Source=INAZACAUTO02;Initial Catalog=GEP_Automation;Persist Security Info=True;User ID=sa;Password=Password@123" />
-                        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[SenderAccount]" DisplayName="Execute Query" ExistingDbConnection="[SQLConnectionString]" sap:VirtualizedContainerService.HintSize="396.666666666667,87.3333333333333" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="SELECT Sender&#xD;&#xA;  FROM [GEP_Automation].[dbo].[NHOP_Tickets]&#xD;&#xA;  where Request_ID = @RequestID">
+                        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[SenderAccount]" DisplayName="Execute Query" ExistingDbConnection="[SQLConnectionString]" sap:VirtualizedContainerService.HintSize="396.666666666667,87.3333333333333" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="SELECT Sender&#xA;  FROM [GEP_Automation].[dbo].[NHOP_Tickets]&#xA;  where Request_ID = @RequestID">
                           <ui:ExecuteQuery.Parameters>
-                            <InArgument x:TypeArguments="x:String" x:Key="RequestID">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="EmailDict(&quot;OrgTicket&quot;)" />
-                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="RequestID">[EmailDict("OrgTicket")]</InArgument>
                           </ui:ExecuteQuery.Parameters>
                         </ui:ExecuteQuery>
                         <ui:DatabaseDisconnect DatabaseConnection="[SQLConnectionString]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="396.666666666667,22" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
-                        <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[SenderAccount]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="396.666666666667,396.666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                        <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[SenderAccount]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="396.666666666667,398" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                           <ui:ForEachRow.Body>
                             <ActivityAction x:TypeArguments="sd:DataRow">
                               <ActivityAction.Argument>
@@ -227,7 +228,7 @@
                       </Sequence>
                     </If.Then>
                   </If>
-                  <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[EmailDict(&quot;OccurenceID&quot;)]" sap:VirtualizedContainerService.HintSize="714,680.666666666667" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                  <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[EmailDict(&quot;OccurenceID&quot;)]" sap:VirtualizedContainerService.HintSize="714,285.333333333333" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                     <Switch.Default>
                       <Sequence sap:VirtualizedContainerService.HintSize="304,358" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <sap:WorkflowViewStateService.ViewState>
@@ -267,13 +268,13 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence x:Key="PRE01" sap:VirtualizedContainerService.HintSize="304,453.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <Sequence x:Key="PRE01" sap:VirtualizedContainerService.HintSize="304,455.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="262,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_9">
+                      <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_9">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Object">[row(9)]</OutArgument>
                         </Assign.To>
@@ -306,7 +307,7 @@
                         </Assign.Value>
                       </Assign>
                     </Sequence>
-                    <Sequence x:Key="DUP_TP01" sap:VirtualizedContainerService.HintSize="304,68" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <Sequence x:Key="DUP_TP01" sap:VirtualizedContainerService.HintSize="304,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -338,14 +339,14 @@
                         </Assign.Value>
                       </Assign>
                     </Sequence>
-                    <Sequence x:Key="LWD_METR02" sap:VirtualizedContainerService.HintSize="618.666666666667,1242" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                    <Sequence x:Key="LWD_METR02" sap:VirtualizedContainerService.HintSize="618.666666666667,1243.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_12">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[SpocDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="576.666666666667,784.666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[SpocDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="576.666666666667,786" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd:DataRow">
                             <ActivityAction.Argument>
@@ -435,14 +436,14 @@
                         </Assign.Value>
                       </Assign>
                     </Sequence>
-                    <Sequence x:Key="LWD_DO365AD01" sap:VirtualizedContainerService.HintSize="304,456.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                    <Sequence x:Key="LWD_DO365AD01" sap:VirtualizedContainerService.HintSize="304,456" sap2010:WorkflowViewState.IdRef="Sequence_13">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="262,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_18">
+                      <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_18">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Object">[row(9)]</OutArgument>
                         </Assign.To>
@@ -507,7 +508,7 @@
                         </Assign.Value>
                       </Assign>
                     </Sequence>
-                    <Sequence x:Key="NHOP_UJC02" sap:VirtualizedContainerService.HintSize="618.666666666667,834.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                    <Sequence x:Key="NHOP_UJC02" sap:VirtualizedContainerService.HintSize="618.666666666667,245.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_18">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -656,9 +657,7 @@
                       <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[row(9).ToString]" Cc="[EmailCC]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="334,146.666666666667" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" IsBodyHtml="False" IsDraft="False" Subject="[row(8).ToString]" To="[EmailTO]">
                         <ui:SendOutlookMail.Files>
                           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                            <InArgument x:TypeArguments="x:String">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="EmailDict(&quot;FilePath&quot;)" />
-                            </InArgument>
+                            <InArgument x:TypeArguments="x:String">[EmailDict("FilePath")]</InArgument>
                           </scg:List>
                         </ui:SendOutlookMail.Files>
                         <sap:WorkflowViewStateService.ViewState>
