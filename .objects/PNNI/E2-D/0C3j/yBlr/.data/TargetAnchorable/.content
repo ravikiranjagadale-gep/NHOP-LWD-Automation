@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-16"?>
-<TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000025126523/details" ContentHash="5zQdCsjP9E-JJqKAH_gpCA" DesignTimeRectangle="364, 249, 98, 27" ElementType="Text" FriendlyName="'Resolution'" FullSelectorArgument="&lt;webctrl aaname='Resolution' parentid='1619093369822' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Resolution' parentid='1619093369822' tag='A' type='' check:text='Resolution' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="FuzzySelector, Image" Text="Resolution" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='A' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix">
-  <imageRef attrName="ImageBase64" xmlns="">0gqeQ5LbO7UOXl-6BDH3Txg</imageRef>
-  <imageRef attrName="InformativeScreenshot" originalValue="59791e9efcfdd26688acd59fdf377785.png" xmlns="">0P0GIuZQUmUSwlJYiE-5gXg</imageRef>
+<TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000025242431/details?selectTab=conversationsDetails" ContentHash="VhyX6eHicka0UZ3qIvYHzA" DesignTimeRectangle="364, 249, 98, 27" ElementType="Text" FriendlyName="'Resolution'" FullSelectorArgument="&lt;webctrl parentid='1619246835601' tag='A' innertext='Resolution' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='1619246835601' tag='A' innertext='Resolution' type='' aaname='Resolution' check:text='Resolution' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="FuzzySelector, Image" Text="Resolution" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='A' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="297, 249, 68, 27" ElementType="Text" FriendlyName="'Tasks'" FullSelectorArgument="&lt;webctrl aaname='Tasks' parentid='1619246835601' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Tasks' parentid='1619246835601' tag='A' type='' check:text='Tasks' /&gt;" SearchSteps="FuzzySelector, Image" Text="Tasks" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='A' type='' /&gt;">
+        <imageRef attrName="ImageBase64" xmlns="">14l3W620QW0O2FEq4DT5A8g</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0GZKZYFJnx0KFcYM-VSHIPw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="93fab224a4f67c424f05d7bc79090e72.png" xmlns="">0-mvIeA09v0ygySy8nC25yA</imageRef>
 </TargetAnchorable>

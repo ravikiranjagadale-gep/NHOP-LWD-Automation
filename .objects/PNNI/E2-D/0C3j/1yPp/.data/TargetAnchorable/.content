@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-16"?>
-<TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/WOListView.do" ContentHash="iT7XDpc8vUObmpbRa2mSHQ" DesignTimeRectangle="205, 269, 18, 18" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl parentid='NOTIFY_STATUS_35364000024622175' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='NOTIFY_STATUS_35364000024622175' tag='SPAN' type='' aaname='' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
-  <imageRef attrName="ImageBase64" xmlns="">0aTft-Gqz7k6aQX3n0U7xRg</imageRef>
-  <imageRef attrName="InformativeScreenshot" originalValue="d2820b5ace74b9ced5b21054a2cc3282.png" xmlns="">0BGRncqZj_EGl7g-F0l9Aiw</imageRef>
+<TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/WOListView.do" ContentHash="FDFhgEXPYk6x-xojT1hMng" DesignTimeRectangle="203, 267, 22, 22" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl tag='SPAN' tableRow='2' idx='4' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' aaname='' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="249, 226, 118, 34" ElementType="Text" FriendlyName="'ID'" FullSelectorArgument="&lt;webctrl id='ZSearchWOCustomView_TABLE' tag='TABLE' /&gt;&lt;webctrl aaname='ID' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZSearchWOCustomView_TABLE' tag='TABLE' /&gt;&lt;webctrl aaname='ID' tag='TH' type='' check:text='ID' /&gt;" SearchSteps="FuzzySelector, Image" Text="ID" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='TH' type='' /&gt;">
+        <imageRef attrName="ImageBase64" xmlns="">1SV_j4Gx21kSecMUeFxVYqQ</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0gZeoMtfsFUyHZKPyjwcQzw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="3b78dc992c771b832f2913a92dbe8246.png" xmlns="">0stjgcpRWsUyK-u3GZ9mtLA</imageRef>
 </TargetAnchorable>

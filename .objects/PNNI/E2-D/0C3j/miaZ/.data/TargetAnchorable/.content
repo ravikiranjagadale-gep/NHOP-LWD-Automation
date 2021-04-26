@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-16"?>
-<TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000025126523/details?selectTab=resolutionDetails" ContentHash="z1ZmFjwmp0qPFmWlpiLD8A" DesignTimeRectangle="191, 139, 58, 28" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;webctrl aaname='Close Request' parentid='menufixed' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Close Request' parentid='menufixed' tag='BUTTON' type='' check:text='Close' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Close" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000025242431/details?selectTab=resolutionDetails" ContentHash="vPLGbzVjhE6I1U6w4XXl7g" DesignTimeRectangle="191, 139, 58, 28" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;webctrl parentid='menufixed' tag='BUTTON' innertext=' Close ' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='menufixed' tag='BUTTON' innertext=' Close ' type='' aaname='Close Request' check:text='Close' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="FuzzySelector, Image" Text="Close" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TargetAnchorable.Anchors>
     <scg:List x:TypeArguments="ITarget" Capacity="4">
-      <Target DesignTimeRectangle="141, 139, 50, 28" ElementType="Button" FriendlyName="'Edit'" FullSelectorArgument="&lt;webctrl aaname='Edit Request' parentid='menufixed' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Edit Request' parentid='menufixed' tag='BUTTON' type='' check:text='Edit' /&gt;" SearchSteps="FuzzySelector, Image" Text="Edit" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;">
-        <imageRef attrName="ImageBase64" xmlns="">1FgEaiQxh6EK4AsPsNbE20g</imageRef>
+      <Target DesignTimeRectangle="86, 139, 42, 28" ElementType="Button" FriendlyName="'BUTTON'" FullSelectorArgument="&lt;webctrl aaname='Go back' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Go back' tag='BUTTON' type='button' /&gt;" SearchSteps="FuzzySelector, Image">
+        <imageRef attrName="ImageBase64" xmlns="">1K8P97Co2REuPSyXBvzGtkg</imageRef>
       </Target>
     </scg:List>
   </TargetAnchorable.Anchors>
-  <imageRef attrName="ImageBase64" xmlns="">0uuPixeFBX0mZIE9ZTjeAjw</imageRef>
-  <imageRef attrName="InformativeScreenshot" originalValue="2e9e2af1429d9f64ef9a702719bdd71c.png" xmlns="">0VPgDwTgGrUCdM8so8h1ciQ</imageRef>
+  <imageRef attrName="ImageBase64" xmlns="">0JU5yTJkqWk-s-ahOdMxXyg</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="25f2fe995c9491c307f4f492142cac2d.png" xmlns="">0UR9E5MKCTkSa5Ipjvim4Ag</imageRef>
 </TargetAnchorable>
