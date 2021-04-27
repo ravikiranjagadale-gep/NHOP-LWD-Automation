@@ -1,6 +1,6 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Log_in_Manageengine_NHOP_Ver1" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1199,827" sap2010:WorkflowViewState.IdRef="Log_in_Manageengine_NHOP_Ver1_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System" xmlns:swc="clr-namespace:System.Web.Caching;assembly=System.Web" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="41">
+    <scg:List x:TypeArguments="x:String" Capacity="82">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -42,6 +42,8 @@
       <x:String>System.Web.Caching</x:String>
       <x:String>UiPath.Mail.Outlook.Activities</x:String>
       <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -229,32 +231,32 @@
               <av:Size x:Key="ShapeSize">200,108</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="It wil read te NHOP ticket fom Manageengie" DisplayName="Sequence NHOP Ticket reading process" sap:VirtualizedContainerService.HintSize="3082,25411" sap2010:WorkflowViewState.IdRef="Sequence_40">
+          <Sequence sap2010:Annotation.AnnotationText="It wil read te NHOP ticket fom Manageengie" DisplayName="Sequence NHOP Ticket reading process" sap:VirtualizedContainerService.HintSize="3156,25411" sap2010:WorkflowViewState.IdRef="Sequence_40">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application/Browser foe Open GEP Manageengine" sap:VirtualizedContainerService.HintSize="3040,25288" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" Version="V1">
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application/Browser foe Open GEP Manageengine" sap:VirtualizedContainerService.HintSize="3114,25288" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" Version="V1">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Sequence NHOP Ticket process Strat" sap:VirtualizedContainerService.HintSize="3006,25071" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                  <Sequence DisplayName="Sequence NHOP Ticket process Strat" sap:VirtualizedContainerService.HintSize="3080,25071" sap2010:WorkflowViewState.IdRef="Sequence_39">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence sap:VirtualizedContainerService.HintSize="2964,24977" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                    <Sequence sap:VirtualizedContainerService.HintSize="3038,24977" sap2010:WorkflowViewState.IdRef="Sequence_38">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2922,24883" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2996,24883" sap2010:WorkflowViewState.IdRef="Sequence_37">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -500,7 +502,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:AppendLine>
                         <Delay Duration="00:00:15" sap:VirtualizedContainerService.HintSize="2864,22" sap2010:WorkflowViewState.IdRef="Delay_4" />
-                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="2880,1091" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="2954,1091" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                           <TryCatch.Try>
                             <Sequence sap:VirtualizedContainerService.HintSize="839,836" sap2010:WorkflowViewState.IdRef="Sequence_6">
                               <Sequence.Variables>
@@ -590,8 +592,8 @@
                             </Catch>
                           </TryCatch.Catches>
                         </TryCatch>
-                        <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="2880,22" sap2010:WorkflowViewState.IdRef="Delay_5" />
-                        <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Search Upcoming Hire Tickets" ClickBeforeMode="None" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="2880,259" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="WindowMessages" Text="Upcoming Hire">
+                        <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="2954,22" sap2010:WorkflowViewState.IdRef="Delay_5" />
+                        <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Search Upcoming Hire Tickets" ClickBeforeMode="None" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="2954,259" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="WindowMessages" Text="Upcoming Hire">
                           <uix:NTypeInto.Target>
                             <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests" ContentHash="tHRy-mpE6kOOJGEd1-MJeQ" DesignTimeRectangle="118, 211, 274, 32" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl parentid='sdp_filter_dialog_7260' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='sdp_filter_dialog_7260' tag='INPUT' type='text' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARYAAAAkCAYAAABMiBVdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQ0SURBVHhe7Z1BS11HGIb7b7Loor8iP8Qf4dKdQhdu3YirIrGgkqZCQKRtgjGkFUpq2oKhhBhaiC6i0QRJgk59rue9fk5P7z3XM6g3vg8Mnpn5zsycC99zZ46CX6SGHB0dVVdn1LUZY0xjscDx8XF1df7aGGMiXbHsvE1pZHo/3f56z8XFxWWgMjJ9kLb3zzYbXbEglcfPP1U1Y4xpDu7AIaIrFqxjjDEXJTrEYjHGFMFiMcYUx2IxxhTHYjHGFMdiMcYUx2IxxhSniFheb++k5R8fpm++XUiL39/vFK5pe7O7W0U149aXX1VXxphhpbVY/nrxsiORp8/+qFpO+fDxY6eNPmKaYrEYM/y0Egs7FcTRa1dC39zivXTw7n3V0hvEcnh4mKamptLo6Gi3bGxsVBGXB3NOTEykvb3+n8fs7GxtLHXaV1ZWOjEUYz53WomFo06+U6mDmJ9W16pabxALUokJqOS8bLkMIhZix8bG0tbWVtVySmy3WMxNoZVY2K00gWNR01jEUicRfeNfJoOIJe5MIpaJuYm0EgsvaZsyt/hdoxe5dTuWOpTIdUel/CgV5UDc5ORkp8QdBvMpXnNLLPPz892+XBwR7mNe5getUWujPz4XY2lc3ae16558DOqsnXVTeAaNoRhjrpp2YlkaRCz3GoslT5g8mZV8aid+fHy8KwnalcB5LMmXJyF9eWLTpth4b91xR+T91KPUolh69cX1E4dIYp317Z58lvykDsxJnMYz5ippJRaONxxz+sGL20GOQhGSTILplUQkngQQIYYEjnKICZ2LJ5LHMm8UWI7m0jqjLCDW8/XGZ+J+iY6Y1dXVTjx13ad1K86Y60QrsSz/8KDRy9tffn060MvbOkgmJTmJJ9nEoqSN/ewgkIGSOJdFLoNIHttPLMAaKHXjqk9SiGvXWhmbe5HM5uZmmpmZ+c9PzZ+PY8mY60IrsXC06ffr5ld//5PuLNwd6NfNdQkSkzx+u+co2SSSvJ7LIu+PXEQsuoddRrwXJBZd180p6I87FWKXlpY6Ysk/G2Ae5us1pjGXRSuxAH/8xovZ337/89yxCJGsn+xUkAryWft5verpDWIhQZSAoORXWy6DmFR5LInOt7lic1kAfdyjhOVeykXEorUwZ3wG0LiQj80a8jpz8eIYiEemeg7NQzvouVU35ippLRZAIhx1EAgvaSlc00bfoyfrjeWCWJQk2uJHMYiYwHkSk1yxvVdCC/p1jySTxzYRC2isPMnjOoBn0pz5S2GuadNz182tGI0RxzbmKikilgjHorqjkeTSj/97x2KMGR6Ki6UtFosxw4/FYowpzrUTizFm+LFYjDHFsViMMcWxWIwxxbFYjDHFsViMMcWpFYv/Kbwx5qKc/lP4g6oWxLL99rgjF6zj4uLiMkjBHa/3jyqbBLEYY0wpLBZjTGFS+hcTKxIiPXxNkgAAAABJRU5ErkJggg==" InformativeScreenshot="23210f517fb36ab4e328ff548654aec8.png" Reference="Esc2uwRRdkGtd0UerjX7gQ/ILt0q3xL3UWS3IIMiYHnHQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
                           </uix:NTypeInto.Target>
@@ -601,8 +603,8 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NTypeInto>
-                        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="2880,22" sap2010:WorkflowViewState.IdRef="Delay_6" />
-                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="2880,337" sap2010:WorkflowViewState.IdRef="CommentOut_12">
+                        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="2954,22" sap2010:WorkflowViewState.IdRef="Delay_6" />
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="2954,337" sap2010:WorkflowViewState.IdRef="CommentOut_12">
                           <ui:CommentOut.Body>
                             <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,259" sap2010:WorkflowViewState.IdRef="Sequence_110">
                               <sap:WorkflowViewStateService.ViewState>
@@ -618,13 +620,13 @@
                             </Sequence>
                           </ui:CommentOut.Body>
                         </ui:CommentOut>
-                        <uix:NClick ClickType="Single" DisplayName="Click 'Upcoming Hire'" sap:VirtualizedContainerService.HintSize="2880,167" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left">
+                        <uix:NClick ClickType="Single" DisplayName="Click 'Upcoming Hire'" sap:VirtualizedContainerService.HintSize="2954,167" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests" ContentHash="2I7LuGMrBE2ltyx9J3OzNw" DesignTimeRectangle="126, 264, 201, 30" ElementType="Text" FriendlyName="'Upcoming Hire'" FullSelectorArgument="&lt;webctrl parentid='sdp_filter_dialog_6390' tag='SPAN' innertext='Upcoming Hire' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='sdp_filter_dialog_6390' tag='SPAN' innertext='Upcoming Hire' type='' aaname='Upcoming Hire' check:text='Upcoming Hire' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAM0AAAAiCAYAAAD8rl0+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARFSURBVHhe7Z3pb1VFGMb55zAGZDEQDSCEhGCQLyZiDJ9K+KCyL7JUEQJEgkIoIOBWhbKGJbEC0mJJGootWPZz7r703td55uQ9TG9OLUNb7D15TvLLubO+M7fvM+/M3A+dInz48PF6poQVEULIy0PREOIJRUOIJxQNIZ5QNIR4QtEQ4glFQ4gnFA0hnlA0hHhC0RDiSdOIprN/SOZsDWXfxVJi+UTwf9gkk59YND2PajL3i1C2tBeGVUB66Z6M3M/Uh+W/bgLD3Wd1eVxILn8VkuZ2/k7Vfg94T4RN0vw0jWgmgtFE49YlRPESDRzpvdaMbD9dlLc2BPLmukA+PZGPV+KzPVVZYMrfWBPItPWBfHM52tYc/6NstzlTTT7eSCMfNhd+mZF1PxZk9ubQtlu2Nyt7L5Ti9PL9Wfk7qMfja/s9avvxdzlpOZqXJbsje6iv/WI8GBfGB5uKtlVGE02SzTWnCrLi25xMN/Nv76rYsSGNMeA7ae0oyrPSCxskfXiLZsbGQD7Yl5VrfUOy61zRiuOAEUfXPzV5d3toHejPBzXpMALqHqzJ1btD8vaWUD4/WbD5eCONfLX5jmnX8VdV9l8qWUfX9BHjrLAHO0kOjLooQ7/LzZgWfZWRvud1O55Zm41IOssWCGrbr0UZaIiWryIa2MQcMN9+026VEa6OF7Ywt5M3KnF/JH14iwbOeOpm5BTIQ9nKwzm7ysM5rxgxuO23/VaU+TtD6X0SOSbeSCNfbcLxUabpjT9HY9D+MYYkB35/T1YeZCM7h66VbTnquWN2+0A9F+S5kUiBUEcSjfaL9J3HNSsYHf+TosiHB7LS0paPbZD04S0a1MFby+FIAI6lTjtSe6RdJ250ysYx/FddtYvPwLWPSIOoh9uvmyYK4TPytK6Cfhd/nZHOgSjqgRPXK3YLOZJoXJta3ig6tw5JH7FoBsK6LDEO9JnZemgebo8+OZSzW5/BXLR1SYo0WFk10mDbpu1BY6TB6jyvIdKMt2ge5kU+OpizDoztI+aUdAOGfl1BA3dhGM2mRpodZ6K5KPfMFlHrkPQRiwbAiWZtCuTglbL94+P3CT1ToByOhDQO33qmwYH4e7M637hfsyu0nmlO367KdZP3Mmea8RbNxd6qzNsR2jEg3fu0bhcArauMVTTo0z3ToD4WFMxb65D0MUw0WI1xYIZwsEpDBLvPleLbIHWotT8UZKap03h79tOtio0iaIubpF+6oojk5jfenrlOqemxigbbMogG9hTcyuGmS+uDsYoG4HIBwtGbOswPAnLrkHQxTDSj4TpUUvlkAMJAJMR1t0YXREWIaDKPmzQPqRMNzhk4+GMbiCtvRJ3Vx/J23NhCJrUhxIfUiQbRBWcybJOwXcKPjrgha+/mbydkfPASDSGEoiHEG4qGEE8oGkI8oWgI8YSiIcQTioYQTygaQjyhaAjxhP/UiQ8fr0fkX9GzRz2vJLaEAAAAAElFTkSuQmCC" InformativeScreenshot="17ec64a495829357220669b828356e0f.png" Reference="Esc2uwRRdkGtd0UerjX7gQ/sd7NGOSOyUiHfX6fbclhXQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="FuzzySelector, Image" Text="Upcoming Hire" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" />
                           </uix:NClick.Target>
                         </uix:NClick>
-                        <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="2880,22" sap2010:WorkflowViewState.IdRef="Delay_7" />
-                        <ui:UiElementExists DisplayName="Element Exists 'Extra Info'" Exists="[Ticket]" sap:VirtualizedContainerService.HintSize="2880,106" sap2010:WorkflowViewState.IdRef="UiElementExists_9">
+                        <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="2954,22" sap2010:WorkflowViewState.IdRef="Delay_7" />
+                        <ui:UiElementExists DisplayName="Element Exists 'Extra Info'" Exists="[Ticket]" sap:VirtualizedContainerService.HintSize="2954,106" sap2010:WorkflowViewState.IdRef="UiElementExists_9">
                           <ui:UiElementExists.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3a41f2b8-9a0c-45c8-bb45-7a700e6337e2" InformativeScreenshot="1026a56429ce363a198eebfd58f05b7c" Selector="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;&#xD;&#xA;&lt;webctrl aria-role='grid' tag='TABLE' /&gt;&#xD;&#xA;&lt;webctrl tableCol='2' tag='TD' tableRow='2' /&gt;&#xD;&#xA;">
                               <ui:Target.TimeoutMS>
@@ -636,15 +638,15 @@
                             </ui:Target>
                           </ui:UiElementExists.Target>
                         </ui:UiElementExists>
-                        <If Condition="[Ticket = True]" sap:VirtualizedContainerService.HintSize="2880,17291" sap2010:WorkflowViewState.IdRef="If_18">
+                        <If Condition="[Ticket = True]" sap:VirtualizedContainerService.HintSize="2954,17291" sap2010:WorkflowViewState.IdRef="If_18">
                           <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="2459,17130" sap2010:WorkflowViewState.IdRef="Sequence_95">
+                            <Sequence sap:VirtualizedContainerService.HintSize="2533,17130" sap2010:WorkflowViewState.IdRef="Sequence_95">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="2417,690" sap2010:WorkflowViewState.IdRef="TryCatch_26">
+                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="2491,690" sap2010:WorkflowViewState.IdRef="TryCatch_26">
                                 <TryCatch.Try>
                                   <Sequence DisplayName="Sequence Table of all NHOP tickets" sap:VirtualizedContainerService.HintSize="376,435" sap2010:WorkflowViewState.IdRef="Sequence_74">
                                     <sap:WorkflowViewStateService.ViewState>
@@ -694,7 +696,7 @@
                                   </Catch>
                                 </TryCatch.Catches>
                               </TryCatch>
-                              <Assign DisplayName="Assign flag " sap:VirtualizedContainerService.HintSize="2417,61" sap2010:WorkflowViewState.IdRef="Assign_9">
+                              <Assign DisplayName="Assign flag " sap:VirtualizedContainerService.HintSize="2491,61" sap2010:WorkflowViewState.IdRef="Assign_9">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Int32">[flag]</OutArgument>
                                 </Assign.To>
@@ -702,37 +704,37 @@
                                   <InArgument x:TypeArguments="x:Int32">1</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[NHOP_list_data]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="2417,16205" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[NHOP_list_data]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="2491,16205" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
                                 <ui:ForEachRow.Body>
                                   <ActivityAction x:TypeArguments="sd:DataRow">
                                     <ActivityAction.Argument>
                                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                                     </ActivityAction.Argument>
-                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="2367,16055" sap2010:WorkflowViewState.IdRef="Sequence_94">
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="2441,16055" sap2010:WorkflowViewState.IdRef="Sequence_94">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ID" DisplayName="Get Row Item use for Ticket ID" sap:VirtualizedContainerService.HintSize="2325,64" sap2010:WorkflowViewState.IdRef="GetRowItem_4" Row="[row]">
+                                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ID" DisplayName="Get Row Item use for Ticket ID" sap:VirtualizedContainerService.HintSize="2399,64" sap2010:WorkflowViewState.IdRef="GetRowItem_4" Row="[row]">
                                         <ui:GetRowItem.Value>
                                           <OutArgument x:TypeArguments="x:String">[ID_of_NHOP_Tickets]</OutArgument>
                                         </ui:GetRowItem.Value>
                                       </ui:GetRowItem>
-                                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Subject" DisplayName="Get Row Item use for Subject" sap:VirtualizedContainerService.HintSize="2325,64" sap2010:WorkflowViewState.IdRef="GetRowItem_5" Row="[row]">
+                                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Subject" DisplayName="Get Row Item use for Subject" sap:VirtualizedContainerService.HintSize="2399,64" sap2010:WorkflowViewState.IdRef="GetRowItem_5" Row="[row]">
                                         <ui:GetRowItem.Value>
                                           <OutArgument x:TypeArguments="x:String">[Subject_of_NHOP_Ticket]</OutArgument>
                                         </ui:GetRowItem.Value>
                                       </ui:GetRowItem>
-                                      <If Condition="[Subject_of_NHOP_Ticket = &quot;Upcoming Hire - Create Account&quot;]" sap:VirtualizedContainerService.HintSize="2325,15754" sap2010:WorkflowViewState.IdRef="If_25">
+                                      <If Condition="[Subject_of_NHOP_Ticket = &quot;Upcoming Hire - Create Account&quot;]" sap:VirtualizedContainerService.HintSize="2399,15754" sap2010:WorkflowViewState.IdRef="If_25">
                                         <If.Then>
-                                          <Sequence sap:VirtualizedContainerService.HintSize="2289,15573" sap2010:WorkflowViewState.IdRef="Sequence_93">
+                                          <Sequence sap:VirtualizedContainerService.HintSize="2363,15573" sap2010:WorkflowViewState.IdRef="Sequence_93">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <If Condition="[flag = 1]" sap:VirtualizedContainerService.HintSize="2247,543" sap2010:WorkflowViewState.IdRef="If_19">
+                                            <If Condition="[flag = 1]" sap:VirtualizedContainerService.HintSize="2321,543" sap2010:WorkflowViewState.IdRef="If_19">
                                               <If.Then>
                                                 <Sequence sap:VirtualizedContainerService.HintSize="376,362" sap2010:WorkflowViewState.IdRef="Sequence_75">
                                                   <sap:WorkflowViewStateService.ViewState>
@@ -762,8 +764,8 @@
                                                 </Sequence>
                                               </If.Then>
                                             </If>
-                                            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="2247,22" sap2010:WorkflowViewState.IdRef="Delay_45" />
-                                            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="2247,751" sap2010:WorkflowViewState.IdRef="TryCatch_27">
+                                            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="2321,22" sap2010:WorkflowViewState.IdRef="Delay_45" />
+                                            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="2321,751" sap2010:WorkflowViewState.IdRef="TryCatch_27">
                                               <TryCatch.Try>
                                                 <Sequence sap:VirtualizedContainerService.HintSize="376,496" sap2010:WorkflowViewState.IdRef="Sequence_76">
                                                   <sap:WorkflowViewStateService.ViewState>
@@ -816,14 +818,14 @@
                                                 </Catch>
                                               </TryCatch.Catches>
                                             </TryCatch>
-                                            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="2247,22" sap2010:WorkflowViewState.IdRef="Delay_46" />
-                                            <uix:NClick ClickType="Single" DisplayName="Click 'Go'" sap:VirtualizedContainerService.HintSize="2247,167" sap2010:WorkflowViewState.IdRef="NClick_31" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left">
+                                            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="2321,22" sap2010:WorkflowViewState.IdRef="Delay_46" />
+                                            <uix:NClick ClickType="Single" DisplayName="Click 'Go'" sap:VirtualizedContainerService.HintSize="2321,167" sap2010:WorkflowViewState.IdRef="NClick_31" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left">
                                               <uix:NClick.Target>
                                                 <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests" ContentHash="tCpNTkx_0EGQN-6SdlCPnQ" DesignTimeRectangle="1869, 272, 36, 30" ElementType="Button" FriendlyName="'Go'" FullSelectorArgument="&lt;webctrl parentid='DataTables_Table_0' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='DataTables_Table_0' tag='BUTTON' type='' aaname='Go' check:text='Go' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAiCAYAAAAtZZsLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEVSURBVFhH7ZgxDoIwFIa9nJfQWW/gHbiAbkwmXsDE1cXZxMWZyYVBIKKCQs1PxNTyGOgTi6ZNvgT6XsPHD13auySp6DK/I7jeX8TYjUTfCYwynIWFS0UQBWqBCRBURZBqNIkV5GIFuVhBLv8vON9cRXoXb8PzM7JXB5bgapcUcpCk6p9AW3CyOInDMWtVDmgLQgyCEKXqJUhZHrin+urQFsSD/Ch/CTrLWMRPl3IeLxGc86KGHtyjp0nq2oJ1CcrzW+9WINexgZqkqC2IVJCOmkZnBAEeru5iWRDXxj5xiboJMOR/U603SQ+wBdvGCnKxglysIBcryKUiOJjSjSYYuWFVEAc2KFALvgmCIg+PukrHBVPxAI6WGPpTHwjsAAAAAElFTkSuQmCC" InformativeScreenshot="be12011d5548e42c7cce8610222c1b1d.png" Reference="Esc2uwRRdkGtd0UerjX7gQ/fvbEetlKR0qD_6-mw6FYXQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="Go" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;" />
                                               </uix:NClick.Target>
                                             </uix:NClick>
-                                            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="2247,22" sap2010:WorkflowViewState.IdRef="Delay_47" />
-                                            <uix:NClick ClickType="Single" DisplayName="Click 'Click_on_Ticket'" sap:VirtualizedContainerService.HintSize="2247,167" sap2010:WorkflowViewState.IdRef="NClick_32" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left">
+                                            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="2321,22" sap2010:WorkflowViewState.IdRef="Delay_47" />
+                                            <uix:NClick ClickType="Single" DisplayName="Click 'Click_on_Ticket'" sap:VirtualizedContainerService.HintSize="2321,167" sap2010:WorkflowViewState.IdRef="NClick_32" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left">
                                               <uix:NClick.Target>
                                                 <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests" ContentHash="wtMiDBWxNUWpBrjdWaUAMA" DesignTimeRectangle="170, 320, 20, 20" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;a&amp;gt;div' isleaf='1' parentid='DataTables_Table_1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;a&amp;gt;div' isleaf='1' parentid='DataTables_Table_1' tag='DIV' type='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAETSURBVEhL7ZRRS8JQGIb7txFehITECPoNgiHhiiWU4C4mzIsNFfoJQnQToVjUfXm5m0+eNeOwvjW3DBH2wAeHc773PDs7ugP5ZypBLrsRzBcvEkzuZRiOCxUZsiaqoNVx5Ng6l1vXUzfSil4yF7aT7PKFKjg6saR5eSV9z5ePz2Uymw099JIha6IKDuun8vQ8E7t7Fwdf396TlZ+wRg+9ZMiaZAqAMEFKk2jrhQRgPuHMuEDGzKVPWFgA63fcvu7K9OExLsbMpe+olADYyA9GctNz42Ks/QBKCyCKou8TMNb4k2ATNhLUGmfq8fMgQ9ZEFfQHfnyB2j/2tyJD1kQV8CRhiW8RmfTJVcE2qQS57LtAZAV6Q4JhTtcCiAAAAABJRU5ErkJggg==" InformativeScreenshot="2fff65d26af7ae035eb33131c8f61ba0.png" Reference="Esc2uwRRdkGtd0UerjX7gQ/6Mi_ce1xU0u86nIEtfnEhQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
                                                   <uix:TargetAnchorable.Anchors>
@@ -840,10 +842,10 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </uix:NClick>
-                                            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="2247,22" sap2010:WorkflowViewState.IdRef="Delay_48" />
-                                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="2247,62" sap2010:WorkflowViewState.IdRef="WriteLine_23" Text="[ID_of_NHOP_Tickets]" />
-                                            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="2247,22" sap2010:WorkflowViewState.IdRef="Delay_49" />
-                                            <ui:UiElementExists DisplayName="Element Exists 'Extra Info'" Exists="[Notes]" sap:VirtualizedContainerService.HintSize="2247,106" sap2010:WorkflowViewState.IdRef="UiElementExists_8">
+                                            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="2321,22" sap2010:WorkflowViewState.IdRef="Delay_48" />
+                                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="2321,62" sap2010:WorkflowViewState.IdRef="WriteLine_23" Text="[ID_of_NHOP_Tickets]" />
+                                            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="2321,22" sap2010:WorkflowViewState.IdRef="Delay_49" />
+                                            <ui:UiElementExists DisplayName="Element Exists 'Extra Info'" Exists="[Notes]" sap:VirtualizedContainerService.HintSize="2321,106" sap2010:WorkflowViewState.IdRef="UiElementExists_8">
                                               <ui:UiElementExists.Target>
                                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3a41f2b8-9a0c-45c8-bb45-7a700e6337e2" InformativeScreenshot="3c4106df56b3c17826c9825f27a63a5a" Selector="&lt;webctrl isleaf='1' parentid='conList2' tag='DIV' /&gt;">
                                                   <ui:Target.TimeoutMS>
@@ -855,7 +857,7 @@
                                                 </ui:Target>
                                               </ui:UiElementExists.Target>
                                             </ui:UiElementExists>
-                                            <If Condition="[Notes = True]" sap:VirtualizedContainerService.HintSize="2247,875" sap2010:WorkflowViewState.IdRef="If_20">
+                                            <If Condition="[Notes = True]" sap:VirtualizedContainerService.HintSize="2321,875" sap2010:WorkflowViewState.IdRef="If_20">
                                               <If.Then>
                                                 <Sequence sap:VirtualizedContainerService.HintSize="376,694" sap2010:WorkflowViewState.IdRef="Sequence_77">
                                                   <sap:WorkflowViewStateService.ViewState>
@@ -885,7 +887,7 @@
                                                 </Sequence>
                                               </If.Then>
                                             </If>
-                                            <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Ticket From'" sap:VirtualizedContainerService.HintSize="2247,167" sap2010:WorkflowViewState.IdRef="NGetText_49">
+                                            <uix:NGetText ContinueOnError="True" DisplayName="Get Text 'Ticket From'" sap:VirtualizedContainerService.HintSize="2321,167" sap2010:WorkflowViewState.IdRef="NGetText_49">
                                               <uix:NGetText.Target>
                                                 <uix:TargetAnchorable BrowserURL="https://itsupport.gep.com/app/itdesk/ui/requests/35364000024783673/details" DesignTimeRectangle="174, 455, 72, 28" ElementType="Text" FriendlyName="'GEP @ icims'" FullSelectorArgument="&lt;webctrl aaname='GEP @ icims' parentid='conList1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='conList1' tag='SPAN' type='' /&gt;" ImageBase64="" InformativeScreenshot="38e921ac54197e9c34844b16336081b9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GEP - ManageEngine ServiceDesk Plus Cloud' /&gt;" SearchSteps="FuzzySelector" Text="GEP @ icims" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;">
                                                   <uix:TargetAnchorable.Anchors>
@@ -899,10 +901,10 @@
                                                 <OutArgument x:TypeArguments="x:String">[Ticket_from]</OutArgument>
                                               </uix:NGetText.Text>
                                             </uix:NGetText>
-                                            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="2247,22" sap2010:WorkflowViewState.IdRef="Delay_52" />
-                                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="2247,62" sap2010:WorkflowViewState.IdRef="WriteLine_25" Text="[Ticket_from]" />
-                                            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="2247,22" sap2010:WorkflowViewState.IdRef="Delay_53" />
-                                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="2247,718" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+                                            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="2321,22" sap2010:WorkflowViewState.IdRef="Delay_52" />
+                                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="2321,62" sap2010:WorkflowViewState.IdRef="WriteLine_25" Text="[Ticket_from]" />
+                                            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="2321,22" sap2010:WorkflowViewState.IdRef="Delay_53" />
+                                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="2321,718" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
                                               <ui:MultipleAssign.AssignOperations>
                                                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="32">
                                                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_67">
@@ -1076,8 +1078,8 @@
                                                 </scg:List>
                                               </ui:MultipleAssign.AssignOperations>
                                             </ui:MultipleAssign>
-                                            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="2247,22" sap2010:WorkflowViewState.IdRef="Delay_54" />
-                                            <If Condition="[Ticket_from = &quot;GEP @ icims&quot;]" sap:VirtualizedContainerService.HintSize="2247,4562" sap2010:WorkflowViewState.IdRef="If_21">
+                                            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="2321,22" sap2010:WorkflowViewState.IdRef="Delay_54" />
+                                            <If Condition="[Ticket_from = &quot;GEP @ icims&quot;]" sap:VirtualizedContainerService.HintSize="2321,4562" sap2010:WorkflowViewState.IdRef="If_21">
                                               <If.Then>
                                                 <Sequence DisplayName="Sequence gather Data from NHOP Ticket" sap:VirtualizedContainerService.HintSize="376,4401" sap2010:WorkflowViewState.IdRef="Sequence_78">
                                                   <sap:WorkflowViewStateService.ViewState>
@@ -1273,8 +1275,8 @@
                                                 </Sequence>
                                               </If.Else>
                                             </If>
-                                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="2247,62" sap2010:WorkflowViewState.IdRef="WriteLine_27" Text="[Candidate_Name +&quot;     &quot; + Person_system_ID + &quot;     &quot; + Priority_Ticket + &quot;     &quot; + Recruiter + &quot;     &quot; + Sender_and_Cc + &quot;     &quot; + Cc + &quot;     &quot; + Status+ &quot;     &quot; + Date_of_join+ &quot;     &quot; + GEP_Email+ &quot;     &quot; + Person_type+ &quot;     &quot; + Job_Title+ &quot;     &quot; + Function_job+ &quot;     &quot; + Department+ &quot;     &quot; + Candidate_Level+ &quot;     &quot; + Reporting_Manager+ &quot;     &quot; + Reporting_Loction+ &quot;     &quot; + HR_Business+ &quot;     &quot; + Mobile_Phone+ &quot;     &quot; + Primary_Email+ &quot;     &quot; + Rehire +&quot;     &quot;+Distribution_list]" />
-                                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="2247,718" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
+                                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="2321,62" sap2010:WorkflowViewState.IdRef="WriteLine_27" Text="[Candidate_Name +&quot;     &quot; + Person_system_ID + &quot;     &quot; + Priority_Ticket + &quot;     &quot; + Recruiter + &quot;     &quot; + Sender_and_Cc + &quot;     &quot; + Cc + &quot;     &quot; + Status+ &quot;     &quot; + Date_of_join+ &quot;     &quot; + GEP_Email+ &quot;     &quot; + Person_type+ &quot;     &quot; + Job_Title+ &quot;     &quot; + Function_job+ &quot;     &quot; + Department+ &quot;     &quot; + Candidate_Level+ &quot;     &quot; + Reporting_Manager+ &quot;     &quot; + Reporting_Loction+ &quot;     &quot; + HR_Business+ &quot;     &quot; + Mobile_Phone+ &quot;     &quot; + Primary_Email+ &quot;     &quot; + Rehire +&quot;     &quot;+Distribution_list]" />
+                                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="2321,718" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
                                               <ui:MultipleAssign.AssignOperations>
                                                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="32">
                                                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_88">
@@ -1448,12 +1450,12 @@
                                                 </scg:List>
                                               </ui:MultipleAssign.AssignOperations>
                                             </ui:MultipleAssign>
-                                            <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query - Inser Ouery" ExistingDbConnection="[dbConnection]" sap:VirtualizedContainerService.HintSize="2247,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_5" Sql="[&quot;insert into dbo.NHOP_Tickets ([Request_ID],[Candidate_Name],[Person_System_ID],[Priority_Ticket],[Recruiter],[Sender],[CC],[Ticket_Status],[DOJ],[GEP_Email],[Person_type],[Job_Title],[Department],[Function_SubFunction],[Candidate_Level],[Reporting_Manager],[Reporting_Location],[HR_Business_Partner],[Mobile_Number],[Primary_Email_ID],[Rehire],[Incendent_Status],[Group_Members],[Remark],[Created_DateTime],[Updated_DateTime]) values (&quot;+&quot;'&quot;+ID_of_NHOP_Tickets+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Candidate_Name+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Person_system_ID+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Priority_Ticket+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Recruiter+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Cc+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Sender_and_Cc+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Status+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Date_of_join+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+GEP_Email+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Person_type+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Job_Title+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Department+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Function_job+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Candidate_Level+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Reporting_Manager+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Reporting_Loction+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+HR_Business+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Mobile_Phone+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Primary_Email+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Rehire+&quot;'&quot;+&quot;,'NHOP Data Gathered',&quot;+&quot;'&quot;+Distribution_list+&quot;'&quot;+&quot;,&quot;+&quot;'No Remark',&quot;+&quot;'&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”)+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”)+&quot;')&quot;]">
+                                            <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query - Inser Ouery" ExistingDbConnection="[dbConnection]" sap:VirtualizedContainerService.HintSize="2321,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_5" Sql="[&quot;insert into dbo.NHOP_Tickets ([Request_ID],[Candidate_Name],[Person_System_ID],[Priority_Ticket],[Recruiter],[Sender],[CC],[Ticket_Status],[DOJ],[GEP_Email],[Person_type],[Job_Title],[Department],[Function_SubFunction],[Candidate_Level],[Reporting_Manager],[Reporting_Location],[HR_Business_Partner],[Mobile_Number],[Primary_Email_ID],[Rehire],[Incendent_Status],[Group_Members],[Remark],[Created_DateTime],[Updated_DateTime]) values (&quot;+&quot;'&quot;+ID_of_NHOP_Tickets+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Candidate_Name+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Person_system_ID+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Priority_Ticket+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Recruiter+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Cc+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Sender_and_Cc+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Status+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Date_of_join+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+GEP_Email+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Person_type+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Job_Title+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Department+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Function_job+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Candidate_Level+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Reporting_Manager+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Reporting_Loction+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+HR_Business+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Mobile_Phone+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Primary_Email+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+Rehire+&quot;'&quot;+&quot;,'NHOP Data Gathered',&quot;+&quot;'&quot;+Distribution_list+&quot;'&quot;+&quot;,&quot;+&quot;'No Remark',&quot;+&quot;'&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”)+&quot;'&quot;+&quot;,&quot;+&quot;'&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”)+&quot;')&quot;]">
                                               <ui:ExecuteNonQuery.Parameters>
                                                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                               </ui:ExecuteNonQuery.Parameters>
                                             </ui:ExecuteNonQuery>
-                                            <ui:AppendLine DisplayName="Append Line Data insert in data base successful" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="2247,52" sap2010:WorkflowViewState.IdRef="AppendLine_93" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Data insert in data base successful for ID :- &quot;+ID_of_NHOP_Tickets]" UseDefaultEncoding="False">
+                                            <ui:AppendLine DisplayName="Append Line Data insert in data base successful" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="2321,52" sap2010:WorkflowViewState.IdRef="AppendLine_93" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Data insert in data base successful for ID :- &quot;+ID_of_NHOP_Tickets]" UseDefaultEncoding="False">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1461,12 +1463,12 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </ui:AppendLine>
-                                            <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[Data_From_Database]" DisplayName="Execute Query" ExistingDbConnection="[dbConnection]" sap:VirtualizedContainerService.HintSize="2247,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="[&quot;select * from dbo.NHOP_Tickets where Person_System_ID = '&quot;+Person_system_ID+&quot;' and Candidate_Name = '&quot;+Candidate_Name+&quot;' and Mobile_Number = '&quot;+Mobile_Phone+&quot;'&quot;]">
+                                            <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[Data_From_Database]" DisplayName="Execute Query" ExistingDbConnection="[dbConnection]" sap:VirtualizedContainerService.HintSize="2321,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="[&quot;select * from dbo.NHOP_Tickets where Person_System_ID = '&quot;+Person_system_ID+&quot;' and Candidate_Name = '&quot;+Candidate_Name+&quot;' and Mobile_Number = '&quot;+Mobile_Phone+&quot;'&quot;]">
                                               <ui:ExecuteQuery.Parameters>
                                                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                               </ui:ExecuteQuery.Parameters>
                                             </ui:ExecuteQuery>
-                                            <Assign sap:VirtualizedContainerService.HintSize="2247,61" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                            <Assign sap:VirtualizedContainerService.HintSize="2321,61" sap2010:WorkflowViewState.IdRef="Assign_11">
                                               <Assign.To>
                                                 <OutArgument x:TypeArguments="x:Int32">[Number_of_data]</OutArgument>
                                               </Assign.To>
@@ -1474,8 +1476,8 @@
                                                 <InArgument x:TypeArguments="x:Int32">[Data_From_Database.Rows.Count]</InArgument>
                                               </Assign.Value>
                                             </Assign>
-                                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="2247,62" sap2010:WorkflowViewState.IdRef="WriteLine_28" Text="[Number_of_data.ToString]" />
-                                            <If Condition="[Number_of_data = 1]" sap:VirtualizedContainerService.HintSize="2247,4621" sap2010:WorkflowViewState.IdRef="If_24">
+                                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="2321,62" sap2010:WorkflowViewState.IdRef="WriteLine_28" Text="[Number_of_data.ToString]" />
+                                            <If Condition="[Number_of_data = 1]" sap:VirtualizedContainerService.HintSize="2321,4621" sap2010:WorkflowViewState.IdRef="If_24">
                                               <If.Then>
                                                 <Sequence sap:VirtualizedContainerService.HintSize="480,1497" sap2010:WorkflowViewState.IdRef="Sequence_82">
                                                   <sap:WorkflowViewStateService.ViewState>
@@ -1587,13 +1589,13 @@
                                                 </Sequence>
                                               </If.Then>
                                               <If.Else>
-                                                <Sequence sap:VirtualizedContainerService.HintSize="1722,4460" sap2010:WorkflowViewState.IdRef="Sequence_92">
+                                                <Sequence sap:VirtualizedContainerService.HintSize="1796,4460" sap2010:WorkflowViewState.IdRef="Sequence_92">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:AppendLine DisplayName="Append Line Data is present in data base" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="1680,52" sap2010:WorkflowViewState.IdRef="AppendLine_100" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Data is already presint in data base of Emp :- &quot;+Candidate_Name +&quot;      &quot;+ ID_of_NHOP_Tickets]" UseDefaultEncoding="False">
+                                                  <ui:AppendLine DisplayName="Append Line Data is present in data base" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="1754,52" sap2010:WorkflowViewState.IdRef="AppendLine_100" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Warning&quot;+&quot;     &quot;+&quot;Data is already presint in data base of Emp :- &quot;+Candidate_Name +&quot;      &quot;+ ID_of_NHOP_Tickets]" UseDefaultEncoding="False">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1601,13 +1603,13 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:AppendLine>
-                                                  <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Data_From_Database]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1680,4274" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                                                  <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Data_From_Database]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1754,4274" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                                                     <ui:ForEachRow.Body>
                                                       <ActivityAction x:TypeArguments="sd:DataRow">
                                                         <ActivityAction.Argument>
                                                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                                                         </ActivityAction.Argument>
-                                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1630,4124" sap2010:WorkflowViewState.IdRef="Sequence_91">
+                                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1704,4124" sap2010:WorkflowViewState.IdRef="Sequence_91">
                                                           <Sequence.Variables>
                                                             <Variable x:TypeArguments="x:String" Name="Duplicate_ticket_id" />
                                                           </Sequence.Variables>
@@ -1616,25 +1618,25 @@
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Incendent_Status" DisplayName="Get Row Item Satust_of_Emp" sap:VirtualizedContainerService.HintSize="1588,64" sap2010:WorkflowViewState.IdRef="GetRowItem_6" Row="[row]">
+                                                          <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Incendent_Status" DisplayName="Get Row Item Satust_of_Emp" sap:VirtualizedContainerService.HintSize="1662,64" sap2010:WorkflowViewState.IdRef="GetRowItem_6" Row="[row]">
                                                             <ui:GetRowItem.Value>
                                                               <OutArgument x:TypeArguments="x:String">[Status_of_Emp]</OutArgument>
                                                             </ui:GetRowItem.Value>
                                                           </ui:GetRowItem>
-                                                          <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Request_ID" DisplayName="Get Row ItemDuplicate Ticket No" sap:VirtualizedContainerService.HintSize="1588,64" sap2010:WorkflowViewState.IdRef="GetRowItem_7" Row="[row]">
+                                                          <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Request_ID" DisplayName="Get Row ItemDuplicate Ticket No" sap:VirtualizedContainerService.HintSize="1662,64" sap2010:WorkflowViewState.IdRef="GetRowItem_7" Row="[row]">
                                                             <ui:GetRowItem.Value>
                                                               <OutArgument x:TypeArguments="x:String">[Duplicate_ticket_id]</OutArgument>
                                                             </ui:GetRowItem.Value>
                                                           </ui:GetRowItem>
-                                                          <If Condition="[Status_of_Emp = &quot;Employee Onbording Completed&quot; Or Status_of_Emp = &quot;Pending for deletion&quot; Or Status_of_Emp = &quot;Employee Joined&quot; Or Status_of_Emp = &quot;On Hold, Not Joined&quot;]" sap:VirtualizedContainerService.HintSize="1588,3822" sap2010:WorkflowViewState.IdRef="If_23">
+                                                          <If Condition="[Status_of_Emp = &quot;Employee Onbording Completed&quot; Or Status_of_Emp = &quot;Pending for deletion&quot; Or Status_of_Emp = &quot;Employee Joined&quot; Or Status_of_Emp = &quot;On Hold, Not Joined&quot;]" sap:VirtualizedContainerService.HintSize="1662,3822" sap2010:WorkflowViewState.IdRef="If_23">
                                                             <If.Then>
-                                                              <Sequence sap:VirtualizedContainerService.HintSize="1047,2473" sap2010:WorkflowViewState.IdRef="Sequence_87">
+                                                              <Sequence sap:VirtualizedContainerService.HintSize="1121,2967" sap2010:WorkflowViewState.IdRef="Sequence_87">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                <If Condition="[Status_of_Emp = &quot;Not Joined&quot; Or Status_of_Emp = &quot;Pending for deletion&quot;]" sap:VirtualizedContainerService.HintSize="1005,2379" sap2010:WorkflowViewState.IdRef="If_22">
+                                                                <If Condition="[Status_of_Emp = &quot;Not Joined&quot; Or Status_of_Emp = &quot;Pending for deletion&quot;]" sap:VirtualizedContainerService.HintSize="1079,2873" sap2010:WorkflowViewState.IdRef="If_22">
                                                                   <If.Then>
                                                                     <Sequence sap:VirtualizedContainerService.HintSize="480,1435" sap2010:WorkflowViewState.IdRef="Sequence_100">
                                                                       <sap:WorkflowViewStateService.ViewState>
@@ -1745,36 +1747,51 @@
                                                                     </Sequence>
                                                                   </If.Then>
                                                                   <If.Else>
-                                                                    <Sequence sap:VirtualizedContainerService.HintSize="480,2218" sap2010:WorkflowViewState.IdRef="Sequence_86">
+                                                                    <Sequence sap:VirtualizedContainerService.HintSize="554,2712" sap2010:WorkflowViewState.IdRef="Sequence_86">
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                      <ui:AppendLine DisplayName="Append LineTicket assign successful" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="438,134" sap2010:WorkflowViewState.IdRef="AppendLine_104" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Mail send for :- &quot;+ID_of_NHOP_Tickets]" UseDefaultEncoding="False" />
-                                                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="438,317" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                                                                      <ui:AppendLine DisplayName="Append LineTicket assign successful" FileName="[Path_of_log_file]" sap:VirtualizedContainerService.HintSize="512,134" sap2010:WorkflowViewState.IdRef="AppendLine_104" Text="[&quot;[&quot;+System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;]     &quot;+ &quot;Info&quot;+&quot;     &quot;+&quot;Mail send for :- &quot;+ID_of_NHOP_Tickets]" UseDefaultEncoding="False" />
+                                                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="512,811" sap2010:WorkflowViewState.IdRef="CommentOut_20">
                                                                         <ui:CommentOut.Body>
-                                                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,239" sap2010:WorkflowViewState.IdRef="Sequence_84">
+                                                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="476,733" sap2010:WorkflowViewState.IdRef="Sequence_119">
                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                               </scg:Dictionary>
                                                                             </sap:WorkflowViewStateService.ViewState>
-                                                                            <ui:SendOutlookMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Account="Ashish_Jadhav@gep.com" Body="[&quot;Hello&quot; +&#xA;Environment.NewLine+&#xA;Environment.NewLine+&#xA;&quot;Employee &quot; + Candidate_Name +&quot; is already present in Data-Base.  &quot;+&#xA;Environment.NewLine+&#xA;Environment.NewLine+&#xA;&quot;Regards,&quot;+&#xA;Environment.NewLine+&#xA;&quot;GEP BOT&quot;]" DisplayName="Send Outlook Mail Message Emp already in DB" sap:VirtualizedContainerService.HintSize="334,147" sap2010:WorkflowViewState.IdRef="SendOutlookMail_3" IsBodyHtml="False" IsDraft="False" Subject="Email fom Bot" To="Saurabh_Talawdekar@gep.com">
-                                                                              <ui:SendOutlookMail.Files>
-                                                                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-                                                                              </ui:SendOutlookMail.Files>
-                                                                            </ui:SendOutlookMail>
+                                                                            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,641" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Configration\Macro_Ver2\Macros.xlsm">
+                                                                              <ui:ExcelApplicationScope.Body>
+                                                                                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                                                                  <ActivityAction.Argument>
+                                                                                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                                                                  </ActivityAction.Argument>
+                                                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,532" sap2010:WorkflowViewState.IdRef="Sequence_118">
+                                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                      </scg:Dictionary>
+                                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                                    <ui:ExcelWriteCell Cell="F2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Sheet1" Text="[ID_of_NHOP_Tickets]" />
+                                                                                    <ui:ExcelWriteCell Cell="G2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Sheet1" Text="[Duplicate_ticket_id]" />
+                                                                                    <ui:ExcelWriteCell Cell="H2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="Sheet1" Text="[Date_of_join]" />
+                                                                                    <ui:ExecuteMacro ContinueOnError="{x:Null}" MacroOutput="{x:Null}" DisplayName="Execute Macro" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExecuteMacro_1" MacroName="ThisWorkbook.CopyBodyFromWord" />
+                                                                                  </Sequence>
+                                                                                </ActivityAction>
+                                                                              </ui:ExcelApplicationScope.Body>
+                                                                            </ui:ExcelApplicationScope>
                                                                           </Sequence>
                                                                         </ui:CommentOut.Body>
                                                                       </ui:CommentOut>
-                                                                      <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query  - Update Query after mail send" ExistingDbConnection="[dbConnection]" sap:VirtualizedContainerService.HintSize="438,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_11" Sql="[&quot;UPDATE dbo.NHOP_Tickets Set Incendent_Status = 'Duplicate Ticket Found - Open' , Updated_DateTime =&quot; +&quot;'&quot; +System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;'&quot;+&quot; Where Request_ID = &quot;+&quot;'&quot;+ID_of_NHOP_Tickets+&quot;'&quot;]">
+                                                                      <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Non Query  - Update Query after mail send" ExistingDbConnection="[dbConnection]" sap:VirtualizedContainerService.HintSize="512,88" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_11" Sql="[&quot;UPDATE dbo.NHOP_Tickets Set Incendent_Status = 'Duplicate Ticket Found - Open' , Updated_DateTime =&quot; +&quot;'&quot; +System.DateTime.Now.ToString(“MM/dd/yyyy hh:mm:ss”) +&quot;'&quot;+&quot; Where Request_ID = &quot;+&quot;'&quot;+ID_of_NHOP_Tickets+&quot;'&quot;]">
                                                                         <ui:ExecuteNonQuery.Parameters>
                                                                           <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                                                         </ui:ExecuteNonQuery.Parameters>
                                                                       </ui:ExecuteNonQuery>
-                                                                      <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="Delay_60" />
-                                                                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,690" sap2010:WorkflowViewState.IdRef="TryCatch_31">
+                                                                      <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="512,22" sap2010:WorkflowViewState.IdRef="Delay_60" />
+                                                                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="512,690" sap2010:WorkflowViewState.IdRef="TryCatch_31">
                                                                         <TryCatch.Try>
                                                                           <Sequence sap:VirtualizedContainerService.HintSize="376,435" sap2010:WorkflowViewState.IdRef="Sequence_85">
                                                                             <sap:WorkflowViewStateService.ViewState>
@@ -1887,9 +1904,9 @@
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="454,606" sap2010:WorkflowViewState.IdRef="CommentOut_14">
+                                                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="454,606" sap2010:WorkflowViewState.IdRef="CommentOut_19">
                                                                   <ui:CommentOut.Body>
-                                                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="418,528" sap2010:WorkflowViewState.IdRef="Sequence_112">
+                                                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="418,528" sap2010:WorkflowViewState.IdRef="Sequence_117">
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2024,7 +2041,7 @@
                                                                     </Catch>
                                                                   </TryCatch.Catches>
                                                                 </TryCatch>
-                                                                <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="Delay_63" />
+                                                                <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="454,22" sap2010:WorkflowViewState.IdRef="Delay_63" />
                                                                 <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,611" sap2010:WorkflowViewState.IdRef="TryCatch_36">
                                                                   <TryCatch.Try>
                                                                     <Sequence DisplayName="Sequence Bot status Data Update in data base" sap:VirtualizedContainerService.HintSize="376,356" sap2010:WorkflowViewState.IdRef="Sequence_102">
